@@ -50,6 +50,7 @@
       }
     ],
     "dot-notation": "warn",
+    "linebreak-style": "off",
     "function-paren-newline": "off",
     "generator-star-spacing": "off",
     "global-require": "off",

@@ -13,7 +13,7 @@ export { goBack, goForward, push, replace } from 'connected-react-router';
 
 export const {
   hideAlert,
-  showAlert
+  showAlert,
 } = createActions({
   [ActionTypes.HIDE_ALERT]: (id: string) => ({ id }),
   [ActionTypes.SHOW_ALERT]: (message: string, options: Object) => {
