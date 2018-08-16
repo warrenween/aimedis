@@ -4,12 +4,14 @@
 // *** Variables
 @import 'variables/app';
 @import 'variables/bootstrap';
+@import 'variables/components';
 @import 'variables/typography';
 
 // *** Utilities
 @import 'utilities/functions';
 @import 'utilities/mixins';
 @import 'utilities/grid';
+@import 'utilities/components';
 
 // *** Vendor
 @import 'vendor/bootstrap';
@@ -20,7 +22,8 @@
 
 // *** Modules
 @import 'modules/animations';
-@import 'modules/buttons';
+@import 'modules/buttons'; // Update with UI
+@import 'modules/type';
 @import 'modules/icons';
 @import 'modules/transitions';
 
@@ -30,9 +33,9 @@
 @import 'components/header';
 @import 'components/loader';
 @import 'components/logo';
-@import 'components/system-alerts';
+@import 'containers/system-alerts';
 
 // *** Routes
-@import 'routes/home';
-@import 'routes/private';
-@import 'routes/not-found';
+@import 'pages/home';
+@import 'pages/profile';
+@import 'pages/not-found';

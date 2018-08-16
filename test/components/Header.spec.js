@@ -1,21 +1,23 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { Home } from 'pages/Home';
+import Header from 'components/Header';
 
 const mockDispatch = jest.fn();
 
 function setup() {
   const props = {
+    app: {},
     dispatch: mockDispatch,
-    location: {},
-    user: {},
+    location: {
+      pathname: '/',
+    },
   };
 
-  return mount(<Home {...props} />);
+  return mount(<Header {...props} />);
 }
 
-describe('Home', () => {
+describe('Header', () => {
   const wrapper = setup();
 
   it('should be a Component', () => {
@@ -27,9 +29,9 @@ describe('Home', () => {
   });
 
   it('should handle clicks', () => {
-    wrapper.find('.btn').simulate('click');
+    wrapper.find('.app__logout').simulate('click');
     expect(mockDispatch.mock.calls[0][0]).toEqual({
-      type: 'USER_LOGIN',
+      type: 'USER_LOGOUT',
       payload: {},
     });
   });

@@ -11,16 +11,17 @@ import history from 'modules/history';
 import config from 'config';
 import { showAlert } from 'actions';
 
-import Home from 'routes/Home';
-import Private from 'routes/Private';
-import NotFound from 'routes/NotFound';
+import HomeRoute from 'routes/HomeRoute';
+import ProfileRoute from 'routes/ProfileRoute';
 
-import Header from 'containers/Header';
+import Home from 'pages/Home';
+import Profile from 'pages/Profile';
+import NotFound from 'pages/NotFound';
+
 import SystemAlerts from 'containers/SystemAlerts';
 
+import Header from 'components/Header';
 import Footer from 'components/Footer';
-import RoutePublic from 'components/RoutePublic';
-import RoutePrivate from 'components/RoutePrivate';
 
 export class App extends React.Component {
   static propTypes = {
@@ -35,7 +36,7 @@ export class App extends React.Component {
 
     /* istanbul ignore else */
     if (changedTo('user.isAuthenticated', true)) {
-      dispatch(showAlert('Hello! And welcome!', { type: 'success', icon: 'i-trophy' }));
+      dispatch(showAlert('Welcome!', { type: 'success', icon: 'i-trophy' }));
     }
   }
 
@@ -57,11 +58,11 @@ export class App extends React.Component {
             titleTemplate={`%s | ${config.name}`}
             titleAttributes={{ itemprop: 'name', lang: 'pt-br' }}
           />
-          {user.isAuthenticated && <Header dispatch={dispatch} user={user} />}
+          <Header dispatch={dispatch} user={user} />
           <main className="app__main">
             <Switch>
-              <RoutePublic isAuthenticated={user.isAuthenticated} path="/" exact component={Home} />
-              <RoutePrivate isAuthenticated={user.isAuthenticated} path="/private" component={Private} />
+              <HomeRoute isAuthenticated={user.isAuthenticated} path="/" exact component={Home} />
+              <ProfileRoute isAuthenticated={user.isAuthenticated} path="/profile" component={Profile} />
               <Route component={NotFound} />
             </Switch>
           </main>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import NotFound from 'routes/NotFound';
+import NotFound from 'pages/NotFound';
 
 function setup() {
   return mount(<NotFound />);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Private from 'routes/Private';
+import Profile from 'pages/Profile';
 
 function setup() {
   const props = {
@@ -9,10 +9,10 @@ function setup() {
     location: {},
   };
 
-  return shallow(<Private {...props} />);
+  return shallow(<Profile {...props} />);
 }
 
-describe('Private', () => {
+describe('Profile', () => {
   const wrapper = setup();
 
   it('should be a Component', () => {
@@ -20,6 +20,6 @@ describe('Private', () => {
   });
 
   it('should render properly', () => {
-    expect(wrapper.find('.app__private')).toExist();
+    expect(wrapper.find('.app__profile')).toExist();
   });
 });

@@ -4,12 +4,12 @@ $grid-gutter-width: 3rem;
 /* stylelint-disable unit-blacklist */
 $grid-breakpoints: (
   xs: 0,
-  ix: 400,
-  sm: 576,
-  md: 768,
-  lg: 1024,
-  xl: 1200,
-  xxl: 1600,
+  ix: 400px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1600px,
 );
 /* stylelint-enable */
 
@@ -32,24 +32,36 @@ $container-max-widths: (
   xxl: 154rem
 );
 
-$font-family-sans-serif: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$headings-font-family: Lato, sans-serif;
-$headings-font-weight: 700;
-
 $body-bg: #fff;
 
+$primary: $app-color;
+$primary-50: #7fd5d7;
+$primary-25: #bfeaeb;
+$secondary: #00b0db;
+$secondary-50: rgba($secondary, 0.5);
+$secondary-25: rgba($secondary, 0.25);
+$black: #000808;
+$black-75: #404646;
+$black-50: #7f8383;
+$black-25: #bfc1c1;
+$black-5: #f2f2f2;
+$red: #ee5253;
+$yellow: #feca57;
+$green: #1dd1a1;
+
 $theme-colors: (
-  'primary':    $app-color,
+  'primary':        $primary,
+  'primary-50':     $primary-50,
+  'primary-25':     $primary-25,
+  'secondary':      $secondary,
+  'secondary-50':   $secondary-50,
+  'secondary-25':   $secondary-25,
+  'black':          $black,
+  'black-75':       $black-75,
+  'black-50':       $black-50,
+  'black-25':       $black-25,
+  'black-5':        $black-5,
+  'red':            $red,
+  'yellow':         $yellow,
+  'green':          $green,
 );
-
-$btn-border-radius-sm: 2rem;
-$input-btn-padding-x-sm: 2rem;
-$input-btn-padding-y-sm: 0.6rem;
-
-$btn-border-radius: 2.6rem;
-$input-btn-padding-x: 2.6rem;
-$input-btn-padding-y: 1rem;
-
-$btn-border-radius-lg: 3rem;
-$input-btn-padding-x-lg: 3rem;
-$input-btn-padding-y-lg: 1.4rem;
