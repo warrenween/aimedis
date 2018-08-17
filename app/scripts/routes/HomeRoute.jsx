@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
-const HomeRoute = ({ component: Component, isAuthenticated, to, ...rest }) => (
+const HomeRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render={props => (
-      isAuthenticated
-        ? (<Redirect to={to} />)
-        : (<Component {...props} />)
-    )}
+    render={
+      props => (<Component {...props} />)
+    }
   />
 );
 
@@ -20,7 +18,6 @@ HomeRoute.propTypes = {
 };
 
 HomeRoute.defaultProps = {
-  to: '/profile',
 };
 
 export default HomeRoute;

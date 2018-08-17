@@ -9,9 +9,6 @@ function setup() {
   const props = {
     app: {},
     dispatch: mockDispatch,
-    location: {
-      pathname: '/',
-    },
   };
 
   return mount(<Header {...props} />);
@@ -26,13 +23,5 @@ describe('Header', () => {
 
   it('should render properly', () => {
     expect(wrapper.html()).toMatchSnapshot();
-  });
-
-  it('should handle clicks', () => {
-    wrapper.find('.app__logout').simulate('click');
-    expect(mockDispatch.mock.calls[0][0]).toEqual({
-      type: 'USER_LOGOUT',
-      payload: {},
-    });
   });
 });

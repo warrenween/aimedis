@@ -32,8 +32,6 @@ $container-max-widths: (
   xxl: 154rem
 );
 
-$body-bg: #fff;
-
 $primary: $app-color;
 $primary-50: #7fd5d7;
 $primary-25: #bfeaeb;
@@ -48,6 +46,10 @@ $black-5: #f2f2f2;
 $red: #ee5253;
 $yellow: #feca57;
 $green: #1dd1a1;
+$white: #fff;
+$shadow-color: #0194a4;
+
+$body-bg: $white;
 
 $theme-colors: (
   'primary':        $primary,
@@ -65,3 +67,5 @@ $theme-colors: (
   'yellow':         $yellow,
   'green':          $green,
 );
+
+$navbar-light-toggler-icon-custom: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$primary}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;

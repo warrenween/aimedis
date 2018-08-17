@@ -28,12 +28,13 @@
 @import 'modules/transitions';
 
 // *** Components
+@import 'containers/system-alerts';
 @import 'components/alert';
 @import 'components/footer';
 @import 'components/header';
 @import 'components/loader';
 @import 'components/logo';
-@import 'containers/system-alerts';
+@import 'components/get-early-access';
 
 // *** Routes
 @import 'pages/home';

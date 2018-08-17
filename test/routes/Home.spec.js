@@ -6,13 +6,7 @@ import { Home } from 'pages/Home';
 const mockDispatch = jest.fn();
 
 function setup() {
-  const props = {
-    dispatch: mockDispatch,
-    location: {},
-    user: {},
-  };
-
-  return mount(<Home {...props} />);
+  return mount(<Home />);
 }
 
 describe('Home', () => {

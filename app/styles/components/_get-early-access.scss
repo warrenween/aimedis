@@ -1,0 +1,14 @@
+.app__get__early__access {
+  &__input {
+    height: 56px;
+    width: 339px;
+    border-radius: 28px 0 0 28px;
+    background-color: rgba(101,107,109,0.09);
+    box-shadow: 0 2px 8px 0 rgba(101,107,109,0.24);
+  }
+
+  &__button {
+    height: 3rem;
+    width: 13rem;
+  }
+}
