@@ -1,4 +1,5 @@
 .btn {
+  border: 0;
   border-radius: 1.75rem;
   font-size: $font-size-sm;
   font-weight: 800;
@@ -9,26 +10,30 @@
   text-transform: uppercase;
 
   &__primary {
-    background-color: $white;
+    background: linear-gradient(36.72deg, #00aaa6, #00b1e6);
+    box-shadow: $box-shadow-custom;
+    color: $white;
+
+    &:hover, &:active {
+      background: $white;
+      box-shadow: none;
+      color: $primary;
+    }
+  }
+
+  &__secondary {
+    background: $white;
     box-shadow: $box-shadow-2;
     color: $primary;
 
     &:hover, &:active {
-      background-color: linear-gradient(36.72deg, #00aaa6 0%, #00b1e6 100%);
+      background: linear-gradient(36.72deg, #00aaa6, #00b1e6);
       box-shadow: $box-shadow-custom;
       color: $white;
     }
   }
 
-  &__secondary {
-    background-color: linear-gradient(36.72deg, #00aaa6 0%, #00b1e6 100%);
-    box-shadow: $box-shadow-custom;
-    color: $white;
-
-    &:hover, &:active {
-      background-color: $white;
-      box-shadow: $box-shadow-2;
-      color: $primary;
-    }
+  &:focus {
+    outline: 0;
   }
 }

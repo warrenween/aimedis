@@ -11,8 +11,8 @@ export default class Title extends React.PureComponent {
     const { title, subtitle } = this.props;
     return (
       <div className="app__title">
-        <p>{subtitle}</p>
-        <p>{title}</p>
+        <p className="app__title__subtitle body">{subtitle}</p>
+        <p className="app__title__title display">{title}</p>
       </div>
     );
   }

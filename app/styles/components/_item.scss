@@ -1,0 +1,25 @@
+.app__item {
+  &__icon {
+    align-items: center;
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    width: 3.5rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 3.5rem;
+    }
+  }
+
+  &__title {
+    color: $black;
+    font-weight: $font-weight-middle;
+    margin-bottom: 1.125rem;
+    margin-top: 1rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

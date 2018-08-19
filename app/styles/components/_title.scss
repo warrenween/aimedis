@@ -1,0 +1,14 @@
+.app__title {
+
+  &__subtitle {
+    color: $primary;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: $black;
+    font-weight: $font-weight-bold;
+  }
+}

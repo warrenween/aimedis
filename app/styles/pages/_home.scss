@@ -1,0 +1,82 @@
+.app__home {
+  &__section {
+    margin-top: 9rem;
+    @include media-breakpoint-up(lg) {
+      margin: 15rem 12.5% 0;
+    }
+  }
+
+  &__section1 {
+    margin-right: 1rem;
+
+    &__header {
+      color: $black;
+      font-weight: $font-weight-bold;
+      letter-spacing: 1px;
+    }
+
+    &__subheader {
+      color: $black;
+      margin-bottom: 2.5rem;
+      margin-top: 2rem;
+      opacity: 0.5;
+    }
+
+    &__terms {
+      color: $black;
+      margin-top: 1rem;
+      opacity: 0.5;
+
+      span {
+        color: $primary;
+      }
+    }
+  }
+
+  &__section3 {
+    .app__title {
+      margin-bottom: 1.5rem;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__section4 {
+    &__subtitle {
+      color: $black;
+      font-weight: $font-weight-middle;
+      margin-bottom: 2.5rem;
+      margin-top: 1.75rem;
+      opacity: 0.5;
+      text-align: center;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+        text-align: left;
+      }
+    }
+
+    &__download {
+      margin: 0.75rem auto 0;
+      width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 0.5rem;
+        width: initial;
+      }
+
+      &:hover, &:active {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+
+    .margin-align {
+      margin-bottom: 1.5rem;
+      margin-top: -3.5rem;
+      padding: 0;
+    }
+  }
+}

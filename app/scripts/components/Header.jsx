@@ -58,7 +58,7 @@ export class Header extends React.PureComponent {
               </li>
             </ul>
             <form className="form-inline">
-              <button className="btn-primary app__header__login mx-xl-3" onClick={this.handleClick}>{user.isAuthenticated ? 'LogOut' : 'LogIn'}</button>
+              <button className="btn btn__secondary app__header__login mx-xl-3" onClick={this.handleClick}>{user.isAuthenticated ? 'LogOut' : 'LogIn'}</button>
             </form>
           </div>
 
