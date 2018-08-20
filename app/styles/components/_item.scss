@@ -1,25 +1,82 @@
 .app__item {
+  display: inline-block;
+  padding-bottom: 1.125rem;
+  padding-top: 1.5rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 2.5rem;
+    padding-top: 3.5rem;
+  }
+
+  &.active, &:hover {
+    background: linear-gradient(16.56deg, #00b0db 0%, #00acb9 33.42%, #00aaa6 100%);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
+    opacity: 0.5;
+
+    .app__item {
+      &__title {
+        color: $white;
+      }
+
+      &__icon {
+        &__img {
+          display: none;
+        }
+
+        &__active {
+          display: block;
+          padding-top: 100%;
+          position: relative;
+          width: 100%;
+          &__circle {
+            background-color: $white;
+            border-radius: 50%;
+            height: 80%;
+            left: 10%;
+            opacity: 0.9;
+            position: absolute;
+            top: 10%;
+            width: 80%;
+          }
+
+          &__triangle {
+            border-bottom: 0.5rem solid transparent;
+            border-left: 0.8rem solid $primary;
+            border-top: 0.5rem solid transparent;
+            height: 0;
+            left: calc(50% - 0.3rem);
+            position: absolute;
+            top: calc(50% - 0.4rem);
+          }
+        }
+      }
+    }
+  }
+
   &__icon {
     align-items: center;
     display: flex;
     height: 3.5rem;
     justify-content: center;
-    margin-top: 1.5rem;
     width: 3.5rem;
 
-    @include media-breakpoint-up(lg) {
-      margin-top: 3.5rem;
+    &__active {
+      display: none;
     }
   }
 
   &__title {
     color: $black;
     font-weight: $font-weight-middle;
-    margin-bottom: 1.125rem;
-    margin-top: 1rem;
+    height: 4.5rem;
+    margin-bottom: 0;
+    max-width: 14rem;
+    padding-top: 1rem;
 
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 2.5rem;
+    @include media-breakpoint-down(md) {
+      font-size: 1rem;
+      max-width: 11rem;
     }
   }
 }

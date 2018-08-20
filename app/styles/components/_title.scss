@@ -4,11 +4,16 @@
     color: $primary;
     font-weight: 800;
     letter-spacing: 0.8px;
+    margin-bottom: 0.75rem;
     text-transform: uppercase;
   }
 
   &__title {
     color: $black;
     font-weight: $font-weight-bold;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 1.625rem;
+    }
   }
 }

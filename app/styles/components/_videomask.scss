@@ -1,0 +1,67 @@
+.app__video__mask {
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+
+  @include media-breakpoint-down(md) {
+    margin: -25% auto -15%;
+  }
+
+  &__circle {
+    background-color: $secondary;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  &__circle1 {
+    height: 100%;
+    left: 0;
+    opacity: 0.05;
+    top: 0;
+    width: 100%;
+    @include media-breakpoint-down(lg) {
+      height: 70%;
+      left: 15%;
+      top: 15%;
+      width: 70%;
+    }
+  }
+
+  &__circle2 {
+    height: 70%;
+    left: 15%;
+    opacity: 0.1;
+    top: 15%;
+    width: 70%;
+    @include media-breakpoint-down(lg) {
+      height: 40%;
+      left: 30%;
+      top: 30%;
+      width: 40%;
+    }
+  }
+
+  &__circle3 {
+    height: 25%;
+    left: 37.5%;
+    opacity: 0.2;
+    top: 37.5%;
+    width: 25%;
+    @include media-breakpoint-down(lg) {
+      height: 18%;
+      left: 41%;
+      top: 41%;
+      width: 18%;
+    }
+  }
+
+  &__triangle {
+    border-bottom: 1rem solid transparent;
+    border-left: 1.6rem solid #fff;
+    border-top: 1rem solid transparent;
+    height: 0;
+    left: calc(50% - 0.5rem);
+    position: absolute;
+    top: calc(50% - 0.8rem);
+  }
+}

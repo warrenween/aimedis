@@ -2,17 +2,20 @@
   &__section {
     margin-top: 9rem;
     @include media-breakpoint-up(lg) {
+      margin: 15rem 5% 0;
+    }
+    @include media-breakpoint-up(xl) {
       margin: 15rem 12.5% 0;
     }
   }
 
   &__section1 {
-    margin-right: 1rem;
 
     &__header {
       color: $black;
       font-weight: $font-weight-bold;
       letter-spacing: 1px;
+      margin-right: 1rem;
     }
 
     &__subheader {
@@ -76,7 +79,15 @@
     .margin-align {
       margin-bottom: 1.5rem;
       margin-top: -3.5rem;
-      padding: 0;
+      padding-left: 2.5rem;
+      padding-right: 0;
+    }
+  }
+
+  &__section5 {
+    margin-top: 7rem;
+    @include media-breakpoint-up(lg) {
+      margin-top: 11rem;
     }
   }
 }
