@@ -7,7 +7,7 @@ export default class Item extends React.PureComponent {
     icon: PropTypes.string.isRequired,
     align: PropTypes.string.isRequired,
     src: PropTypes.string,
-    active: PropTypes.bool.isRequired,
+    active: PropTypes.bool,
   };
 
   render() {

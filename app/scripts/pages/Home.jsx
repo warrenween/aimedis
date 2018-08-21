@@ -5,6 +5,7 @@ import Avatar from 'components/Avatar'
 import Title from 'components/Title'
 import Item from 'components/Item'
 import Overview from '../components/Overview';
+import Carousel from '../components/Carousel';
 
 export default class Home extends React.PureComponent {
   render() {
@@ -52,13 +53,13 @@ export default class Home extends React.PureComponent {
               <Title title="What Aimedis offers" subtitle="Platform features" />
             </div>
             <div className="col-lg-3 col-6 text-center">
-              <Item title="Your health data in one place" icon="your-health-data-in-one-place" src="" align="center" active="true" />
+              <Item title="Your health data in one place" icon="your-health-data-in-one-place" src="" align="center" active={true} />
             </div>
             <div className="col-lg-3 col-6 mb-lg-5 mb-3 text-center">
-              <Item title="Videochat with doctors" icon="your-health-data-in-one-place" src="" align="center" active="true" />
+              <Item title="Videochat with doctors" icon="your-health-data-in-one-place" src="" align="center" active={true} />
             </div>
             <div className="col-lg-3 col-6 mb-lg-5 mb-3 text-center">
-              <Item title="Doctors appointments" icon="your-health-data-in-one-place" src="" align="center" active="true" />
+              <Item title="Doctors appointments" icon="your-health-data-in-one-place" src="" align="center" active={true} />
             </div>
             <div className="col-lg-3 col-6 offset-lg-3 mb-lg-5 mb-3 text-center">
               <Item title="Independent Second Opinion" icon="your-health-data-in-one-place" src="" align="center" />
@@ -123,20 +124,47 @@ export default class Home extends React.PureComponent {
             <div className="col-12 text-center">
               <Title title="Aimedis Ecosystem" subtitle="Platform Overview" />
             </div>
-            <div className="col-12 col-md-5">
-              <Overview order="1" title="Fully responsive" subtitle="In every actual browser" />
-              <Overview order="2" title="Multilanguage" subtitle="also fully functional abroad" />
-              <Overview order="3" title="Easy to use" subtitle="also for unexperienced patients simple & fast" />
-              <Overview order="4" title="ISO 21007 certification" subtitle="For optimal security through regular security audits" />
-              <Overview order="5" title="Tested by doctors & hospitals" subtitle="Tested by active physicians and medical IT specialists" />
+            <div className="col-12 col-lg-5 app__home__section5__overview">
+              <Overview order={1} title="Fully responsive" subtitle="In every actual browser" active={true} />
+              <Overview order={2} title="Multilanguage" subtitle="also fully functional abroad" />
+              <Overview order={3} title="Easy to use" subtitle="also for unexperienced patients simple & fast" />
+              <Overview order={4} title="ISO 21007 certification" subtitle="For optimal security through regular security audits" />
+              <Overview order={5} title="Tested by doctors & hospitals" subtitle="Tested by active physicians and medical IT specialists" />
             </div>
-            <div className="col-md-7">
+            <div className="col-lg-7 d-none d-lg-block">
               <img src={require(`assets/media/images/IMac.png`)} alt='No Image' />
             </div>
           </div>
           <div className="row app__home__section app__home__section6">
             <div className="col-12 text-center">
               <Title title="Testimonials" subtitle="what users say" />
+            </div>
+            <div className="col-12">
+              <Carousel />
+            </div>
+          </div>
+          <div className="row app__home__section app__home__section7 d-none d-lg-block">
+            <div className="col-12 text-left">
+              <Title title="Aimedis is mobile" subtitle="information on the go" />
+            </div>
+            <div className="app__home__section7__content">
+              <div className="app__home__section7__content__iphone">
+                <div className="app__home__section7__content__iphone__img mx-auto">
+                  <img src={require(`assets/media/icons/icon_apple.png`)} alt='No Image' />
+                </div>
+                <p className="app__home__section7__content__iphone__title">on iPhone and iPad from iOS 9</p>
+                <button className="btn btn__secondary app__home__section7__content__iphone__button">GO TO App Store</button>
+              </div>
+              <div className="app__home__section7__content__android">
+                <div className="app__home__section7__content__android__img mx-auto">
+                  <img src={require(`assets/media/icons/icon_android.png`)} alt='No Image' />
+                </div>
+                <p className="app__home__section7__content__android__title">on Android smartphones and tablet from Android 4</p>
+                <button className="btn btn__primary app__home__section7__content__android__button">GO TO GOOGLE PLAY</button>
+              </div>
+              <div className="app__home__section7__content__img ml-auto d-none">
+                <img src={require(`assets/media/images/iPhoneX-01.png`)} alt='No Image' />
+              </div>
             </div>
           </div>
         </div>

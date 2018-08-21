@@ -17,7 +17,7 @@ import { showAlert } from 'actions';
 import App from 'containers/App';
 import Loader from 'components/Loader';
 import '../styles/main.scss';
-import 'bootstrap/js/dist'
+import 'bootstrap';
 
 export const init = {
   cssRetries: 0,

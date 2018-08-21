@@ -1,0 +1,34 @@
+.app__carousel {
+  &__content {
+    .carousel {
+      .carousel-inner {
+        .carousel-item {
+          text-align: center;
+
+          img {
+            clip-path: polygon(38% 13%, 54% 31%, 90% 39%, 100% 70%, 80% 90%, 50% 100%, 22% 90%, 4% 70%, 2% 35%, 11% 9%);
+            height: 23rem;
+            width: 23rem;
+          }
+
+          &__description {
+            color: $black-75;
+            font-weight: $font-weight-middle;
+          }
+
+          &__name {
+            color: $black;
+            font-weight: $font-weight-bold;
+          }
+
+          &__caption {
+            color: $primary;
+            opacity: 0.5;
+            font-style: italic;
+            font-weight: $font-weight-bold;
+          }
+        }
+      }
+    }
+  }
+}

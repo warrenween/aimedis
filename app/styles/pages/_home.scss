@@ -89,5 +89,139 @@
     @include media-breakpoint-up(lg) {
       margin-top: 11rem;
     }
+
+    &__overview {
+      margin-top: 5rem;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    img {
+      margin-top: -3rem;
+      width: 120%;
+    }
+  }
+
+  &__section6 {
+    margin-top: 7rem;
+    @include media-breakpoint-up(lg) {
+      margin-top: 13rem;
+    }
+  }
+
+  &__section7 {
+    margin-top: 12.5rem;
+
+    &__content {
+      display: flex;
+      margin-top: 3.5rem;
+
+      &__iphone {
+        background-color: $primary;
+        border-radius: 0.75rem;
+        box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
+        display: inline-block;
+        height: 27.75rem;
+        margin-right: 4rem;
+        padding: 5.25rem 1.5rem 2.5rem;
+        text-align: center;
+        width: 16rem;
+
+        &__img {
+          align-items: center;
+          display: flex;
+          height: 3.5rem;
+          justify-content: center;
+          width: 3.5rem;
+        }
+
+        &__title {
+          color: $white;
+          font-size: $subheader-size;
+          font-weight: $font-weight-bold;
+          letter-spacing: 0.01px;
+          line-height: $body-line-height;
+          margin: 6.5rem 1rem 0;
+        }
+
+        &__button {
+          margin-top: 4.25rem;
+        }
+
+        &:hover, &:active {
+          background-color: $white;
+
+          .app__home__section7__content__iphone {
+            &__title {
+              color: #868a8c;
+            }
+
+            &__button {
+              background: linear-gradient(36.72deg, #00aaa6, #00b1e6);
+              box-shadow: $box-shadow-custom;
+              color: $white;
+            }
+          }
+        }
+      }
+
+      &__android {
+        background-color: $white;
+        border-radius: 0.75rem;
+        box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
+        display: inline-block;
+        height: 27.75rem;
+        padding: 5.25rem 1.5rem 2.5rem;
+        text-align: center;
+        width: 16rem;
+
+        &__img {
+          align-items: center;
+          display: flex;
+          height: 3.5rem;
+          justify-content: center;
+          width: 3.5rem;
+        }
+
+        &__title {
+          color: #868a8c;
+          font-size: $subheader-size;
+          font-weight: $font-weight-bold;
+          letter-spacing: 0.01px;
+          line-height: $body-line-height;
+          margin: 6.5rem 1rem 0;
+        }
+
+        &__button {
+          font-size: 0.875rem;
+          letter-spacing: 0.91px;
+          line-height: 1.25rem;
+          margin-top: 4.25rem;
+          padding: 0.875rem 1.25rem;
+        }
+
+        &:hover, &:active {
+          background-color: $primary;
+
+          .app__home__section7__content__android {
+            &__title {
+              color: $white;
+            }
+
+            &__button {
+              background: $white;
+              box-shadow: none;
+              color: $primary;
+            }
+          }
+        }
+      }
+
+      &__img {
+        // width: calc(100% - 36rem);
+      }
+    }
   }
 }

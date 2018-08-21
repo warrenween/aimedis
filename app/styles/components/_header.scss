@@ -46,16 +46,18 @@
       li.active, li:hover, li:active {
         position: relative;
 
-        &:before {
-          background: $primary;
-          border-radius: 50%;
-          content: '';
-          height: 2rem;
-          margin-left: calc(50% - 1rem);
-          margin-top: -4.7rem;
-          position: absolute;
-          text-align: center;
-          width: 2rem;
+        @include media-breakpoint-up(lg) {
+          &:before {
+            background: $primary;
+            border-radius: 50%;
+            content: '';
+            height: 2rem;
+            margin-left: calc(50% - 1rem);
+            margin-top: -4.7rem;
+            position: absolute;
+            text-align: center;
+            width: 2rem;
+          }
         }
 
         a {
