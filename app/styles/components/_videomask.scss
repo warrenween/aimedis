@@ -19,7 +19,7 @@
     opacity: 0.05;
     top: 0;
     width: 100%;
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       height: 70%;
       left: 15%;
       top: 15%;
@@ -33,7 +33,7 @@
     opacity: 0.1;
     top: 15%;
     width: 70%;
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       height: 40%;
       left: 30%;
       top: 30%;
@@ -44,10 +44,10 @@
   &__circle3 {
     height: 25%;
     left: 37.5%;
-    opacity: 0.2;
+    opacity: 0.5;
     top: 37.5%;
     width: 25%;
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       height: 18%;
       left: 41%;
       top: 41%;

@@ -1,113 +1,170 @@
 .app__home {
-  &__section {
-    margin-top: 9rem;
-    @include media-breakpoint-up(lg) {
-      margin: 15rem 5% 0;
-    }
-    @include media-breakpoint-up(xl) {
-      margin: 15rem 12.5% 0;
-    }
-  }
-
   &__section1 {
+    margin-top: 15.25rem;
 
-    &__header {
-      color: $black;
-      font-weight: $font-weight-bold;
-      letter-spacing: 1px;
-      margin-right: 1rem;
+    @include media-breakpoint-down(md) {
+      margin-top: 9.25rem;
     }
 
-    &__subheader {
-      color: $black;
-      margin-bottom: 2.5rem;
-      margin-top: 2rem;
-      opacity: 0.5;
-    }
+    &__content {
+      &__header {
+        color: $black;
+        font-size: 2.625rem;
+        font-weight: $font-weight-bold;
+        letter-spacing: 0.95px;
+        line-height: 3.5rem;
+        margin-right: 1rem;
 
-    &__terms {
-      color: $black;
-      margin-top: 1rem;
-      opacity: 0.5;
+        @include media-breakpoint-down(md) {
+          font-size: 2.25rem;
+          line-height: 3.125rem;
+        }
+      }
 
-      span {
-        color: $primary;
+      &__subheader {
+        color: $black;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        margin-bottom: 2.5rem;
+        margin-top: 2rem;
+        opacity: 0.5;
+      }
+
+      &__terms {
+        color: $black;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        margin-top: 1rem;
+        opacity: 0.5;
+
+        @include media-breakpoint-down(md) {
+          opacity: 1;
+        }
+
+        span {
+          color: $primary;
+        }
       }
     }
   }
 
   &__section3 {
-    .app__title {
-      margin-bottom: 1.5rem;
-      @include media-breakpoint-up(lg) {
-        margin-bottom: 4rem;
+    margin-top: 15rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 9rem;
+    }
+
+    &__title {
+      margin-bottom: 5rem;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &__content {
+      margin-bottom: -3.5rem;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: -1rem;
+      }
+
+      &__item {
+        margin-bottom: 3.5rem;
+        text-align: center;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 1rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
 
   &__section4 {
-    &__subtitle {
-      color: $black;
-      font-weight: $font-weight-middle;
-      margin-bottom: 2.5rem;
-      margin-top: 1.75rem;
-      opacity: 0.5;
-      text-align: center;
+    margin-top: 15rem;
 
-      @include media-breakpoint-up(lg) {
-        margin-bottom: 2rem;
-        margin-top: 1.5rem;
-        text-align: left;
-      }
+    @include media-breakpoint-down(md) {
+      margin-top: 7.25rem;
     }
 
-    &__download {
-      margin: 0.75rem auto 0;
-      width: 100%;
+    &__content {
+      &__subtitle {
+        color: $black;
+        font-weight: $font-weight-middle;
+        margin-bottom: 2.5rem;
+        margin-top: 1.75rem;
+        opacity: 0.5;
+        text-align: center;
 
-      @include media-breakpoint-up(lg) {
-        margin-top: 0.5rem;
-        width: initial;
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 2rem;
+          margin-top: 1.5rem;
+          text-align: left;
+        }
       }
 
-      &:hover, &:active {
-        background-color: $primary;
-        color: $white;
-      }
-    }
+      &__download {
+        margin: 0.75rem auto 0;
+        width: 100%;
 
-    .margin-align {
-      margin-bottom: 1.5rem;
-      margin-top: -3.5rem;
-      padding-left: 2.5rem;
-      padding-right: 0;
+        @include media-breakpoint-up(lg) {
+          margin-top: 0.5rem;
+          width: initial;
+        }
+
+        &:hover, &:active {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+
+      &__item {
+        margin-bottom: 4rem;
+        padding-left: 2.5rem;
+        padding-right: 0;
+      }
     }
   }
 
   &__section5 {
-    margin-top: 7rem;
-    @include media-breakpoint-up(lg) {
-      margin-top: 11rem;
+    margin-top: 11rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 7rem;
     }
 
-    &__overview {
-      margin-top: 5rem;
+    &__content {
+      margin-top: 7.75rem;
 
       @include media-breakpoint-down(md) {
-        margin-top: 1.5rem;
+        margin-top: 2.5rem;
       }
-    }
 
-    img {
-      margin-top: -3rem;
-      width: 120%;
+      img {
+        margin-top: -9.5rem;
+        width: 120%;
+      }
     }
   }
 
   &__section6 {
-    margin-top: 7rem;
-    @include media-breakpoint-up(lg) {
-      margin-top: 13rem;
+    margin-top: 12.5rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 7.25rem;
+    }
+
+    &__content {
+      margin-top: 4.125rem;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 2.25rem;
+      }
     }
   }
 
@@ -117,9 +174,10 @@
     &__content {
       display: flex;
       margin-top: 3.5rem;
+      padding-bottom: 13rem;
+      position: relative;
 
-      &__iphone {
-        background-color: $primary;
+      &__mobile {
         border-radius: 0.75rem;
         box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
         display: inline-block;
@@ -138,16 +196,24 @@
         }
 
         &__title {
-          color: $white;
           font-size: $subheader-size;
           font-weight: $font-weight-bold;
+          height: 3.75rem;
           letter-spacing: 0.01px;
           line-height: $body-line-height;
           margin: 6.5rem 1rem 0;
         }
 
         &__button {
-          margin-top: 4.25rem;
+          margin-top: 3rem;
+        }
+      }
+
+      &__iphone {
+        background-color: $primary;
+
+        &__title {
+          color: $white;
         }
 
         &:hover, &:active {
@@ -169,36 +235,15 @@
 
       &__android {
         background-color: $white;
-        border-radius: 0.75rem;
-        box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
-        display: inline-block;
-        height: 27.75rem;
-        padding: 5.25rem 1.5rem 2.5rem;
-        text-align: center;
-        width: 16rem;
-
-        &__img {
-          align-items: center;
-          display: flex;
-          height: 3.5rem;
-          justify-content: center;
-          width: 3.5rem;
-        }
 
         &__title {
           color: #868a8c;
-          font-size: $subheader-size;
-          font-weight: $font-weight-bold;
-          letter-spacing: 0.01px;
-          line-height: $body-line-height;
-          margin: 6.5rem 1rem 0;
         }
 
         &__button {
           font-size: 0.875rem;
           letter-spacing: 0.91px;
           line-height: 1.25rem;
-          margin-top: 4.25rem;
           padding: 0.875rem 1.25rem;
         }
 
@@ -220,7 +265,59 @@
       }
 
       &__img {
-        // width: calc(100% - 36rem);
+        left: 30rem;
+        position: absolute;
+        top: -8rem;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__section8 {
+    margin-top: 10.25rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 7.25rem;
+    }
+
+    &__content {
+      margin-top: 5.5rem;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 2.25rem;
+      }
+    }
+  }
+
+  &__section9 {
+    margin-top: 15rem;
+    @include media-breakpoint-down(md) {
+      margin-top: 5.5rem;
+    }
+
+    &__title {
+      color: $black;
+      font-size: 2.625rem;
+      font-weight: $font-weight-bold;
+      letter-spacing: 0.95px;
+      line-height: 3.5rem;
+      margin: 0 auto;
+      max-width: 25rem;
+      text-align: center;
+
+      @include media-breakpoint-down(md) {
+        font-size: 2rem;
+        line-height: 2.875rem;
+      }
+    }
+
+    &__content {
+      margin: 2.75rem auto 10rem;
+      width: 31rem;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 7.5rem;
+        width: 21.5rem;
       }
     }
   }

@@ -1,0 +1,32 @@
+.app__list {
+  height: 6rem;
+
+  @include media-breakpoint-down(md) {
+    height: 10.25rem;
+    padding-bottom: 1.125rem;
+    padding-top: 1.5rem;
+    width: 10.25rem;
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    width: 3.5rem;
+  }
+
+  &__title {
+    color: $black;
+    font-size: 1.125rem;
+    font-weight: $font-weight-middle;
+    line-height: 1.75rem;
+    padding-top: 1rem;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      max-width: 10rem;
+    }
+  }
+}

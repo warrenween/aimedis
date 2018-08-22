@@ -1,8 +1,11 @@
 .app__get__early__access {
-  height: 3.25rem;
+  font-size: 0.875rem;
+  height: 3.5rem;
+  line-height: 1.25rem;
   position: relative;
-  @include media-breakpoint-up(lg) {
-    height: 3.5rem;
+
+  @include media-breakpoint-down(md) {
+    height: 3.25rem;
   }
 
   &__input {
@@ -12,14 +15,10 @@
     box-shadow: 0 0.125rem 0.5rem 0 rgba($input-color, 0.24);
     color: $black;
     left: 0;
-    padding: 1rem 1.125rem;
+    padding: 1.125rem 1.5rem;
     position: absolute;
     top: 0;
     width: 70%;
-
-    @include media-breakpoint-up(lg) {
-      padding: 1.125rem 1.5rem;
-    }
 
     &:focus {
       outline: 0;
@@ -28,19 +27,30 @@
     &::placeholder {
       opacity: 0.25;
     }
+
+    @include media-breakpoint-down(md) {
+      padding: 1rem 1.125rem;
+
+      &::placeholder {
+        opacity: 0.5;
+      }
+    }
   }
 
   &__button {
     font-weight: 800;
     height: 100%;
     left: 55%;
-    max-width: 10rem;
+    max-width: 15rem;
     padding: 0;
     position: absolute;
     top: 0;
     width: 45%;
-    @include media-breakpoint-up(lg) {
-      max-width: 15rem;
+
+    @include media-breakpoint-down(md) {
+      font-size: 0.75rem;
+      letter-spacing: 0.78px;
+      max-width: 10rem;
     }
   }
 }
