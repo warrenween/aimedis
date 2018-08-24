@@ -36,6 +36,9 @@ export default class Home extends React.PureComponent {
                 </div>
                 <div className="col-lg-5 offset-lg-1 d-none d-lg-block app__home__section1__image">
                   <VideoMask/>
+                  <div className="app__home__mask__one">
+                    <img src={require(`assets/media/images/bg.png`)} alt='No Image'/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -155,13 +158,13 @@ export default class Home extends React.PureComponent {
             <div className="app__home__section5__content">
               <div className="row">
                 <div className="col-12 col-lg-5">
-                  <Overview order={1} title="Fully responsive" subtitle="In every actual browser" active={true}/>
-                  <Overview order={2} title="Multilanguage" subtitle="also fully functional abroad"/>
-                  <Overview order={3} title="Easy to use" subtitle="also for unexperienced patients simple & fast"/>
+                  <Overview order={1} title="Fully responsive" subtitle="In every actual browser" src="mobile.png" active={true} />
+                  <Overview order={2} title="Multilanguage" subtitle="also fully functional abroad" src="mobile.png" />
+                  <Overview order={3} title="Easy to use" subtitle="also for unexperienced patients simple & fast" src="mobile.png" />
                   <Overview order={4} title="ISO 21007 certification"
-                            subtitle="For optimal security through regular security audits"/>
+                            subtitle="For optimal security through regular security audits" src="mobile.png"/>
                   <Overview order={5} title="Tested by doctors & hospitals"
-                            subtitle="Tested by active physicians and medical IT specialists"/>
+                            subtitle="Tested by active physicians and medical IT specialists" src="mobile.png"/>
                 </div>
                 <div className="col-lg-7 d-none d-lg-block">
                   <img src={require(`assets/media/images/IMac.png`)} alt='No Image'/>
@@ -240,9 +243,6 @@ export default class Home extends React.PureComponent {
             </div>
           </div>
           <div className="app__home__mask d-none d-lg-block">
-            <div className="app__home__mask__one">
-              <img src={require(`assets/media/images/bg.png`)} alt='No Image'/>
-            </div>
             <div className="app__home__mask__two">
               <img src={require(`assets/media/images/Group 8.png`)} alt='No Image'/>
             </div>

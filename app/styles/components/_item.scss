@@ -3,6 +3,7 @@
 
   &__content {
     height: 14rem;
+    margin: 0 auto;
     padding-bottom: 2.5rem;
     padding-top: 3.5rem;
     width: 14rem;
@@ -126,6 +127,10 @@
         box-shadow: $box-shadow-3;
         opacity: 1;
         padding: 5.25rem 2rem;
+
+        @include media-breakpoint-down(md) {
+          padding: 2.5rem 2rem;
+        }
 
         &__icon {
           display: none;

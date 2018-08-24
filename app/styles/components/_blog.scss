@@ -1,5 +1,6 @@
 .app__blog {
   height: 29rem;
+  margin: 0 auto;
   padding: 1.5rem 1rem;
   width: 20rem;
   &__content {
@@ -47,8 +48,11 @@
 
   &:hover, &:active {
     cursor: pointer;
-    height: 30rem;
     margin-top: -1rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: -0.5rem;
+    }
 
     .app__blog__content__title {
       color: $primary;

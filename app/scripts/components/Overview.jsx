@@ -6,11 +6,12 @@ export default class Overview extends React.PureComponent {
     order: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
     active: PropTypes.bool,
   };
 
   render() {
-    const { order, title, subtitle, active } = this.props;
+    const { order, title, subtitle, src, active } = this.props;
     return (
       <div className={"app__overview" + (active ? " active" : "")}>
         <div className="app__overview__internal">
@@ -29,7 +30,7 @@ export default class Overview extends React.PureComponent {
           </div>
         </div>
         <div className="app__overview__external">
-          <img src={require(`assets/media/images/mobile.png`)} alt='No Image' />
+          <img src={require(`assets/media/images/` + src)} alt='No Image' />
         </div>
       </div>
     );
