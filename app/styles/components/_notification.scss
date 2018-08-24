@@ -1,0 +1,41 @@
+.app__notification {
+  align-items: center;
+  background-color: $white;
+  border-radius: 4.375rem;
+  box-shadow: $box-shadow-5;
+  display: flex;
+  padding: 2rem;
+
+  &__icon {
+    align-items: center;
+    background: $primary;
+    border-radius: 50%;
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    width: 3.5rem;
+  }
+
+  &__content {
+    margin: 0 1rem;
+  }
+
+  &__close {
+    align-items: center;
+    color: $input-color;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 100;
+    justify-content: center;
+    margin: 0.5rem;
+
+    i {
+      display: none;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

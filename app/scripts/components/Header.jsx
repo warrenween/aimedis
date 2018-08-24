@@ -27,7 +27,7 @@ export class Header extends React.PureComponent {
 
     return (
       <header className="app__header">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light mx-md-0 mx-lg-4 mx-xl-5">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="/">
             <Logo />
           </a>

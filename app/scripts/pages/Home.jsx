@@ -8,6 +8,7 @@ import List from 'components/List';
 import Overview from 'components/Overview';
 import Carousel from 'components/Carousel';
 import Blog from 'components/Blog';
+import Notification from 'components/Notification';
 
 export default class Home extends React.PureComponent {
   render() {
@@ -17,7 +18,7 @@ export default class Home extends React.PureComponent {
           <div className="app__home__section1">
             <div className="app__home__section1__content">
               <div className="row">
-                <div className="col-lg-6 col-md-12">
+                <div className="col-lg-6 col-md-12 p-lg-0">
                   <div className="app__home__section1__content__header">Aimedis is the health platform of the future.</div>
                   <div className="app__home__section1__content__subheader d-none d-lg-block">Aimedis has been developed by
                     doctors for patients, doctors and hospitals - designed to give patients the complete control over their
@@ -42,23 +43,23 @@ export default class Home extends React.PureComponent {
           <div className="app__home__section2">
             <div className="app__home__section2__content">
               <div className="row">
-                <div className="col-lg-2 col-md-6">
-                  <Avatar src="" />
+                <div className="col-lg-2 col-6 app__home__section2__content__item">
+                  <Avatar src="fhir.png" />
                 </div>
-                <div className="col-lg-2 col-md-6">
-                  <Avatar src="" />
+                <div className="col-lg-2 col-6 app__home__section2__content__item">
+                  <Avatar src="fhir.png" />
                 </div>
-                <div className="col-lg-2 col-md-6">
-                  <Avatar src="" />
+                <div className="col-lg-2 col-6 app__home__section2__content__item">
+                  <Avatar src="fhir.png" />
                 </div>
-                <div className="col-lg-2 col-md-6">
-                  <Avatar src="" />
+                <div className="col-lg-2 col-6 app__home__section2__content__item">
+                  <Avatar src="fhir.png" />
                 </div>
-                <div className="col-lg-2 col-md-6">
-                  <Avatar src="" />
+                <div className="col-lg-2 col-6 app__home__section2__content__item">
+                  <Avatar src="fhir.png" />
                 </div>
-                <div className="col-lg-2 col-md-6">
-                  <Avatar src="" />
+                <div className="col-lg-2 col-6 app__home__section2__content__item">
+                  <Avatar src="fhir.png" />
                 </div>
               </div>
             </div>
@@ -197,6 +198,9 @@ export default class Home extends React.PureComponent {
                   Android 4</p>
                 <button className="app__home__section7__content__mobile__button btn btn__primary app__home__section7__content__android__button">GO TO GOOGLE PLAY
                 </button>
+                <div className="app__home__section7__content__mobile__soon">
+                  soon
+                </div>
               </div>
               <div className="app__home__section7__content__img ml-auto">
                 <img src={require(`assets/media/images/iPhoneX-01.png`)} alt='No Image'/>
@@ -233,6 +237,35 @@ export default class Home extends React.PureComponent {
             </div>
             <div className="app__home__section9__content">
               <GetEarlyAccess/>
+            </div>
+          </div>
+          <div className="app__home__mask d-none d-lg-block">
+            <div className="app__home__mask__one">
+              <img src={require(`assets/media/images/bg.png`)} alt='No Image'/>
+            </div>
+            <div className="app__home__mask__two">
+              <img src={require(`assets/media/images/Group 8.png`)} alt='No Image'/>
+            </div>
+            <div className="app__home__mask__three">
+              <img src={require(`assets/media/images/Path 2 Copy 3.png`)} alt='No Image'/>
+            </div>
+            <div className="app__home__mask__four">
+              <img src={require(`assets/media/images/Group 2.png`)} alt='No Image'/>
+            </div>
+            <div className="app__home__mask__five">
+              <img src={require(`assets/media/images/Group 2.png`)} alt='No Image'/>
+            </div>
+            <div className="app__home__mask__notification">
+              <Notification icon="flash.png">
+                <div className="app__home__mask__notification__content">
+                  <div className="app__home__mask__notification__content__title">
+                    <span>Token sale</span> is currently live!
+                  </div>
+                  <div className="app__home__mask__notification__content__description">
+                    Ending in <span>12d 15h 3m 44s</span>
+                  </div>
+                </div>
+              </Notification>
             </div>
           </div>
         </div>

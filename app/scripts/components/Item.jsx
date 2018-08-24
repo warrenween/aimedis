@@ -13,15 +13,20 @@ export default class Item extends React.PureComponent {
     const { title, icon, src, active } = this.props;
     return (
       <div className={"app__item" + (active ? " active" : "")}>
-        <div className="app__item__icon mx-auto">
-          <img className="app__item__icon__img" src={require(`assets/media/icons/${icon}.png`)} alt='No Image' />
-          <div className="app__item__icon__active">
-            <div className="app__item__icon__active__circle" />
-            <div className="app__item__icon__active__triangle" />
+        <div className="app__item__content">
+          <div className="app__item__content__icon mx-auto">
+            <img className="app__item__content__icon__img" src={require(`assets/media/icons/${icon}.png`)} alt='No Image' />
+            <div className="app__item__content__icon__active">
+              <div className="app__item__content__icon__active__circle" />
+              <div className="app__item__content__icon__active__triangle" />
+            </div>
           </div>
+          <p className="app__item__content__title mx-auto">{title}</p>
+          <p className="app__item__content__active mx-auto">See full product overview</p>
         </div>
-        <p className="app__item__title mx-auto">{title}</p>
-        <div className="app__item__active">
+        <div className="app__item__background">
+          Image
+          <img src={require(`assets/media/icons/${icon}.png`)} alt='No Image' />
         </div>
       </div>
     );

@@ -1,5 +1,5 @@
 .app__header {
-  background: $white;
+  // background: $white;
   left: 0;
   padding-top: 2rem;
   position: fixed;
@@ -9,6 +9,10 @@
 
   nav {
     background: transparent !important;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 calc((50% - 32rem) * 0.4);
+    }
 
     .app__logo {
       img {
@@ -31,8 +35,10 @@
     }
 
     .navbar-nav {
+      margin-right: 2.625rem;
       max-width: 45rem;
       width: 100%;
+
       li a {
         color: $black-50;
         font-size: $body-size;

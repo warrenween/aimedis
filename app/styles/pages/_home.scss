@@ -1,4 +1,7 @@
 .app__home {
+  overflow: hidden;
+  position: relative;
+
   &__section1 {
     margin-top: 15.25rem;
 
@@ -13,11 +16,11 @@
         font-weight: $font-weight-bold;
         letter-spacing: 0.95px;
         line-height: 3.5rem;
-        margin-right: 1rem;
 
         @include media-breakpoint-down(md) {
           font-size: 2.25rem;
           line-height: 3.125rem;
+          margin-right: 1rem;
         }
       }
 
@@ -44,6 +47,22 @@
         span {
           color: $primary;
         }
+      }
+    }
+  }
+
+  &__section2 {
+    margin-top: 15rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 11.5rem;
+    }
+
+    &__content {
+      margin-bottom: -4.125rem;
+
+      &__item {
+        margin-bottom: 4.125rem;
       }
     }
   }
@@ -184,6 +203,7 @@
         height: 27.75rem;
         margin-right: 4rem;
         padding: 5.25rem 1.5rem 2.5rem;
+        position: relative;
         text-align: center;
         width: 16rem;
 
@@ -206,6 +226,23 @@
 
         &__button {
           margin-top: 3rem;
+        }
+
+        &__soon {
+          background: $green;
+          clip-path: ellipse(65% 60% at 70% 12%);
+          color: #fff;
+          font-size: 0.875rem;
+          font-weight: 900;
+          height: 3.75rem;
+          line-height: 1.25rem;
+          padding: 0.5rem 1.5rem;
+          position: absolute;
+          right: 0;
+          text-align: center;
+          text-transform: uppercase;
+          top: 0;
+          width: 5rem;
         }
       }
 
@@ -318,6 +355,98 @@
       @include media-breakpoint-down(md) {
         margin-bottom: 7.5rem;
         width: 21.5rem;
+      }
+    }
+  }
+
+  &__mask {
+    &__one {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+
+      img {
+        width: 40rem;
+      }
+    }
+
+    &__two {
+      left: 0;
+      position: absolute;
+      top: 100rem;
+      z-index: -1;
+
+      img {
+        width: 16.25rem;
+      }
+    }
+
+    &__three {
+      position: absolute;
+      right: 0;
+      top: 56.75rem;
+      z-index: -1;
+
+      img {
+        width: 13rem;
+      }
+    }
+
+    &__four {
+      position: absolute;
+      right: -6.5rem;
+      top: 204rem;
+      z-index: -1;
+
+      img {
+        width: 18rem;
+      }
+    }
+
+    &__five {
+      left: 0;
+      position: absolute;
+      top: 422rem;
+      z-index: -1;
+
+      img {
+        width: 13.5rem;
+      }
+    }
+
+    &__notification {
+      position: absolute;
+      right: 5rem;
+      top: 41rem;
+
+      &__content {
+        margin-right: 1rem;
+
+        &__title {
+          color: #060606;
+          font-size: 1.125rem;
+          font-weight: 800;
+          letter-spacing: 1.29px;
+          line-height: 1.5rem;
+
+          span {
+            color: $primary;
+          }
+        }
+
+        &__description {
+          color: $input-color;
+          font-size: 1rem;
+          font-weight: $font-weight-middle;
+          letter-spacing: 1.14px;
+          line-height: 1.25rem;
+          margin-top: 0.5rem;
+
+          span {
+            font-weight: $font-weight-bold;
+          }
+        }
       }
     }
   }
