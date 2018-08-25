@@ -1,0 +1,58 @@
+.app__product__item {
+  &__content {
+    &__info {
+      &__title {
+        color: $black;
+        font-size: 2.625rem;
+        font-weight: $font-weight-bold;
+        letter-spacing: 0.95px;
+        line-height: 3.5rem;
+      }
+      &__description {
+        color: $black;
+        font-size: 1rem;
+        font-weight: $font-weight-middle;
+        line-height: 1.75rem;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        opacity: 0.5;
+      }
+      &__button {
+        align-items: center;
+        display: flex;
+        margin-top: 3rem;
+        &__icon {
+          background-color: #00aeca;
+          border-radius: 50%;
+          height: 2.5rem;
+          position: relative;
+          width: 2.5rem;
+          &__triangle {
+            border-bottom: 0.5rem solid transparent;
+            border-left: 0.75rem solid #fff;
+            border-top: 0.5rem solid transparent;
+            height: 0;
+            left: calc(50% - 0.25rem);
+            position: absolute;
+            top: calc(50% - 0.5rem);
+          }
+        }
+        &__text {
+          color: $black;
+          font-size: 0.875rem;
+          font-weight: 800;
+          letter-spacing: 0.91px;
+          line-height: 1.25rem;
+          margin-bottom: 0rem;
+          margin-left: 0.75rem;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .direction-rtl {
+      direction: rtl;
+      padding-right: 60px;
+    }
+  }
+}

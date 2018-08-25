@@ -1,0 +1,138 @@
+.app__product {
+  overflow: hidden;
+  position: relative;
+
+  &__section1 {
+    margin-top: 15.1875rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 9.25rem;
+    }
+
+    &__content {
+      &__item + &__item {
+        margin-top: 15.3125rem;
+      }
+    }
+  }
+
+  &__section2 {
+    margin-top: 17.25rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 7.625rem;
+    }
+
+    &__content {
+      margin-top: 7.75rem;
+
+      &__title {
+        color: $black;
+        font-size: 2.625rem;
+        font-weight: 900;
+        letter-spacing: 0.95px;
+        line-height: 3.5rem;
+        margin-bottom: 2.75rem;
+      }
+
+      &__mobile {
+        display: flex;
+
+        &__button {
+          background-color: $black;
+          border-radius: 0.75rem;
+          display: flex;
+          height: 4.25rem;
+          padding: 0.875rem 1.125rem;
+          width: 12.375rem;
+          &__title {
+            color: $white;
+            font-family: "Lucida Grande";
+            &__small {
+              font-size: 0.75rem;
+              letter-spacing: 0.15px;
+              line-height: 0.75rem;
+              margin-bottom: 0;
+            }
+            &__big {
+              font-size: 1.25rem;
+              font-weight: bold;
+              letter-spacing: 0.18px;
+              line-height: 1.75rem;
+            }
+          }
+
+          img {
+            height: 1.75rem;
+            margin-right: 0.5rem;
+            width: 1.75rem;
+          }
+        }
+
+        &__button + &__button {
+          margin-left: 1rem;
+        }
+
+        &__image {
+          img {
+            bottom: 0;
+            height: 702px;
+            position: absolute;
+            right: 0;
+            width: 352px;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  &__section3 {
+    margin-bottom: 10rem;
+    margin-top: 13.125rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 7.5rem;
+      margin-top: 6.375rem;
+    }
+  }
+  &__mask {
+    &__two {
+      left: -5rem;
+      position: absolute;
+      top: 84rem;
+      z-index: -1;
+
+      img {
+        width: 16.25rem;
+      }
+    }
+
+    &__four {
+      position: absolute;
+      right: -3rem;
+      top: 153rem;
+      z-index: -1;
+
+      img {
+        transform: scaleX(-1);
+        width: 13.5rem;
+      }
+    }
+
+    &__five {
+      position: absolute;
+      right: -3rem;
+      top: 283rem;
+      z-index: -1;
+
+      img {
+        transform: scaleX(-1);
+        width: 13.5rem;
+      }
+    }
+  }
+}

@@ -1,4 +1,8 @@
 .app__overview {
+  @include media-breakpoint-up(lg) {
+    width: 24.125rem;
+  }
+
   &__internal {
     background-color: $white;
     border-radius: 0.75rem;
@@ -104,7 +108,8 @@
           justify-content: center;
 
           img {
-            margin-top: 1rem;
+            margin-bottom: 2.25rem;
+            margin-top: 2.25rem;
             width: initial;
           }
         }

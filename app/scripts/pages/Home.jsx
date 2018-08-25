@@ -9,13 +9,14 @@ import Overview from 'components/Overview';
 import Carousel from 'components/Carousel';
 import Blog from 'components/Blog';
 import Notification from 'components/Notification';
+import Feature from 'components/Feature';
 
 export default class Home extends React.PureComponent {
   render() {
     return (
       <div key="Home" className="app__home app__route">
         <div className="container">
-          <div className="app__home__section1">
+          <section className="app__home__section1">
             <div className="app__home__section1__content">
               <div className="row">
                 <div className="col-lg-6 col-md-12 p-lg-0">
@@ -42,8 +43,8 @@ export default class Home extends React.PureComponent {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="app__home__section2">
+          </section>
+          <section className="app__home__section2">
             <div className="app__home__section2__content">
               <div className="row">
                 <div className="col-lg-2 col-6 app__home__section2__content__item">
@@ -66,8 +67,8 @@ export default class Home extends React.PureComponent {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="app__home__section3">
+          </section>
+          <section className="app__home__section3">
             <div className="app__home__section3__title text-center">
               <Title title="What Aimedis offers" subtitle="Platform features"/>
             </div>
@@ -102,8 +103,8 @@ export default class Home extends React.PureComponent {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="app__home__section4">
+          </section>
+          <section className="app__home__section4">
             <div className="app__home__section4__content">
               <div className="row">
                 <div className="col-lg-5 col-md-12">
@@ -150,8 +151,8 @@ export default class Home extends React.PureComponent {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="app__home__section5">
+          </section>
+          <section className="app__home__section5">
             <div className="app__home__section5__title text-center">
               <Title title="Aimedis Ecosystem" subtitle="Platform Overview"/>
             </div>
@@ -171,16 +172,16 @@ export default class Home extends React.PureComponent {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="app__home__section6">
+          </section>
+          <section className="app__home__section6">
             <div className="app__home__section6__title text-center">
               <Title title="Testimonials" subtitle="what users say"/>
             </div>
             <div className="app__home__section6__content">
               <Carousel/>
             </div>
-          </div>
-          <div className="app__home__section7 d-none d-lg-block">
+          </section>
+          <section className="app__home__section7 d-none d-lg-block">
             <div className="app__home__section7__title">
               <Title title="Aimedis is mobile" subtitle="information on the go"/>
             </div>
@@ -190,7 +191,7 @@ export default class Home extends React.PureComponent {
                   <img src={require(`assets/media/icons/icon_apple.png`)} alt='No Image'/>
                 </div>
                 <p className="app__home__section7__content__mobile__title app__home__section7__content__iphone__title">on iPhone and iPad from iOS 9</p>
-                <button className="btn btn__secondary app__home__section7__content__iphone__button">GO TO App Store
+                <button className="btn btn__secondary app__home__section7__content__mobile__button app__home__section7__content__iphone__button">GO TO App Store
                 </button>
               </div>
               <div className="app__home__section7__content__mobile app__home__section7__content__android">
@@ -209,8 +210,8 @@ export default class Home extends React.PureComponent {
                 <img src={require(`assets/media/images/iPhoneX-01.png`)} alt='No Image'/>
               </div>
             </div>
-          </div>
-          <div className="app__home__section8">
+          </section>
+          <section className="app__home__section8">
             <div className="app__home__section8__title text-center">
               <Title title="Aimedis Blog" subtitle="Learn what’s new"/>
             </div>
@@ -233,16 +234,11 @@ export default class Home extends React.PureComponent {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="app__home__section9">
-            <div className="app__home__section9__title">
-              Discover the best features for you.
-            </div>
-            <div className="app__home__section9__content">
-              <GetEarlyAccess/>
-            </div>
-          </div>
-          <div className="app__home__mask d-none d-lg-block">
+          </section>
+          <section className="app__home__section9">
+            <Feature />
+          </section>
+          <section className="app__home__mask d-none d-lg-block">
             <div className="app__home__mask__two">
               <img src={require(`assets/media/images/Group 8.png`)} alt='No Image'/>
             </div>
@@ -267,7 +263,7 @@ export default class Home extends React.PureComponent {
                 </div>
               </Notification>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     );

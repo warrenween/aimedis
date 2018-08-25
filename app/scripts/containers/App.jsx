@@ -12,9 +12,11 @@ import config from 'config';
 import { showAlert } from 'actions';
 
 import HomeRoute from 'routes/HomeRoute';
+import ProductRoute from 'routes/ProductRoute';
 import ProfileRoute from 'routes/ProfileRoute';
 
 import Home from 'pages/Home';
+import Product from 'pages/Product';
 import Profile from 'pages/Profile';
 import NotFound from 'pages/NotFound';
 
@@ -62,6 +64,7 @@ export class App extends React.Component {
           <main className="app__main">
             <Switch>
               <HomeRoute isAuthenticated={user.isAuthenticated} path="/" exact component={Home} />
+              <ProductRoute isAuthenticated={user.isAuthenticated} path="/product" exact component={Product} />
               <ProfileRoute isAuthenticated={user.isAuthenticated} path="/profile" component={Profile} />
               <Route component={NotFound} />
             </Switch>
