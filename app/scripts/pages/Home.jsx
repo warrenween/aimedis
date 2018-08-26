@@ -169,6 +169,9 @@ export default class Home extends React.PureComponent {
                 </div>
                 <div className="col-lg-7 d-none d-lg-block">
                   <img src={require(`assets/media/images/IMac.png`)} alt='No Image'/>
+                  <div className="app__home__mask__four">
+                    <img src={require(`assets/media/images/Group 2.png`)} alt='No Image'/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -244,9 +247,6 @@ export default class Home extends React.PureComponent {
             </div>
             <div className="app__home__mask__three">
               <img src={require(`assets/media/images/Path 2 Copy 3.png`)} alt='No Image'/>
-            </div>
-            <div className="app__home__mask__four">
-              <img src={require(`assets/media/images/Group 2.png`)} alt='No Image'/>
             </div>
             <div className="app__home__mask__five">
               <img src={require(`assets/media/images/Group 2.png`)} alt='No Image'/>

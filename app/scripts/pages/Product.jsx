@@ -3,6 +3,7 @@ import ProductItem from 'components/ProductItem';
 import Feature from 'components/Feature';
 import Title from 'components/Title';
 import Overview from 'components/Overview';
+import ProductCarousel from 'components/ProductCarousel';
 
 export default class Product extends React.PureComponent {
   render() {
@@ -10,44 +11,7 @@ export default class Product extends React.PureComponent {
       <div key="Product" className="app__product app__route">
         <div className="container">
           <section className="app__product__section1">
-            <div className="app__product__section1__content">
-              <div className="app__product__section1__content__item">
-                <ProductItem title="Your health data in one place."
-                             description="Aimedis has been developed by doctors for patients, doctors and hospitals - designed to give patients the complete control over their health data and support."
-                             src="Product1.png"
-                             align="left"/>
-              </div>
-              <div className="app__product__section1__content__item">
-                <ProductItem title="Video chat with doctor."
-                             description="Aimedis has been developed by doctors for patients, doctors and hospitals - designed to give patients the complete control over their health data and support."
-                             src="Product2.png"
-                             align="right"/>
-              </div>
-              <div className="app__product__section1__content__item">
-                <ProductItem title="Independent Second Opinion."
-                             description="Aimedis has been developed by doctors for patients, doctors and hospitals - designed to give patients the complete control over their health data and support."
-                             src="Product1.png"
-                             align="left"/>
-              </div>
-              <div className="app__product__section1__content__item">
-                <ProductItem title="Video chat with doctor."
-                             description="Aimedis has been developed by doctors for patients, doctors and hospitals - designed to give patients the complete control over their health data and support."
-                             src="Product2.png"
-                             align="right"/>
-              </div>
-              <div className="app__product__section1__content__item">
-                <ProductItem title="Independent Second Opinion."
-                             description="Aimedis has been developed by doctors for patients, doctors and hospitals - designed to give patients the complete control over their health data and support."
-                             src="Product1.png"
-                             align="left"/>
-              </div>
-              <div className="app__product__section1__content__item">
-                <ProductItem title="Video chat with doctor."
-                             description="Aimedis has been developed by doctors for patients, doctors and hospitals - designed to give patients the complete control over their health data and support."
-                             src="Product2.png"
-                             align="right"/>
-              </div>
-            </div>
+            <ProductCarousel/>
           </section>
           <section className="app__product__section2">
             <div className="app__product__section2__title text-center d-block d-lg-none">

@@ -12,8 +12,11 @@ export default class ProductItem extends React.PureComponent {
   render() {
     const { title, description, src, align } = this.props;
 
-    const content1 = (<div className="col-6 p-0 app__product__item__content__info">
+    const content1 = (<div className="col-12 col-lg-6 p-lg-0 app__product__item__content__info">
       <p className="app__product__item__content__info__title">{title}</p>
+      <div className="app__product__item__content__info__image d-block d-lg-none">
+        <img src={require(`assets/media/images/mobile.png`)} alt='No Image'/>
+      </div>
       <p className="app__product__item__content__info__description">{description}</p>
       <div className="app__product__item__content__info__button">
         <div className="app__product__item__content__info__button__icon">
@@ -29,9 +32,9 @@ export default class ProductItem extends React.PureComponent {
       <div className="app__product__item">
         <div className="app__product__item__content">
           <div className="row">
-            {align === 'right' && <div className="col-6 direction-rtl"> {content2} </div>}
+            {align === 'right' && <div className="col-6 d-none d-lg-flex direction-rtl"> {content2} </div>}
             {content1}
-            {align === 'left' && <div className="col-6"> {content2} </div>}
+            {align === 'left' && <div className="col-6 d-none d-lg-flex"> {content2} </div>}
           </div>
         </div>
       </div>

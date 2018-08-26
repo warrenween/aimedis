@@ -1,0 +1,55 @@
+.app__product__carousel {
+  &__content {
+    position: relative;
+
+    &__inner {
+      &__item {
+        margin-top: 15.3125rem;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        .app__product__carousel__content__inner {
+          &__item {
+            display: none;
+            margin-top: 0;
+
+            &.active {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    &__external {
+      left: 50%;
+      position: absolute;
+      top: 40.625rem;
+      z-index: 1000;
+
+      &__content {
+        display: flex;
+        margin-left: -50%;
+
+        &__item {
+          background: $primary;
+          border-radius: 50%;
+          height: 0.5rem;
+          margin-right: 1rem;
+          opacity: 0.6;
+          width: 0.5rem;
+
+          &.active {
+            height: 0.75rem;
+            opacity: 1;
+            width: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}

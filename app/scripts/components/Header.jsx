@@ -48,7 +48,7 @@ export class Header extends React.PureComponent {
                 <a className="nav-link" href="/blog">Blog</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about-us">About us</a>
+                <a className="nav-link" href="/about">About us</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/institutions">Institutions</a>

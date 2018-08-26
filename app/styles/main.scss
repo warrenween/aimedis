@@ -45,10 +45,14 @@
 @import 'components/blog';
 @import 'components/notification';
 @import 'components/product_item';
+@import 'components/product_carousel';
 @import 'components/feature';
+@import 'components/group_toggle';
+@import 'components/group_toggle_item';
 
 // *** Routes
 @import 'pages/home';
 @import 'pages/product';
+@import 'pages/about';
 @import 'pages/profile';
 @import 'pages/not-found';

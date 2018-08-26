@@ -17,12 +17,12 @@ export default class Carousel extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    clearInterval(this.timerID);
+    // clearInterval(this.timerID);
   }
 
   prev = () => {
     this.setState((prevState) => {
-      return { active: (prevState.active + 2) % prevState.count }
+      return { active: (prevState.active + prevState.count - 1) % prevState.count }
     });
   };
 
@@ -75,7 +75,7 @@ export default class Carousel extends React.PureComponent {
         <div className="app__carousel__content__indicator__prev">
           <span className="i-long-arrow-left" />
         </div>
-        { listItems[(active + 2) % count] }
+        { listItems[(active + count - 1) % count] }
       </div>
     );
 
