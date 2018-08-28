@@ -14,7 +14,7 @@ export default class GroupToggle extends React.PureComponent {
     const listGroup1 = [
       {
         id: 0,
-        src: 'ProfHeuer.png',
+        src: 'team1.png',
         title: 'Dr. Michael J. Kaldasch',
         subTitle: 'CEO, MD & founder',
         facebook: '',
@@ -22,7 +22,7 @@ export default class GroupToggle extends React.PureComponent {
       },
       {
         id: 1,
-        src: 'ProfHeuer.png',
+        src: 'team2.png',
         title: 'Dr. Michael J. Kaldasch',
         subTitle: 'CEO, MD & founder',
         facebook: '',
@@ -30,7 +30,7 @@ export default class GroupToggle extends React.PureComponent {
       },
       {
         id: 2,
-        src: 'ProfHeuer.png',
+        src: 'team1.png',
         title: 'Dr. Michael J. Kaldasch',
         subTitle: 'CEO, MD & founder',
         facebook: '',
@@ -38,7 +38,7 @@ export default class GroupToggle extends React.PureComponent {
       },
       {
         id: 3,
-        src: 'ProfHeuer.png',
+        src: 'team3.png',
         title: 'Dr. Michael J. Kaldasch',
         subTitle: 'CEO, MD & founder',
         facebook: '',
@@ -46,7 +46,7 @@ export default class GroupToggle extends React.PureComponent {
       },
       {
         id: 4,
-        src: 'ProfHeuer.png',
+        src: 'team5.png',
         title: 'Dr. Michael J. Kaldasch',
         subTitle: 'CEO, MD & founder',
         facebook: '',
@@ -54,7 +54,7 @@ export default class GroupToggle extends React.PureComponent {
       },
       {
         id: 5,
-        src: 'ProfHeuer.png',
+        src: 'team1.png',
         title: 'Dr. Michael J. Kaldasch',
         subTitle: 'CEO, MD & founder',
         facebook: '',
@@ -62,7 +62,7 @@ export default class GroupToggle extends React.PureComponent {
       },
       {
         id: 6,
-        src: 'ProfHeuer.png',
+        src: 'team4.png',
         title: 'Dr. Michael J. Kaldasch',
         subTitle: 'CEO, MD & founder',
         facebook: '',
@@ -76,16 +76,28 @@ export default class GroupToggle extends React.PureComponent {
 
     for (let i = 0; i < list.length; i++) {
       result.push(
-        <div className="col-6 col-lg-3">
+        <div className="col-6 col-lg-3" key={i}>
           <GroupToggleItem src={list[i].src}
-                         title={list[i].title}
-                         subTitle={list[i].subTitle}
-                         facebook={list[i].facebook}
-                         linkedin={list[i].linkedin}
+                           title={list[i].title}
+                           subTitle={list[i].subTitle}
+                           facebook={list[i].facebook}
+                           linkedin={list[i].linkedin}
+                           key={i}
           />
         </div>
       );
     }
+
+    result.push(
+      <div className="col-6 col-lg-3" key={7}>
+        <GroupToggleItem src="team_mask.png"
+                         title="Join our team"
+                         subTitle="SEE ALL POSITIONS"
+                         key={7}
+                         last={true}
+        />
+      </div>
+    );
 
     return result;
   };
@@ -98,13 +110,21 @@ export default class GroupToggle extends React.PureComponent {
   };
 
   render() {
+    const { active } = this.state;
+
     return (
       <div className="app__group__toggle">
         <div className="app__group__toggle__button" onClick={this.activeClick}>
+          <div className={'app__group__toggle__button__team' + (active ? ' active' : '')}>
+            <span>TEAM</span>
+          </div>
+          <div className={'app__group__toggle__button__board' + (!active ? ' active' : '')}>
+            <span>BOARD</span>
+          </div>
         </div>
         <div className="app__group__toggle__content">
           <div className="row">
-            { this.content() }
+            {this.content()}
           </div>
         </div>
       </div>

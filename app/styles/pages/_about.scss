@@ -54,4 +54,182 @@
       }
     }
   }
+
+  &__section2 {
+    margin-top: 8.75rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 7rem;
+    }
+  }
+
+  &__section3 {
+    margin-top: 8.75rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 35rem;
+    }
+
+    &__title {
+      padding: 0 1rem;
+
+      .app__title__title {
+        @include media-breakpoint-down(md) {
+          line-height: 2.375rem;
+        }
+      }
+    }
+
+    &__content {
+      margin-top: 4rem;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 3.75rem;
+      }
+
+      &__form {
+        @include media-breakpoint-up(lg) {
+          padding-left: 4.5rem;
+        }
+
+        label {
+          color: $black;
+          display: block;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+
+        input {
+          background-color: rgba($input-color, 0.09);
+          border: 0;
+          border-radius: 0.5rem;
+          box-shadow: 0 0.125rem 0.5rem 0 rgba($input-color, 0.24);
+          display: block;
+          max-width: 24.5rem;
+          opacity: 0.6;
+          width: 100%;
+        }
+
+        label + input {
+          margin-top: 0.75rem;
+        }
+
+        input + label {
+          margin-top: 1.5rem;
+        }
+
+        &__name, &__email {
+          height: 3.5rem;
+        }
+
+        &__message {
+          height: 11.125rem;
+        }
+
+        &__button {
+          height: 3.5rem;
+          margin: 2.5rem auto;
+          width: 13rem;
+
+          @include media-breakpoint-down(md) {
+            display: block;
+          }
+        }
+      }
+
+      &__telegram {
+        padding-left: 2rem;
+
+        @include media-breakpoint-down(md) {
+          padding-left: 1rem;
+          position: absolute;
+          top: 134rem;
+        }
+
+        &__title {
+          color: $black;
+          font-size: 1.5rem;
+          font-weight: $font-weight-middle;
+          line-height: 2rem;
+          margin-top: 4rem;
+
+          span {
+            font-weight: 800;
+          }
+        }
+
+        &__link {
+          color: $primary;
+          display: block;
+          font-size: 1.125rem;
+          font-weight: $font-weight-bold;
+          line-height: 1.75rem;
+          margin-top: 1.375rem;
+        }
+
+        &__image {
+          height: 14.625rem;
+          margin-top: 2rem;
+          width: 16.25rem;
+
+          @include media-breakpoint-down(md) {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+
+  &__section4 {
+    height: 31.75rem;
+    margin-top: 7rem;
+
+    @include media-breakpoint-down(md) {
+      height: 35.25rem;
+      margin-top: 5rem;
+    }
+
+    &__content {
+      position: relative;
+      width: 100%;
+
+      &__info {
+        background-color: $primary;
+        border-radius: 0.5rem;
+        bottom: 11.25rem;
+        height: 13rem;
+        padding: 1.625rem 2rem 1.5rem;
+        position: absolute;
+        width: 20.5rem;
+
+        &__title {
+          color: $white;
+          font-size: 1.5rem;
+          font-weight: 800;
+          line-height: 2rem;
+        }
+
+        &__subtitle {
+          color: $white;
+          font-size: 1rem;
+          font-weight: 800;
+          line-height: 1.75rem;
+        }
+
+        &__link {
+          color: $white;
+          font-size: 0.75rem;
+          font-weight: 800;
+          line-height: 1.25rem;
+          text-transform: uppercase;
+        }
+
+        @include media-breakpoint-down(md) {
+          bottom: 2rem;
+          left: calc(50% - 10.25rem);
+        }
+      }
+    }
+  }
 }
