@@ -1,5 +1,6 @@
 .app__overview {
   @include media-breakpoint-up(lg) {
+    height: 7.25rem;
     width: 24.125rem;
   }
 
@@ -7,11 +8,12 @@
     background-color: $white;
     border-radius: 0.75rem;
     box-shadow: $box-shadow-3;
+    height: 100%;
     margin-bottom: 0.75rem;
 
     &__content {
       display: flex;
-      padding: 1.5rem 2rem 2.5rem 1.5rem;
+      padding: 1.5rem;
 
       &__order {
         align-items: center;
@@ -44,6 +46,7 @@
 
         &__subtitle {
           color: $black;
+          margin-right: 1rem;
           opacity: 0.5;
         }
 
@@ -104,16 +107,40 @@
         }
 
         &__external {
-          display: flex;
-          justify-content: center;
+          display: block;
+          position: relative;
 
-          img {
-            margin-bottom: 2.25rem;
-            margin-top: 2.25rem;
-            width: initial;
+          &__image {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+
+            img {
+              margin-bottom: 2.25rem;
+              margin-top: 2.25rem;
+              width: initial;
+            }
+          }
+
+          &__download {
+            bottom: 4rem;
+            margin: 0.75rem auto 0;
+            padding: 1rem 0;
+            position: absolute;
+            width: 100%;
+
+            &:hover, &:active {
+              background-color: $primary;
+              color: $white;
+            }
           }
         }
       }
     }
   }
+
+  & + & {
+    margin-top: 0.75rem;
+  }
 }
+

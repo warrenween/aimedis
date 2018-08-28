@@ -49,10 +49,15 @@
 @import 'components/feature';
 @import 'components/group_toggle';
 @import 'components/group_toggle_item';
+@import 'components/institutions_item';
 
 // *** Routes
 @import 'pages/home';
 @import 'pages/product';
 @import 'pages/about';
+@import 'pages/institutions';
+@import 'pages/investor';
+@import 'pages/policy';
+@import 'pages/terms';
 @import 'pages/profile';
 @import 'pages/not-found';

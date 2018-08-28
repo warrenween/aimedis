@@ -1,0 +1,98 @@
+.app__terms {
+  &__section1 {
+    margin-bottom: 13rem;
+    margin-top: 11.25rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10rem;
+      margin-top: 8.75rem;
+    }
+
+    &__content {
+      &__title {
+        color: $black;
+        font-size: 2.25rem;
+        font-weight: $font-weight-bold;
+        line-height: 2.25rem;
+
+        @include media-breakpoint-down(md) {
+          font-size: 1.625rem;
+          line-height: 2.625rem;
+        }
+      }
+
+      &__subtitle {
+        color: $black;
+        font-size: 1.125rem;
+        font-weight: $font-weight-bold;
+        line-height: 2.25rem;
+        margin-bottom: 2.25rem;
+        margin-top: 2.25rem;
+
+        @include media-breakpoint-down(md) {
+          font-size: 1.125rem;
+          line-height: 2.25rem;
+          margin-bottom: 2.125rem;
+          margin-top: 1.875rem;
+        }
+      }
+
+      &__description1 {
+        color: #13152b;
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+        margin-bottom: 2.75rem;
+        text-align: justify;
+
+        @include media-breakpoint-down(md) {
+          color: $black;
+          font-size: 1rem;
+          line-height: 1.75rem;
+        }
+
+        span {
+          font-weight: $font-weight-bold;
+        }
+      }
+
+      &__description2 {
+        color: #13152b;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        margin-bottom: 2rem;
+        text-align: justify;
+
+        @include media-breakpoint-down(md) {
+          color: $black;
+        }
+
+        span {
+          font-weight: $font-weight-bold;
+        }
+      }
+
+      &__subheader {
+        color: $black;
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 2.25rem;
+        margin-bottom: 2.25rem;
+      }
+    }
+  }
+
+  &__mask {
+    &__bottom {
+      position: absolute;
+      right: -5rem;
+      top: 55rem;
+      transform: scale(-1, -1);
+      z-index: -1;
+
+      img {
+        opacity: 0.32;
+        width: 25rem;
+      }
+    }
+  }
+}

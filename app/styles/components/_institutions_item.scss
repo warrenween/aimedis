@@ -1,0 +1,45 @@
+.app__institutions__item {
+  &__content {
+    &__info {
+      &__description {
+        color: $black;
+        font-size: 1rem;
+        font-weight: $font-weight-middle;
+        line-height: 1.75rem;
+        margin-top: 2rem;
+        opacity: 0.5;
+      }
+
+      &__download {
+        margin-top: 2rem;
+        padding: 1.125rem 1.5rem;
+      }
+    }
+
+    &__image {
+      margin-bottom: -100%;
+      margin-top: -5rem;
+      position: initial;
+
+      img {
+        max-width: 40rem;
+        position: absolute;
+        right: 0;
+        width: 50%;
+      }
+    }
+  }
+
+  .direction-rtl {
+    direction: rtl;
+    padding-right: 3.75rem;
+
+    img {
+      left: 0;
+    }
+  }
+
+  & + & {
+    margin-top: 17rem;
+  }
+}

@@ -1,0 +1,72 @@
+.app__policy {
+  &__section1 {
+    margin-bottom: 7.5rem;
+    margin-top: 11.25rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 6rem;
+      margin-top: 8.75rem;
+    }
+
+    &__content {
+      &__title {
+        color: $black;
+        font-size: 2.25rem;
+        font-weight: $font-weight-bold;
+        line-height: 2.25rem;
+        margin-bottom: 2.5rem;
+
+        @include media-breakpoint-down(md) {
+          font-size: 1.625rem;
+          line-height: 2.625rem;
+          margin-bottom: 2rem;
+        }
+      }
+
+      &__description {
+        color: #13152b;
+        font-size: 1rem;
+        line-height: 1.625rem;
+        margin-bottom: 2rem;
+        text-align: justify;
+
+        @include media-breakpoint-down(md) {
+          color: $black;
+          line-height: 1.75rem;
+          margin-bottom: 2rem;
+        }
+      }
+
+      &__subtitle1 {
+        color: $black;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 2.25rem;
+      }
+
+      &__subtitle2 {
+        color: $black;
+        font-size: 1.125rem;
+        font-weight: bold;
+        line-height: 2.25rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  &__mask {
+    &__bottom {
+      bottom: 10rem;
+      position: absolute;
+      right: 0;
+      transform: scaleX(-1);
+      z-index: -1;
+
+      img {
+        height: 28rem;
+        opacity: 0.32;
+        width: 15rem;
+      }
+    }
+  }
+}

@@ -7,11 +7,12 @@ export default class Overview extends React.PureComponent {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
+    link: PropTypes.string,
     active: PropTypes.bool,
   };
 
   render() {
-    const { order, title, subtitle, src, active } = this.props;
+    const { order, title, subtitle, src, link, active } = this.props;
     return (
       <div className={"app__overview" + (active ? " active" : "")}>
         <div className="app__overview__internal">
@@ -30,7 +31,10 @@ export default class Overview extends React.PureComponent {
           </div>
         </div>
         <div className="app__overview__external">
-          <img src={require(`assets/media/images/` + src)} alt='No Image' />
+          <div className="app__overview__external__image">
+            <img src={require(`assets/media/images/` + src)} alt='No Image' />
+          </div>
+          {link && <button className="app__overview__external__download body btn btn__secondary ml-0" type="button">DOWNLOAD THE CASE STUDY (8.4 MB)</button> }
         </div>
       </div>
     );

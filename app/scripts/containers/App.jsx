@@ -14,11 +14,19 @@ import { showAlert } from 'actions';
 import HomeRoute from 'routes/HomeRoute';
 import ProductRoute from 'routes/ProductRoute';
 import AboutRoute from 'routes/AboutRoute';
+import InstitutionsRoute from 'routes/InstitutionsRoute';
+import InvestorRoute from 'routes/InvestorRoute';
+import TermsRoute from 'routes/TermsRoute';
+import PolicyRoute from 'routes/PolicyRoute';
 import ProfileRoute from 'routes/ProfileRoute';
 
 import Home from 'pages/Home';
 import Product from 'pages/Product';
 import About from 'pages/About';
+import Institutions from 'pages/Institutions';
+import Investor from 'pages/Investor';
+import Terms from 'pages/Terms';
+import Policy from 'pages/Policy';
 import Profile from 'pages/Profile';
 import NotFound from 'pages/NotFound';
 
@@ -68,6 +76,10 @@ export class App extends React.Component {
               <HomeRoute isAuthenticated={user.isAuthenticated} path="/" exact component={Home} />
               <ProductRoute isAuthenticated={user.isAuthenticated} path="/product" exact component={Product} />
               <AboutRoute isAuthenticated={user.isAuthenticated} path="/about" exact component={About} />
+              <InstitutionsRoute isAuthenticated={user.isAuthenticated} path="/institutions" exact component={Institutions} />
+              <InvestorRoute isAuthenticated={user.isAuthenticated} path="/investor" exact component={Investor} />
+              <TermsRoute isAuthenticated={user.isAuthenticated} path="/terms" exact component={Terms} />
+              <PolicyRoute isAuthenticated={user.isAuthenticated} path="/policy" exact component={Policy} />
               <ProfileRoute isAuthenticated={user.isAuthenticated} path="/profile" component={Profile} />
               <Route component={NotFound} />
             </Switch>
