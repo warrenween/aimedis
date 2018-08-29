@@ -22,13 +22,13 @@ export default class Carousel extends React.PureComponent {
 
   prev = () => {
     this.setState((prevState) => {
-      return { active: (prevState.active + prevState.count - 1) % prevState.count }
+      return { active: (prevState.active + prevState.count - 1) % prevState.count };
     });
   };
 
   next = () => {
     this.setState((prevState) => {
-      return { active: (prevState.active + 1) % prevState.count }
+      return { active: (prevState.active + 1) % prevState.count };
     });
   };
 

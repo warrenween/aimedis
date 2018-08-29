@@ -1,0 +1,89 @@
+.app__blog {
+  overflow: hidden;
+  position: relative;
+
+  &__section1 {
+    margin-top: 8.75rem;
+
+    &__mobile {
+      &__subtitle {
+        color: $primary;
+        font-size: 0.875rem;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        line-height: 1.25rem;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+
+      &__title {
+        color: $black;
+        font-size: 1.75rem;
+        font-weight: $font-weight-bold;
+        line-height: 2.625rem;
+        margin-bottom: 2.5rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    &__content {
+      &__image {
+        img {
+          width: 100%;
+        }
+
+        @include media-breakpoint-down(md) {
+          padding: 0;
+        }
+      }
+
+      &__info {
+        padding-right: 2rem;
+
+        &__subtitle {
+          color: $primary;
+          font-size: 0.875rem;
+          font-weight: 800;
+          letter-spacing: 0.8px;
+          line-height: 1.25rem;
+          margin-bottom: 0;
+          margin-top: 6.5rem;
+          text-transform: uppercase;
+        }
+
+        &__title {
+          color: $black;
+          font-size: 1.5rem;
+          font-weight: $font-weight-bold;
+          line-height: 2.25rem;
+          margin-bottom: 0;
+          margin-top: 1.25rem;
+        }
+
+        &__description {
+          color: $black;
+          display: -webkit-box;
+          font-size: 1rem;
+          font-weight: $font-weight-middle;
+          line-height: 1.75rem;
+          margin-top: 0.5rem;
+          opacity: 0.5;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+
+          @include media-breakpoint-down(md) {
+            margin-top: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__section2 {
+    margin-bottom: 8.25rem;
+    margin-top: 3rem;
+  }
+}
+

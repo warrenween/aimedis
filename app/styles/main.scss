@@ -42,7 +42,7 @@
 @import 'components/list';
 @import 'components/overview';
 @import 'components/carousel';
-@import 'components/blog';
+@import 'components/blog_item';
 @import 'components/notification';
 @import 'components/product_item';
 @import 'components/product_carousel';
@@ -50,6 +50,8 @@
 @import 'components/group_toggle';
 @import 'components/group_toggle_item';
 @import 'components/institutions_item';
+@import 'components/blog_list';
+@import 'components/career_item';
 
 // *** Routes
 @import 'pages/home';
@@ -59,5 +61,7 @@
 @import 'pages/investor';
 @import 'pages/policy';
 @import 'pages/terms';
+@import 'pages/blog';
+@import 'pages/career';
 @import 'pages/profile';
 @import 'pages/not-found';

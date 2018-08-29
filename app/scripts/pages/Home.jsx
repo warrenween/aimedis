@@ -7,7 +7,7 @@ import Item from 'components/Item';
 import List from 'components/List';
 import Overview from 'components/Overview';
 import Carousel from 'components/Carousel';
-import Blog from 'components/Blog';
+import BlogItem from 'components/BlogItem';
 import Notification from 'components/Notification';
 import Feature from 'components/Feature';
 
@@ -38,7 +38,7 @@ export default class Home extends React.PureComponent {
                 <div className="col-lg-5 offset-lg-1 d-none d-lg-block app__home__section1__image">
                   <VideoMask/>
                   <div className="app__home__mask__one">
-                    <img src={require(`assets/media/images/bg.png`)} alt='No Image'/>
+                    <img src={require('assets/media/images/bg.png')} alt="No Image"/>
                   </div>
                 </div>
               </div>
@@ -168,9 +168,9 @@ export default class Home extends React.PureComponent {
                             subtitle="Tested by active physicians and medical IT specialists" src="mobile.png"/>
                 </div>
                 <div className="col-lg-7 d-none d-lg-block">
-                  <img src={require(`assets/media/images/IMac.png`)} alt='No Image'/>
+                  <img src={require('assets/media/images/IMac.png')} alt="No Image"/>
                   <div className="app__home__mask__four">
-                    <img src={require(`assets/media/images/Group 2.png`)} alt='No Image'/>
+                    <img src={require('assets/media/images/Group 2.png')} alt="No Image"/>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export default class Home extends React.PureComponent {
             <div className="app__home__section7__content">
               <div className="app__home__section7__content__mobile app__home__section7__content__iphone">
                 <div className="app__home__section7__content__mobile__img app__home__section7__content__iphone__img mx-auto">
-                  <img src={require(`assets/media/icons/icon_apple.png`)} alt='No Image'/>
+                  <img src={require('assets/media/icons/icon_apple.png')} alt="No Image"/>
                 </div>
                 <p className="app__home__section7__content__mobile__title app__home__section7__content__iphone__title">on iPhone and iPad from iOS 9</p>
                 <button className="btn btn__secondary app__home__section7__content__mobile__button app__home__section7__content__iphone__button">GO TO App Store
@@ -199,7 +199,7 @@ export default class Home extends React.PureComponent {
               </div>
               <div className="app__home__section7__content__mobile app__home__section7__content__android">
                 <div className="app__home__section7__content__mobile__img app__home__section7__content__android__img mx-auto">
-                  <img src={require(`assets/media/icons/icon_android.png`)} alt='No Image'/>
+                  <img src={require('assets/media/icons/icon_android.png')} alt="No Image"/>
                 </div>
                 <p className="app__home__section7__content__mobile__title app__home__section7__content__android__title">on Android smartphones and tablet from
                   Android 4</p>
@@ -210,7 +210,7 @@ export default class Home extends React.PureComponent {
                 </div>
               </div>
               <div className="app__home__section7__content__img ml-auto">
-                <img src={require(`assets/media/images/iPhoneX-01.png`)} alt='No Image'/>
+                <img src={require('assets/media/images/iPhoneX-01.png')} alt="No Image"/>
               </div>
             </div>
           </section>
@@ -221,19 +221,19 @@ export default class Home extends React.PureComponent {
             <div className="app__home__section8__content app__home_section8__content">
               <div className="row">
                 <div className="col-12 col-lg-4">
-                  <Blog title="Why Japan, the Tech giant, still needs to improve Health Tech"
+                  <BlogItem title="Why Japan, the Tech giant, still needs to improve Health Tech"
                         description="Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by"
-                        src="Image" />
+                        src="blog1.png" />
                 </div>
                 <div className="col-12 col-lg-4">
-                  <Blog title="Why diagnosing leprosy in the Philippines is not a big problem any more: Learns"
+                  <BlogItem title="Why diagnosing leprosy in the Philippines is not a big problem any more: Learns"
                         description="Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by"
-                        src="Image" />
+                        src="blog2.png" />
                 </div>
                 <div className="col-12 col-lg-4">
-                  <Blog title="Why diagnosing leprosy in the Philippines is not a big problem any more: Learns"
+                  <BlogItem title="Why diagnosing leprosy in the Philippines is not a big problem any more: Learns"
                         description="Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by"
-                        src="Image" />
+                        src="blog3.png" />
                 </div>
               </div>
             </div>
@@ -243,13 +243,13 @@ export default class Home extends React.PureComponent {
           </section>
           <section className="app__home__mask d-none d-lg-block">
             <div className="app__home__mask__two">
-              <img src={require(`assets/media/images/Group 8.png`)} alt='No Image'/>
+              <img src={require('assets/media/images/Group 8.png')} alt="No Image"/>
             </div>
             <div className="app__home__mask__three">
-              <img src={require(`assets/media/images/Path 2 Copy 3.png`)} alt='No Image'/>
+              <img src={require('assets/media/images/Path 2 Copy 3.png')} alt="No Image"/>
             </div>
             <div className="app__home__mask__five">
-              <img src={require(`assets/media/images/Group 2.png`)} alt='No Image'/>
+              <img src={require('assets/media/images/Group 2.png')} alt="No Image"/>
             </div>
             <div className="app__home__mask__notification">
               <Notification icon="flash.png">

@@ -1,4 +1,4 @@
-.app__blog {
+.app__blog__item {
   height: 29rem;
   margin: 0 auto;
   padding: 1.5rem 1rem;
@@ -7,7 +7,6 @@
     position: relative;
     &__img {
       align-items: center;
-      background: $black-25;
       display: flex;
       height: 12.5rem;
       justify-content: center;
@@ -16,6 +15,10 @@
       position: absolute;
       top: 0;
       width: 100%;
+
+      img {
+        width: 100%;
+      }
     }
 
     &__title {
@@ -54,7 +57,7 @@
       margin-top: -0.5rem;
     }
 
-    .app__blog__content__title {
+    .app__blog__item__content__title {
       color: $primary;
     }
   }
@@ -64,7 +67,7 @@
     margin-bottom: 1rem;
     padding: 0;
 
-    .app__blog__content {
+    .app__blog__item__content {
       &__img {
         height: 7.5rem;
         width: 50%;

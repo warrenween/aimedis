@@ -18,6 +18,8 @@ import InstitutionsRoute from 'routes/InstitutionsRoute';
 import InvestorRoute from 'routes/InvestorRoute';
 import TermsRoute from 'routes/TermsRoute';
 import PolicyRoute from 'routes/PolicyRoute';
+import BlogRoute from 'routes/BlogRoute';
+import CareerRoute from 'routes/CareerRoute';
 import ProfileRoute from 'routes/ProfileRoute';
 
 import Home from 'pages/Home';
@@ -28,6 +30,8 @@ import Investor from 'pages/Investor';
 import Terms from 'pages/Terms';
 import Policy from 'pages/Policy';
 import Profile from 'pages/Profile';
+import Blog from 'pages/Blog';
+import Career from 'pages/Career';
 import NotFound from 'pages/NotFound';
 
 import SystemAlerts from 'containers/SystemAlerts';
@@ -80,6 +84,8 @@ export class App extends React.Component {
               <InvestorRoute isAuthenticated={user.isAuthenticated} path="/investor" exact component={Investor} />
               <TermsRoute isAuthenticated={user.isAuthenticated} path="/terms" exact component={Terms} />
               <PolicyRoute isAuthenticated={user.isAuthenticated} path="/policy" exact component={Policy} />
+              <BlogRoute isAuthenticated={user.isAuthenticated} path="/blog" exact component={Blog} />
+              <CareerRoute isAuthenticated={user.isAuthenticated} path="/career" exact component={Career} />
               <ProfileRoute isAuthenticated={user.isAuthenticated} path="/profile" component={Profile} />
               <Route component={NotFound} />
             </Switch>
