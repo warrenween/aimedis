@@ -19,7 +19,9 @@ import InvestorRoute from 'routes/InvestorRoute';
 import TermsRoute from 'routes/TermsRoute';
 import PolicyRoute from 'routes/PolicyRoute';
 import BlogRoute from 'routes/BlogRoute';
+import BlogDetailRoute from 'routes/BlogDetailRoute';
 import CareerRoute from 'routes/CareerRoute';
+import CareerDetailRoute from 'routes/CareerDetailRoute';
 import ProfileRoute from 'routes/ProfileRoute';
 
 import Home from 'pages/Home';
@@ -31,7 +33,9 @@ import Terms from 'pages/Terms';
 import Policy from 'pages/Policy';
 import Profile from 'pages/Profile';
 import Blog from 'pages/Blog';
+import BlogDetail from 'pages/BlogDetail';
 import Career from 'pages/Career';
+import CareerDetail from 'pages/CareerDetail';
 import NotFound from 'pages/NotFound';
 
 import SystemAlerts from 'containers/SystemAlerts';
@@ -78,14 +82,16 @@ export class App extends React.Component {
           <main className="app__main">
             <Switch>
               <HomeRoute isAuthenticated={user.isAuthenticated} path="/" exact component={Home} />
-              <ProductRoute isAuthenticated={user.isAuthenticated} path="/product" exact component={Product} />
-              <AboutRoute isAuthenticated={user.isAuthenticated} path="/about" exact component={About} />
-              <InstitutionsRoute isAuthenticated={user.isAuthenticated} path="/institutions" exact component={Institutions} />
-              <InvestorRoute isAuthenticated={user.isAuthenticated} path="/investor" exact component={Investor} />
-              <TermsRoute isAuthenticated={user.isAuthenticated} path="/terms" exact component={Terms} />
-              <PolicyRoute isAuthenticated={user.isAuthenticated} path="/policy" exact component={Policy} />
+              <ProductRoute isAuthenticated={user.isAuthenticated} path="/product" component={Product} />
+              <AboutRoute isAuthenticated={user.isAuthenticated} path="/about" component={About} />
+              <InstitutionsRoute isAuthenticated={user.isAuthenticated} path="/institutions" component={Institutions} />
+              <InvestorRoute isAuthenticated={user.isAuthenticated} path="/investor" component={Investor} />
+              <TermsRoute isAuthenticated={user.isAuthenticated} path="/terms" component={Terms} />
+              <PolicyRoute isAuthenticated={user.isAuthenticated} path="/policy" component={Policy} />
               <BlogRoute isAuthenticated={user.isAuthenticated} path="/blog" exact component={Blog} />
+              <BlogDetailRoute isAuthenticated={user.isAuthenticated} path="/blog/:id" component={BlogDetail} />
               <CareerRoute isAuthenticated={user.isAuthenticated} path="/career" exact component={Career} />
+              <CareerDetailRoute isAuthenticated={user.isAuthenticated} path="/career/:id" component={CareerDetail} />
               <ProfileRoute isAuthenticated={user.isAuthenticated} path="/profile" component={Profile} />
               <Route component={NotFound} />
             </Switch>
