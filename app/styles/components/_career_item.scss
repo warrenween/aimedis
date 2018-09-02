@@ -59,11 +59,15 @@
       display: flex;
       justify-content: center;
 
-      button {
+      a {
         background: linear-gradient(36.72deg, #00aaa6 0%, #00b1e6 100%);
         border-radius: 1.75rem;
         box-shadow: 0 0.125rem 0.375rem 0 $shadow-color;
         padding: 1.125rem 3.5rem;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
 
       @include media-breakpoint-down(md) {

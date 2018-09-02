@@ -32,7 +32,7 @@ export default class Overview extends React.PureComponent {
         </div>
         <div className="app__overview__external">
           <div className="app__overview__external__image">
-            <img src={require(`assets/media/images/` + src)} alt='No Image' />
+            <img src={require(`assets/media/images/${src}`)} alt='No Image' />
           </div>
           {link && <button className="app__overview__external__download body btn btn__secondary ml-0" type="button">DOWNLOAD THE CASE STUDY (8.4 MB)</button> }
         </div>

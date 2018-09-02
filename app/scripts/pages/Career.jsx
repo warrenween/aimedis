@@ -22,34 +22,49 @@ export default class Career extends React.PureComponent {
             <div className="app__career__section2__content">
               <div className="row">
                 <div className="col-12 app__career__section2__content__item">
-                  <CareerItem title="Web devoloper"
-                              subtitle="React native / JS, Node JS, NoSQL, PHP"
-                              location="VENLO"
-                              availability="FULL-TIME"/>
+                  <CareerItem item={{
+                    id: 1,
+                    title: "Web devoloper",
+                    subtitle: "React native / JS, Node JS, NoSQL, PHP",
+                    location: "VENLO",
+                    availability: "FULL-TIME",
+                  }}/>
                 </div>
                 <div className="col-12 app__career__section2__content__item">
-                  <CareerItem title="Web devoloper"
-                              subtitle="React native / JS, Node JS, NoSQL, PHP"
-                              location="VENLO"
-                              availability="FULL-TIME"/>
+                  <CareerItem item={{
+                    id: 2,
+                    title: "Web devoloper",
+                    subtitle: "React native / JS, Node JS, NoSQL, PHP",
+                    location: "VENLO",
+                    availability: "FULL-TIME",
+                  }}/>
                 </div>
                 <div className="col-12 app__career__section2__content__item">
-                  <CareerItem title="Web devoloper"
-                              subtitle="React native / JS, Node JS, NoSQL, PHP"
-                              location="VENLO"
-                              availability="FULL-TIME"/>
+                  <CareerItem item={{
+                    id: 3,
+                    title: "Web devoloper",
+                    subtitle: "React native / JS, Node JS, NoSQL, PHP",
+                    location: "VENLO",
+                    availability: "FULL-TIME",
+                  }}/>
                 </div>
                 <div className="col-12 app__career__section2__content__item">
-                  <CareerItem title="Web devoloper"
-                              subtitle="React native / JS, Node JS, NoSQL, PHP"
-                              location="VENLO"
-                              availability="FULL-TIME"/>
+                  <CareerItem item={{
+                    id: 4,
+                    title: "Web devoloper",
+                    subtitle: "React native / JS, Node JS, NoSQL, PHP",
+                    location: "VENLO",
+                    availability: "FULL-TIME",
+                  }}/>
                 </div>
                 <div className="col-12 app__career__section2__content__item">
-                  <CareerItem title="Web devoloper"
-                              subtitle="React native / JS, Node JS, NoSQL, PHP"
-                              location="VENLO"
-                              availability="FULL-TIME"/>
+                  <CareerItem item={{
+                    id: 5,
+                    title: "Web devoloper",
+                    subtitle: "React native / JS, Node JS, NoSQL, PHP",
+                    location: "VENLO",
+                    availability: "FULL-TIME",
+                  }}/>
                 </div>
               </div>
             </div>
@@ -64,12 +79,12 @@ export default class Career extends React.PureComponent {
                   </div>
                 </div>
                 <div className="col-12 col-lg-6">
-                  <img src={require(`assets/media/images/career1.png`)} alt='No Image'/>
+                  <img src={require('assets/media/images/career1.png')} alt='No Image'/>
                 </div>
               </div>
               <div className="row app__career__section3__content__mission">
                 <div className="col-12 col-lg-6">
-                  <img src={require(`assets/media/images/career2.png`)} alt='No Image'/>
+                  <img src={require('assets/media/images/career2.png')} alt='No Image'/>
                 </div>
                 <div className="col-12 col-lg-6 app__career__section3__content__info">
                   <div>

@@ -5,12 +5,11 @@ export default class Item extends React.PureComponent {
   static propTypes = {
     title: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
-    src: PropTypes.string,
     active: PropTypes.bool,
   };
 
   render() {
-    const { title, icon, src, active } = this.props;
+    const { title, icon, active } = this.props;
     return (
       <div className={"app__item" + (active ? " active" : "")}>
         <div className="app__item__content">

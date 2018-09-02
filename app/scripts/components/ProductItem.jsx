@@ -15,7 +15,7 @@ export default class ProductItem extends React.PureComponent {
     const content1 = (<div className="col-12 col-lg-6 p-lg-0 app__product__item__content__info">
       <p className="app__product__item__content__info__title">{title}</p>
       <div className="app__product__item__content__info__image d-block d-lg-none">
-        <img src={require(`assets/media/images/mobile.png`)} alt='No Image'/>
+        <img src={require('assets/media/images/mobile.png')} alt='No Image'/>
       </div>
       <p className="app__product__item__content__info__description">{description}</p>
       <div className="app__product__item__content__info__button">
@@ -26,7 +26,7 @@ export default class ProductItem extends React.PureComponent {
       </div>
     </div>);
 
-    const content2 = (<img src={require(`assets/media/images/` + src)} alt='No Image' />);
+    const content2 = (<img src={require(`assets/media/images/${src}`)} alt='No Image' />);
 
     return (
       <div className="app__product__item">

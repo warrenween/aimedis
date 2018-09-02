@@ -2,6 +2,7 @@ import React from 'react';
 import GroupToggle from 'components/GroupToggle';
 import Title from 'components/Title';
 import Location from 'components/Location';
+import { Link } from 'react-router-dom';
 
 export default class About extends React.PureComponent {
   render() {
@@ -16,9 +17,9 @@ export default class About extends React.PureComponent {
                   <p className="app__about__section1__content__info__description">Aimedis combines your health data, onliner prescriptions, video consultation with doctors and psychologists, information, medical hardware, your smart devices, and more on a single platform on your PC, your smartphone or your tablet, anytime, worldwide and in multiple languages.</p>
                 </div>
                 <div className="col-5 offset-1 d-none d-lg-block app__about__section1__content__image">
-                  <img src={require(`assets/media/images/IMac.png`)} alt='No Image'/>
+                  <img src={require('assets/media/images/IMac.png')} alt='No Image'/>
                   <div className="app__about__section1__content__mask">
-                    <img src={require(`assets/media/images/Group 8.png`)} alt='No Image'/>
+                    <img src={require('assets/media/images/Group 8.png')} alt='No Image'/>
                   </div>
                 </div>
               </div>
@@ -44,8 +45,8 @@ export default class About extends React.PureComponent {
                 </div>
                 <div className="col-lg-6 app__about__section3__content__telegram">
                   <p className="app__about__section3__content__telegram__title">Official Aimedis Support Group is on <span>Telegram</span></p>
-                  <a className="app__about__section3__content__telegram__link" href="#">View channel</a>
-                  <img className="app__about__section3__content__telegram__image" src={require(`assets/media/images/telegram.png`)} alt='No Image' />
+                  <Link className="app__about__section3__content__telegram__link" to="#">View channel</Link>
+                  <img className="app__about__section3__content__telegram__image" src={require('assets/media/images/telegram.png')} alt='No Image' />
                 </div>
               </div>
             </div>
@@ -63,7 +64,7 @@ export default class About extends React.PureComponent {
                     <br/>
                     5935 BL Steyl, Netherlands
                   </p>
-                  <a className="app__about__section4__content__info__link" href="#">See on google maps</a>
+                  <Link className="app__about__section4__content__info__link" to="#">See on google maps</Link>
                 </div>
               </div>
             </div>

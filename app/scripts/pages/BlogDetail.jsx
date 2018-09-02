@@ -32,7 +32,7 @@ class BlogDetail extends React.PureComponent {
                     <div className="app__blog__detail__section1__content__info__share">
                       <div className="app__blog__detail__section1__content__info__share__element">
                         <div className="app__blog__detail__section1__content__info__share__element__icon">
-                          <img src={require(`assets/media/icons/writer.png`)} alt='No Image'/>
+                          <img src={require('assets/media/icons/writer.png')} alt='No Image'/>
                         </div>
                         <div className="app__blog__detail__section1__content__info__share__element__text">
                           Chris Welch
@@ -40,7 +40,7 @@ class BlogDetail extends React.PureComponent {
                       </div>
                       <div className="app__blog__detail__section1__content__info__share__element">
                         <div className="app__blog__detail__section1__content__info__share__element__icon">
-                          <img src={require(`assets/media/icons/date.png`)} alt='No Image'/>
+                          <img src={require('assets/media/icons/date.png')} alt='No Image'/>
                         </div>
                         <div className="app__blog__detail__section1__content__info__share__element__text">
                           2 WEEKS AGO
@@ -49,13 +49,13 @@ class BlogDetail extends React.PureComponent {
                     </div>
                     <div className="app__blog__detail__section1__content__info__link d-none d-lg-flex">
                       <div className="app__blog__detail__section1__content__info__link__element">
-                        <img src={require(`assets/media/icons/facebook.png`)} alt='No Image'/>
+                        <img src={require('assets/media/icons/facebook.png')} alt='No Image'/>
                       </div>
                       <div className="app__blog__detail__section1__content__info__link__element">
-                        <img src={require(`assets/media/social/Group 9.png`)} alt='No Image'/>
+                        <img src={require('assets/media/social/Group 9.png')} alt='No Image'/>
                       </div>
                       <div className="app__blog__detail__section1__content__info__link__element">
-                        <img src={require(`assets/media/icons/linkedin.png`)} alt='No Image'/>
+                        <img src={require('assets/media/icons/linkedin.png')} alt='No Image'/>
                       </div>
                     </div>
                   </div>
@@ -102,13 +102,13 @@ class BlogDetail extends React.PureComponent {
                     <div className="app__blog__detail__section1__content__share__text">Like it? Share it!</div>
                     <div className="app__blog__detail__section1__content__share__link">
                       <div className="app__blog__detail__section1__content__share__link__element">
-                        <img src={require(`assets/media/icons/facebook.png`)} alt='No Image'/>
+                        <img src={require('assets/media/icons/facebook.png')} alt='No Image'/>
                       </div>
                       <div className="app__blog__detail__section1__content__share__link__element">
-                        <img src={require(`assets/media/social/Group 9.png`)} alt='No Image'/>
+                        <img src={require('assets/media/social/Group 9.png')} alt='No Image'/>
                       </div>
                       <div className="app__blog__detail__section1__content__share__link__element">
-                        <img src={require(`assets/media/icons/linkedin.png`)} alt='No Image'/>
+                        <img src={require('assets/media/icons/linkedin.png')} alt='No Image'/>
                       </div>
                     </div>
                   </div>
@@ -123,19 +123,28 @@ class BlogDetail extends React.PureComponent {
             <div className="app__blog__detail__section2__content">
               <div className="row">
                 <div className="col-12 col-lg-4">
-                  <BlogItem title="Why Japan, the Tech giant, still needs to improve Health Tech"
-                            description="Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by"
-                            src="blog1.png" />
+                  <BlogItem item={{
+                    id: 1,
+                    title: "Why Japan, the Tech giant, still needs to improve Health Tech",
+                    description: "Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by",
+                    src: "blog1.png",
+                  }}/>
                 </div>
                 <div className="col-12 col-lg-4">
-                  <BlogItem title="Why diagnosing leprosy in the Philippines is not a big problem any more: Learns"
-                            description="Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by"
-                            src="blog2.png" />
+                  <BlogItem item={{
+                    id: 2,
+                    title: "Why diagnosing leprosy in the Philippines is not a big problem any more: Learns",
+                    description: "Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by",
+                    src: "blog2.png",
+                  }}/>
                 </div>
                 <div className="col-12 col-lg-4">
-                  <BlogItem title="Why diagnosing leprosy in the Philippines is not a big problem any more: Learns"
-                            description="Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by"
-                            src="blog3.png" />
+                  <BlogItem item={{
+                    id: 3,
+                    title: "Why diagnosing leprosy in the Philippines is not a big problem any more: Learns",
+                    description: "Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by",
+                    src: "blog3.png",
+                  }}/>
                 </div>
               </div>
             </div>

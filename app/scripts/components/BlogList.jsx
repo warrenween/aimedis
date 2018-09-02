@@ -89,15 +89,18 @@ export default class BlogList extends React.PureComponent {
       },
     ];
 
-    const { active, count } = this.state;
+    const { active } = this.state;
     let result = [];
 
     for (let i = 0; i < 9; i++) {
       result.push(
         <div className="col-12 col-lg-4" key={i}>
-          <BlogItem title={list[i + (active - 1) * 9].title}
-                    description={list[i + (active - 1) * 9].description}
-                    src={list[i + (active - 1) * 9].src} />
+          <BlogItem item={{
+            id: i + 1,
+            title: list[i + (active - 1) * 9].title,
+            description: list[i + (active - 1) * 9].description,
+            src: list[i + (active - 1) * 9].src,
+          }}/>
         </div>
       );
     }

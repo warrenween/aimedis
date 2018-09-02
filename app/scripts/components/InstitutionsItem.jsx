@@ -20,7 +20,7 @@ export default class InstitutionsItem extends React.PureComponent {
       <button className="app__institutions__item__content__info__download btn btn__secondary" type="button">DOWNLOAD THE CASE STUDY (8.4 MB)</button>
     </div>);
 
-    const content2 = (<img src={require('assets/media/images/' + src)} alt="No Image" />);
+    const content2 = (<img src={require(`assets/media/images/${src}`)} alt="No Image" />);
 
     return (
       <div className="app__institutions__item">

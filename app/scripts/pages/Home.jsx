@@ -221,19 +221,28 @@ export default class Home extends React.PureComponent {
             <div className="app__home__section8__content app__home_section8__content">
               <div className="row">
                 <div className="col-12 col-lg-4">
-                  <BlogItem title="Why Japan, the Tech giant, still needs to improve Health Tech"
-                        description="Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by"
-                        src="blog1.png" />
+                  <BlogItem item={{
+                    id: 1,
+                    title: "Why Japan, the Tech giant, still needs to improve Health Tech",
+                    description: "Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by",
+                    src: "blog1.png"
+                  }}/>
                 </div>
                 <div className="col-12 col-lg-4">
-                  <BlogItem title="Why diagnosing leprosy in the Philippines is not a big problem any more: Learns"
-                        description="Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by"
-                        src="blog2.png" />
+                  <BlogItem item={{
+                    id: 2,
+                    title: "Why diagnosing leprosy in the Philippines is not a big problem any more: Learns",
+                    description: "Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by",
+                    src: "blog2.png"
+                  }}/>
                 </div>
                 <div className="col-12 col-lg-4">
-                  <BlogItem title="Why diagnosing leprosy in the Philippines is not a big problem any more: Learns"
-                        description="Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by"
-                        src="blog3.png" />
+                  <BlogItem item={{
+                    id: 3,
+                    title: "Why diagnosing leprosy in the Philippines is not a big problem any more: Learns",
+                    description: "Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by",
+                    src: "blog3.png"
+                  }}/>
                 </div>
               </div>
             </div>

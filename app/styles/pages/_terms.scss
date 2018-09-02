@@ -1,4 +1,7 @@
 .app__terms {
+  overflow: hidden;
+  position: relative;
+
   &__section1 {
     margin-bottom: 13rem;
     margin-top: 11.25rem;

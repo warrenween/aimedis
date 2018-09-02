@@ -48,15 +48,20 @@ export class App extends React.Component {
     app: PropTypes.object.isRequired,
     dispatch: PropTypes.func.isRequired,
     user: PropTypes.object.isRequired,
+    router: PropTypes.object.isRequired,
   };
 
   componentWillReceiveProps(nextProps) {
-    const { dispatch } = this.props;
+    const { dispatch, router } = this.props;
     const { changedTo } = treeChanges(this.props, nextProps);
 
     /* istanbul ignore else */
     if (changedTo('user.isAuthenticated', true)) {
       dispatch(showAlert('Welcome!', { type: 'success', icon: 'i-trophy' }));
+    }
+
+    if (router.location.pathname !== nextProps.router.location.pathname) {
+      window.scroll(0, 0);
     }
   }
 
@@ -109,6 +114,7 @@ function mapStateToProps(state) {
   return {
     app: state.app,
     user: state.user,
+    router: state.router,
   };
 }
 

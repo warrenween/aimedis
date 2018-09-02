@@ -57,35 +57,44 @@
         }
 
         li {
-          color: $white;
-          font-size: 0.75rem;
-          font-weight: $font-weight-middle;
-          letter-spacing: 0.34px;
-          line-height: 1.25rem;
+          line-height: 1.125rem;
           list-style: none;
           margin-bottom: 1.1rem;
-          text-transform: uppercase;
 
-          .separator {
-            margin: 0 0.625rem;
+          a {
+            color: $white;
+            font-size: 0.75rem;
+            font-weight: $font-weight-middle;
+            letter-spacing: 0.34px;
+            text-transform: uppercase;
+
+            .separator {
+              margin: 0 0.625rem;
+            }
+
+            .hire {
+              color: $yellow;
+              font-size: 0.625rem;
+              letter-spacing: 0.29px;
+              text-transform: initial;
+            }
+
+            @include media-breakpoint-down(md) {
+              font-size: 1rem;
+              letter-spacing: 0.46px;
+            }
+
+            &:hover {
+              text-decoration: none;
+            }
           }
 
-          .hire {
-            color: $yellow;
-            font-size: 0.625rem;
-            letter-spacing: 0.29px;
-            line-height: 1.25rem;
-            text-transform: initial;
+          @include media-breakpoint-down(md) {
+            margin-bottom: 1.5rem;
           }
 
           &:last-child {
             margin-bottom: 0;
-          }
-
-          @include media-breakpoint-down(md) {
-            font-size: 1rem;
-            letter-spacing: 0.46px;
-            margin-bottom: 1.5rem;
           }
         }
       }
@@ -105,6 +114,7 @@
       &__icon {
         display: flex;
         flex-wrap: wrap;
+        margin-top: 0.5rem;
 
         &__item {
           align-items: center;
@@ -125,20 +135,27 @@
       }
 
       &__terms {
-        color: $white;
-        font-size: 0.75rem;
-        font-weight: $font-weight-middle;
-        line-height: 1.25rem;
-        margin-top: 4.125rem;
-        text-transform: uppercase;
+        margin-top: 4.25rem;
 
-        span:first-child {
-          margin-right: 2rem;
-        }
+        a {
+          color: $white;
+          font-size: 0.75rem;
+          font-weight: $font-weight-middle;
+          line-height: 1.25rem;
+          text-transform: uppercase;
 
-        @include media-breakpoint-down(md) {
-          margin-top: 1.375rem;
-          text-align: center;
+          &:first-child {
+            margin-right: 2rem;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          @include media-breakpoint-down(md) {
+            margin-top: 1.375rem;
+            text-align: center;
+          }
         }
       }
     }

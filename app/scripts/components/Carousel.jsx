@@ -20,13 +20,15 @@ export default class Carousel extends React.PureComponent {
     // clearInterval(this.timerID);
   }
 
-  prev = () => {
+  prev = (e) => {
+    e.preventDefault();
     this.setState((prevState) => {
       return { active: (prevState.active + prevState.count - 1) % prevState.count };
     });
   };
 
-  next = () => {
+  next = (e) => {
+    e.preventDefault();
     this.setState((prevState) => {
       return { active: (prevState.active + 1) % prevState.count };
     });
@@ -59,7 +61,7 @@ export default class Carousel extends React.PureComponent {
 
     const listItems = list.map((item) => (
       <div className="app__carousel__content__inner__item__content" key={item.id.toString()}>
-        <img src={require(`assets/media/images/` + item.src)} alt="Carousel Image" />
+        <img src={require(`assets/media/images/${item.src}`)} alt="Carousel Image" />
         <p className="app__carousel__content__inner__item__description">{ item.description }</p>
         <p className="app__carousel__content__inner__item__name">{ item.name }</p>
         <p className="app__carousel__content__inner__item__caption">{ item.caption }</p>
@@ -72,7 +74,7 @@ export default class Carousel extends React.PureComponent {
 
     result.push(
       <div className="app__carousel__content__inner__item prev" key="prev">
-        <div className="app__carousel__content__indicator__prev">
+        <div className="app__carousel__content__indicator__prev" onClick={this.prev}>
           <span className="i-long-arrow-left" />
         </div>
         { listItems[(active + count - 1) % count] }
@@ -88,7 +90,7 @@ export default class Carousel extends React.PureComponent {
     result.push(
       <div className="app__carousel__content__inner__item next" key="next">
         { listItems[(active + 1) % count] }
-        <div className="app__carousel__content__indicator__next">
+        <div className="app__carousel__content__indicator__next" onClick={this.next}>
           <span className="i-long-arrow-right" />
         </div>
       </div>
