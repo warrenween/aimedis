@@ -3,14 +3,14 @@ import Router from 'react-router-dom/MemoryRouter';
 import { renderToString } from 'react-dom/server';
 import HomeRoute from 'routes/HomeRoute';
 
-describe('modules/RoutePublic', () => {
-  it('should render the Login component for unauthenticated access', () => {
+describe('routes/HomeRoute', () => {
+  it('should render the Home Page for unauthenticated access', () => {
     const render = renderToString(
-      <Router initialEntries={['/login']}>
+      <Router initialEntries={['/']}>
         <HomeRoute
           exact
-          path="/login"
-          component={() => (<div>LOGIN</div>)}
+          path="/"
+          component={() => (<div>HOME</div>)}
           isAuthenticated={false}
         />
       </Router>
@@ -19,13 +19,13 @@ describe('modules/RoutePublic', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should redirect to /private for authenticated access', () => {
+  it('should render the Home Page for authenticated access', () => {
     const render = renderToString(
-      <Router initialEntries={['/login']}>
+      <Router initialEntries={['/']}>
         <HomeRoute
           exact
-          path="/login"
-          component={() => (<div>LOGIN</div>)}
+          path="/"
+          component={() => (<div>HOME</div>)}
           isAuthenticated={true}
         />
       </Router>

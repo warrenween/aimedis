@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes/InvestorRoute should render the Investor Page for authenticated access 1`] = `"<div data-reactroot=\\"\\">Investor</div>"`;
+
+exports[`routes/InvestorRoute should render the Investor Page for unauthenticated access 1`] = `"<div data-reactroot=\\"\\">Investor</div>"`;

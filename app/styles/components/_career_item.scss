@@ -13,16 +13,16 @@
     }
 
     &__info {
+      @include media-breakpoint-down(md) {
+        font-size: 1.25rem;
+      }
+
       &__title {
         color: $black;
         font-size: 1.125rem;
         font-weight: $font-weight-bold;
         line-height: 2.5rem;
         margin-bottom: 0;
-      }
-
-      @include media-breakpoint-down(md) {
-        font-size: 1.25rem;
       }
 
       &__subtitle {
@@ -59,6 +59,10 @@
       display: flex;
       justify-content: center;
 
+      @include media-breakpoint-down(md) {
+        margin-top: 2.75rem;
+      }
+
       a {
         background: linear-gradient(36.72deg, #00aaa6 0%, #00b1e6 100%);
         border-radius: 1.75rem;
@@ -68,10 +72,6 @@
         &:hover {
           text-decoration: none;
         }
-      }
-
-      @include media-breakpoint-down(md) {
-        margin-top: 2.75rem;
       }
     }
   }

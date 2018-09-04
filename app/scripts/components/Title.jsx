@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 export default class Title extends React.PureComponent {
   static propTypes = {
-    title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   };
 
   render() {

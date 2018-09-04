@@ -14,7 +14,7 @@ export default class Blog extends React.PureComponent {
             <div className="app__blog__section1__content">
               <div className="row">
                 <div className="col-12 col-lg-8 app__blog__section1__content__image">
-                  <img src={require('assets/media/images/featrued_blog.png')} alt='No Image'/>
+                  <img src={require('assets/media/images/featrued_blog.png')} alt="No Asset" />
                 </div>
                 <div className="col-12 col-lg-4 app__blog__section1__content__info">
                   <p className="app__blog__section1__content__info__subtitle d-none d-lg-block">Featured post</p>

@@ -144,17 +144,17 @@
           line-height: 1.25rem;
           text-transform: uppercase;
 
+          @include media-breakpoint-down(md) {
+            margin-top: 1.375rem;
+            text-align: center;
+          }
+
           &:first-child {
             margin-right: 2rem;
           }
 
           &:hover {
             text-decoration: none;
-          }
-
-          @include media-breakpoint-down(md) {
-            margin-top: 1.375rem;
-            text-align: center;
           }
         }
       }

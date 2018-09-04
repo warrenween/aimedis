@@ -9,7 +9,7 @@ const Footer = () => (
         <div className="row">
           <div className="col-12 col-lg-3">
             <div className="app__footer__content__logo">
-              <Link to='/'>
+              <Link to="/">
                 <Logo />
               </Link>
             </div>
@@ -45,37 +45,37 @@ const Footer = () => (
             <div className="app__footer__content__social">
               <div className="app__footer__content__social__icon">
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/facebook.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/facebook.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/Group 9.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/Group 9.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/Group 10.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/Group 10.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/Group 11.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/Group 11.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/btc.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/btc.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/medium.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/medium.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/insta.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/insta.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/In.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/In.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/reddit.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/reddit.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/youtube.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/youtube.png')} alt="No asset" />
                 </div>
                 <div className="app__footer__content__social__icon__item">
-                  <img src={require('assets/media/social/mail.png')} alt='No Image'/>
+                  <img src={require('assets/media/social/mail.png')} alt="No asset" />
                 </div>
               </div>
               <div className="app__footer__content__social__terms">

@@ -3,8 +3,10 @@
   margin: 0 auto;
   padding: 1.5rem 1rem;
   width: 20rem;
+
   &__content {
     position: relative;
+
     &__img {
       align-items: center;
       display: flex;
@@ -74,13 +76,13 @@
       }
 
       &__title {
+        -webkit-box-orient: vertical;
         display: -webkit-box;
+        -webkit-line-clamp: 3;
         left: 55%;
         overflow: hidden;
         text-overflow: ellipsis;
         top: 0;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
         width: 50%;
       }
 

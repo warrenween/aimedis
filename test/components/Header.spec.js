@@ -7,8 +7,15 @@ const mockDispatch = jest.fn();
 
 function setup() {
   const props = {
-    app: {},
     dispatch: mockDispatch,
+    router: {
+      location: {
+        pathname: '/',
+      },
+    },
+    user: {
+      isAuthenticated: false,
+    },
   };
 
   return mount(<Header {...props} />);

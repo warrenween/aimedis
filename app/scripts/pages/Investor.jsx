@@ -33,7 +33,7 @@ export default class Investor extends React.PureComponent {
           </section>
           <section className="app__investor__mask d-none d-lg-block">
             <div className="app__investor__mask__bottom">
-              <img src={require('assets/media/images/Group 8.png')} alt="No Image"/>
+              <img src={require('assets/media/images/Group 8.png')} alt="No Asset" />
             </div>
           </section>
         </div>

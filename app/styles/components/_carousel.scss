@@ -52,11 +52,6 @@
           display: block;
           width: 50%;
 
-          img {
-            height: 23rem;
-            width: 23rem;
-          }
-
           @include media-breakpoint-down(md) {
             width: 100%;
 
@@ -65,9 +60,15 @@
               width: 18rem;
             }
           }
+
+          img {
+            height: 23rem;
+            width: 23rem;
+          }
         }
 
-        &.prev, &.next {
+        &.prev,
+        &.next {
           display: block;
           position: relative;
           width: 25%;
@@ -137,7 +138,8 @@
         }
       }
 
-      &__prev, &__next {
+      &__prev,
+      &__next {
         span {
           align-items: flex-end;
           color: $primary;

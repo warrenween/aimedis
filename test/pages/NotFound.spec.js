@@ -19,7 +19,7 @@ describe('NotFound', () => {
   });
 
   it('should redirect to home', () => {
-    navigate({ pathname: '/some-page' });
+    navigate({ pathname: '/some-pages' });
 
     wrapper.find('Link').simulate('click');
     expect(location.pathname).toBe('/');

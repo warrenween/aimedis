@@ -9,7 +9,7 @@ export default class Feature extends React.PureComponent {
           Discover the best features for you.
         </div>
         <div className="app__feature__content">
-          <GetEarlyAccess/>
+          <GetEarlyAccess />
         </div>
       </div>
     );

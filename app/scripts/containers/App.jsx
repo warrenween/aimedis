@@ -47,8 +47,8 @@ export class App extends React.Component {
   static propTypes = {
     app: PropTypes.object.isRequired,
     dispatch: PropTypes.func.isRequired,
-    user: PropTypes.object.isRequired,
     router: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
   };
 
   componentWillReceiveProps(nextProps) {
@@ -83,7 +83,7 @@ export class App extends React.Component {
             titleTemplate={`%s | ${config.name}`}
             titleAttributes={{ itemprop: 'name', lang: 'pt-br' }}
           />
-          <Header dispatch={dispatch} user={user} />
+          <Header dispatch={dispatch} />
           <main className="app__main">
             <Switch>
               <HomeRoute isAuthenticated={user.isAuthenticated} path="/" exact component={Home} />

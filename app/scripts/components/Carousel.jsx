@@ -22,16 +22,12 @@ export default class Carousel extends React.PureComponent {
 
   prev = (e) => {
     e.preventDefault();
-    this.setState((prevState) => {
-      return { active: (prevState.active + prevState.count - 1) % prevState.count };
-    });
+    this.setState((prevState) => ({ active: (prevState.active + prevState.count - 1) % prevState.count }));
   };
 
   next = (e) => {
     e.preventDefault();
-    this.setState((prevState) => {
-      return { active: (prevState.active + 1) % prevState.count };
-    });
+    this.setState((prevState) => ({ active: (prevState.active + 1) % prevState.count }));
   };
 
   content = () => {
@@ -61,7 +57,7 @@ export default class Carousel extends React.PureComponent {
 
     const listItems = list.map((item) => (
       <div className="app__carousel__content__inner__item__content" key={item.id.toString()}>
-        <img src={require(`assets/media/images/${item.src}`)} alt="Carousel Image" />
+        <img src={require(`assets/media/images/${item.src}`)} alt="No Carousel" />
         <p className="app__carousel__content__inner__item__description">{ item.description }</p>
         <p className="app__carousel__content__inner__item__name">{ item.name }</p>
         <p className="app__carousel__content__inner__item__caption">{ item.caption }</p>
@@ -70,7 +66,7 @@ export default class Carousel extends React.PureComponent {
     );
 
     const { active, count } = this.state;
-    let result = [];
+    const result = [];
 
     result.push(
       <div className="app__carousel__content__inner__item prev" key="prev">

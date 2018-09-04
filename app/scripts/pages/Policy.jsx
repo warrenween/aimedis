@@ -17,7 +17,7 @@ export default class Policy extends React.PureComponent {
                   </p>
                   <p className="app__policy__section1__content__description">
                     Complete details on each type of Personal Data collected are provided in the dedicated sections of this privacy policy or by specific explanation texts displayed prior to the Data collection.
-                    <br/>
+                    <br />
                     The Personal Data may be freely provided by the User, or, in case of Usage Data, collected automatically when using this Application.
                   </p>
                   <p className="app__policy__section1__content__subtitle1">
@@ -28,7 +28,7 @@ export default class Policy extends React.PureComponent {
                   </p>
                   <p className="app__policy__section1__content__description">
                     Any use of Cookies – or of other tracking tools – by this Application or by the owners of third party services used by this Application serves the purpose of providing the service required by the User, in addition to any other purposes described in the present document and in the Cookie Policy, if available.
-                    <br/>
+                    <br />
                     Users are responsible for any third party Personal Data obtained, published or shared through this Application and confirm that they have the third party's consent to provide the Data to the Owner.
                   </p>
                 </div>
@@ -37,7 +37,7 @@ export default class Policy extends React.PureComponent {
           </section>
           <section className="app__policy__mask d-none d-lg-block">
             <div className="app__policy__mask__bottom">
-              <img src={require('assets/media/images/Group 8.png')} alt="No Image"/>
+              <img src={require('assets/media/images/Group 8.png')} alt="No Asset" />
             </div>
           </section>
         </div>

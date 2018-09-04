@@ -16,14 +16,14 @@ export default class Notification extends React.PureComponent {
     return (
       <div className="app__notification">
         <div className="app__notification__icon">
-          <img src={require(`assets/media/icons/${icon}`)} alt='No Image'/>
+          <img src={require(`assets/media/icons/${icon}`)} alt="No Asset" />
         </div>
         <div className="app__notification__content">
           {children}
         </div>
         <div className="app__notification__close" onClick={this.handleClick}>
           x
-          <i className="i-times"></i>
+          <i className="i-times" />
         </div>
       </div>
     );

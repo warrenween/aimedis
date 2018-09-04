@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes/BlogRoute should render the Blog Page for authenticated access 1`] = `"<div data-reactroot=\\"\\">Blog</div>"`;
+
+exports[`routes/BlogRoute should render the Blog Page for unauthenticated access 1`] = `"<div data-reactroot=\\"\\">Blog</div>"`;

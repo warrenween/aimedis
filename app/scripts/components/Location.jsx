@@ -172,7 +172,7 @@ const MyMapComponent = compose(
   }),
   withScriptjs,
   withGoogleMap
-)(() =>
+)(() => (
   <GoogleMap
     defaultZoom={18}
     defaultCenter={{
@@ -190,7 +190,7 @@ const MyMapComponent = compose(
       defaultDraggable={false}
     />
   </GoogleMap>
-);
+));
 
 export default class Location extends React.PureComponent {
   render() {

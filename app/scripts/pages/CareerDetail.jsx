@@ -2,18 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class CareerDetail extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      item: {
-        id: props.match.params.id,
-      },
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //
+  //   this.state = {
+  //     item: {
+  //       id: props.match.params.id,
+  //     },
+  //   };
+  // }
 
   render() {
-    const { item } = this.state;
     return (
       <div key="CareerDetail" className="app__career__detail app__route">
         <div className="container">
@@ -25,11 +24,11 @@ class CareerDetail extends React.PureComponent {
                   <p className="app__career__detail__section1__content__subtitle m-0">React native / JS, Node JS, NoSQL, PHP</p>
                   <div className="app__career__detail__section1__content__info">
                     <div className="app__career__detail__section1__content__info__element">
-                      <div className="app__career__detail__section1__content__info__element__icon"><i className="i-map-marker"></i></div>
+                      <div className="app__career__detail__section1__content__info__element__icon"><i className="i-map-marker" /></div>
                       <div className="app__career__detail__section1__content__info__element__text">VENLO</div>
                     </div>
                     <div className="app__career__detail__section1__content__info__element">
-                      <div className="app__career__detail__section1__content__info__element__icon"><i className="i-clock-o"></i></div>
+                      <div className="app__career__detail__section1__content__info__element__icon"><i className="i-clock-o" /></div>
                       <div className="app__career__detail__section1__content__info__element__text">FULL-TIME</div>
                     </div>
                   </div>
@@ -79,10 +78,10 @@ class CareerDetail extends React.PureComponent {
           </section>
           <section className="app__career__detail__mask d-none d-lg-block">
             <div className="app__career__detail__mask__one">
-              <img src={require('assets/media/images/Group 2.png')} alt="No Image"/>
+              <img src={require('assets/media/images/Group 2.png')} alt="No Asset" />
             </div>
             <div className="app__career__detail__mask__two">
-              <img src={require('assets/media/images/Group 8.png')} alt="No Image"/>
+              <img src={require('assets/media/images/Group 8.png')} alt="No Asset" />
             </div>
           </section>
         </div>
@@ -91,11 +90,8 @@ class CareerDetail extends React.PureComponent {
   }
 }
 
-CareerDetail.propTypes = {
-  match: PropTypes.object.isRequired,
-};
-
-CareerDetail.defaultProps = {
-};
+// CareerDetail.propTypes = {
+//   match: PropTypes.object.isRequired,
+// };
 
 export default CareerDetail;

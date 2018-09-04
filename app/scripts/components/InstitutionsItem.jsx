@@ -4,23 +4,25 @@ import Title from 'components/Title';
 
 export default class InstitutionsItem extends React.PureComponent {
   static propTypes = {
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
+    align: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
-    align: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   };
 
   render() {
     const { title, subtitle, description, src, align } = this.props;
 
-    const content1 = (<div className="col-6 app__institutions__item__content__info">
-      <Title title={title} subtitle={subtitle} />
-      <p className="app__institutions__item__content__info__description">{description}</p>
-      <button className="app__institutions__item__content__info__download btn btn__secondary" type="button">DOWNLOAD THE CASE STUDY (8.4 MB)</button>
-    </div>);
+    const content1 = (
+      <div className="col-6 app__institutions__item__content__info">
+        <Title title={title} subtitle={subtitle} />
+        <p className="app__institutions__item__content__info__description">{description}</p>
+        <button className="app__institutions__item__content__info__download btn btn__secondary" type="button">DOWNLOAD THE CASE STUDY (8.4 MB)</button>
+      </div>
+    );
 
-    const content2 = (<img src={require(`assets/media/images/${src}`)} alt="No Image" />);
+    const content2 = (<img src={require(`assets/media/images/${src}`)} alt="No Asset" />);
 
     return (
       <div className="app__institutions__item">

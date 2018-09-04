@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 export default class Overview extends React.PureComponent {
   static propTypes = {
-    order: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
-    link: PropTypes.string,
     active: PropTypes.bool,
+    link: PropTypes.string,
+    order: PropTypes.number.isRequired,
+    src: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   };
 
   render() {
     const { order, title, subtitle, src, link, active } = this.props;
     return (
-      <div className={"app__overview" + (active ? " active" : "")}>
+      <div className={`app__overview${active ? ' active' : ''}`}>
         <div className="app__overview__internal">
           <div className="app__overview__internal__content">
             <div className="app__overview__internal__content__order">
@@ -32,7 +32,7 @@ export default class Overview extends React.PureComponent {
         </div>
         <div className="app__overview__external">
           <div className="app__overview__external__image">
-            <img src={require(`assets/media/images/${src}`)} alt='No Image' />
+            <img src={require(`assets/media/images/${src}`)} alt="No Asset" />
           </div>
           {link && <button className="app__overview__external__download body btn btn__secondary ml-0" type="button">DOWNLOAD THE CASE STUDY (8.4 MB)</button> }
         </div>

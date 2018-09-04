@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 export default class Item extends React.PureComponent {
   static propTypes = {
-    title: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired,
     active: PropTypes.bool,
+    icon: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   };
 
   render() {
     const { title, icon, active } = this.props;
     return (
-      <div className={"app__item" + (active ? " active" : "")}>
+      <div className={`app__item${active ? ' active' : ''}`}>
         <div className="app__item__content">
           <div className="app__item__content__icon mx-auto">
-            <img className="app__item__content__icon__img" src={require(`assets/media/icons/${icon}.png`)} alt='No Image' />
+            <img className="app__item__content__icon__img" src={require(`assets/media/icons/${icon}.png`)} alt="No Asset" />
             <div className="app__item__content__icon__active">
               <div className="app__item__content__icon__active__circle" />
               <div className="app__item__content__icon__active__triangle" />
@@ -25,7 +25,7 @@ export default class Item extends React.PureComponent {
         </div>
         <div className="app__item__background">
           Image
-          <img src={require(`assets/media/icons/${icon}.png`)} alt='No Image' />
+          <img src={require(`assets/media/icons/${icon}.png`)} alt="No Asset" />
         </div>
       </div>
     );

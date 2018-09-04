@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes/InstitutionsRoute should render the Institutions Page for authenticated access 1`] = `"<div data-reactroot=\\"\\">Institutions</div>"`;
+
+exports[`routes/InstitutionsRoute should render the Institutions Page for unauthenticated access 1`] = `"<div data-reactroot=\\"\\">Institutions</div>"`;

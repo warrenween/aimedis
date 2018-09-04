@@ -1,18 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Profile from 'pages/Profile';
+import Terms from 'pages/Terms';
 
 function setup() {
-  const props = {
-    dispatch: () => {},
-    location: {},
-  };
-
-  return shallow(<Profile {...props} />);
+  return shallow(<Terms />);
 }
 
-describe('Profile', () => {
+describe('Terms', () => {
   const wrapper = setup();
 
   it('should be a Component', () => {
@@ -20,6 +15,6 @@ describe('Profile', () => {
   });
 
   it('should render properly', () => {
-    expect(wrapper.find('.app__profile')).toExist();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });

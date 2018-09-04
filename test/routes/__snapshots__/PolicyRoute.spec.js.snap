@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes/PolicyRoute should render the Policy Page for authenticated access 1`] = `"<div data-reactroot=\\"\\">Policy</div>"`;
+
+exports[`routes/PolicyRoute should render the Policy Page for unauthenticated access 1`] = `"<div data-reactroot=\\"\\">Policy</div>"`;

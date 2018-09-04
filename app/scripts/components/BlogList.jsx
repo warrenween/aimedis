@@ -12,16 +12,12 @@ export default class BlogList extends React.PureComponent {
 
   activeClick = (index, e) => {
     e.preventDefault();
-    this.setState(() => {
-      return { active: index };
-    });
+    this.setState({ active: index });
   };
 
   prev = (e) => {
     e.preventDefault();
-    this.setState((prevState) => {
-      return { active: (prevState.active === 1 ? 1 : prevState.active - 1) };
-    });
+    this.setState((prevState) => ({ active: (prevState.active === 1 ? 1 : prevState.active - 1) }));
   };
 
   next = (e) => {
@@ -90,17 +86,19 @@ export default class BlogList extends React.PureComponent {
     ];
 
     const { active } = this.state;
-    let result = [];
+    const result = [];
 
     for (let i = 0; i < 9; i++) {
       result.push(
         <div className="col-12 col-lg-4" key={i}>
-          <BlogItem item={{
-            id: i + 1,
-            title: list[i + (active - 1) * 9].title,
-            description: list[i + (active - 1) * 9].description,
-            src: list[i + (active - 1) * 9].src,
-          }}/>
+          <BlogItem
+            item={{
+              id: i + 1,
+              title: list[i + (active - 1) * 9].title,
+              description: list[i + (active - 1) * 9].description,
+              src: list[i + (active - 1) * 9].src,
+            }}
+          />
         </div>
       );
     }
@@ -110,8 +108,8 @@ export default class BlogList extends React.PureComponent {
 
   pagination = () => {
     const { active, count } = this.state;
-    let result = [];
-    result.push(<div className="app__blog__list__pagination__item prev" key='prev' onClick={this.prev}>&lt;</div>);
+    const result = [];
+    result.push(<div className="app__blog__list__pagination__item prev" key="prev" onClick={this.prev}>&lt;</div>);
 
     const buttonCount = Math.ceil(count / 9);
 
@@ -123,29 +121,32 @@ export default class BlogList extends React.PureComponent {
       for (let i = 1; i <= buttonCount; i++) {
         result.push(<div className="app__blog__list__pagination__item" key={i} onClick={(e) => this.activeClick(i, e)}>{i}</div>);
       }
-    } else if (active < 5) {
+    }
+    else if (active < 5) {
       for (let i = 1; i <= 5; i++) {
-        result.push(<div className={"app__blog__list__pagination__item" + (active === i ? ' active' : '')} key={i} onClick={(e) => this.activeClick(i, e)}>{i}</div>);
+        result.push(<div className={`app__blog__list__pagination__item${active === i ? ' active' : ''}`} key={i} onClick={(e) => this.activeClick(i, e)}>{i}</div>);
       }
-      result.push(<div className="app__blog__list__pagination__item abbr" key='next_abbr'>...</div>);
+      result.push(<div className="app__blog__list__pagination__item abbr" key="next_abbr">...</div>);
       result.push(<div className="app__blog__list__pagination__item" key={buttonCount} onClick={(e) => this.activeClick(buttonCount, e)}>{buttonCount}</div>);
-    } else if (active > buttonCount - 4) {
+    }
+    else if (active > buttonCount - 4) {
       result.push(<div className="app__blog__list__pagination__item" key={1} onClick={(e) => this.activeClick(1, e)}>1</div>);
-      result.push(<div className="app__blog__list__pagination__item abbr" key='prev_abbr'>...</div>);
+      result.push(<div className="app__blog__list__pagination__item abbr" key="prev_abbr">...</div>);
       for (let i = buttonCount - 4; i <= buttonCount; i++) {
-        result.push(<div className={"app__blog__list__pagination__item" + (active === i ? ' active' : '')} key={i} onClick={(e) => this.activeClick(i, e)}>{i}</div>);
+        result.push(<div className={`app__blog__list__pagination__item${active === i ? ' active' : ''}`} key={i} onClick={(e) => this.activeClick(i, e)}>{i}</div>);
       }
-    } else {
+    }
+    else {
       result.push(<div className="app__blog__list__pagination__item" key={1} onClick={(e) => this.activeClick(1, e)}>1</div>);
-      result.push(<div className="app__blog__list__pagination__item abbr" key='prev_abbr'>...</div>);
+      result.push(<div className="app__blog__list__pagination__item abbr" key="prev_abbr">...</div>);
       for (let i = active - 1; i <= active + 1; i++) {
-        result.push(<div className={"app__blog__list__pagination__item" + (active === i ? ' active' : '')} key={i} onClick={(e) => this.activeClick(i, e)}>{i}</div>);
+        result.push(<div className={`app__blog__list__pagination__item${active === i ? ' active' : ''}`} key={i} onClick={(e) => this.activeClick(i, e)}>{i}</div>);
       }
-      result.push(<div className="app__blog__list__pagination__item abbr" key='next_abbr'>...</div>);
+      result.push(<div className="app__blog__list__pagination__item abbr" key="next_abbr">...</div>);
       result.push(<div className="app__blog__list__pagination__item" key={buttonCount} onClick={(e) => this.activeClick(buttonCount, e)}>{buttonCount}</div>);
     }
 
-    result.push(<div className="app__blog__list__pagination__item next" key='next' onClick={this.next}>&gt;</div>);
+    result.push(<div className="app__blog__list__pagination__item next" key="next" onClick={this.next}>&gt;</div>);
     return result;
   };
 

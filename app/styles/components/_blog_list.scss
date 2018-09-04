@@ -22,7 +22,8 @@
       margin: 0.25rem;
       width: 3.5rem;
 
-      &.prev, &.next {
+      &.prev,
+      &.next {
         border: 1px solid rgba(#979797, 0.34);
         border-radius: 50%;
       }
@@ -35,7 +36,8 @@
         margin-left: 0.75rem;
       }
 
-      &:hover:not(.abbr), &.active:not(.abbr) {
+      &:hover:not(.abbr),
+      &.active:not(.abbr) {
         background: $primary;
         border: 0;
         border-radius: 50%;

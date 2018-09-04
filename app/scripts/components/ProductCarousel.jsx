@@ -23,9 +23,7 @@ export default class ProductCarousel extends React.PureComponent {
 
   activeClick = (index, e) => {
     e.preventDefault();
-    this.setState(() => {
-      return { active: index };
-    });
+    this.setState(() => ({ active: index }));
   };
 
   content = () => {
@@ -75,32 +73,34 @@ export default class ProductCarousel extends React.PureComponent {
     ];
 
     const listItems = list.map((item) => (
-        <ProductItem title={item.title}
-                     description={item.description}
-                     src={item.src}
-                     align={item.align} />
-      )
-    );
+      <ProductItem
+        title={item.title}
+        description={item.description}
+        src={item.src}
+        align={item.align}
+        key={item.title}
+      />
+    ));
 
     const { active, count } = this.state;
-    let result = [];
+    const result = [];
 
     for (let i = 0; i < count; i++) {
-      let flag = "";
-      if (i === (active + count - 1) % count ) {
-        flag = " prev";
+      let flag = '';
+      if (i === (active + count - 1) % count) {
+        flag = ' prev';
       }
 
-      if ( i === active) {
-        flag = " active";
+      if (i === active) {
+        flag = ' active';
       }
 
-      if ( i === (active + 1) % count ) {
-        flag = " next";
+      if (i === (active + 1) % count) {
+        flag = ' next';
       }
 
       result.push(
-        <div className={'app__product__carousel__content__inner__item' + flag} key={i}>
+        <div className={`app__product__carousel__content__inner__item${flag}`} key={i}>
           { listItems[i] }
         </div>
       );
@@ -111,11 +111,11 @@ export default class ProductCarousel extends React.PureComponent {
 
   indicator = () => {
     const { active, count } = this.state;
-    let result = [];
+    const result = [];
 
     for (let i = 0; i < count; i++) {
       result.push(
-        <div className={'app__product__carousel__content__external__content__item' + (active === i ? " active" : "")} key={i} onClick={(e) => this.activeClick(i, e)} />
+        <div className={`app__product__carousel__content__external__content__item${active === i ? ' active' : ''}`} key={i} onClick={(e) => this.activeClick(i, e)} />
       );
     }
 

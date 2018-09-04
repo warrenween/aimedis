@@ -72,17 +72,18 @@ export default class GroupToggle extends React.PureComponent {
     const listGroup2 = listGroup1;
 
     const list = active === 0 ? listGroup1 : listGroup2;
-    let result = [];
+    const result = [];
 
     for (let i = 0; i < list.length; i++) {
       result.push(
         <div className="col-6 col-lg-3" key={i}>
-          <GroupToggleItem src={list[i].src}
-                           title={list[i].title}
-                           subTitle={list[i].subTitle}
-                           facebook={list[i].facebook}
-                           linkedin={list[i].linkedin}
-                           key={i}
+          <GroupToggleItem
+            src={list[i].src}
+            title={list[i].title}
+            subTitle={list[i].subTitle}
+            facebook={list[i].facebook}
+            linkedin={list[i].linkedin}
+            key={i}
           />
         </div>
       );
@@ -90,11 +91,12 @@ export default class GroupToggle extends React.PureComponent {
 
     result.push(
       <div className="col-6 col-lg-3" key={7}>
-        <GroupToggleItem src="team_mask.png"
-                         title="Join our team"
-                         subTitle="SEE ALL POSITIONS"
-                         key={7}
-                         last={true}
+        <GroupToggleItem
+          src="team_mask.png"
+          title="Join our team"
+          subTitle="SEE ALL POSITIONS"
+          key={7}
+          last={true}
         />
       </div>
     );
@@ -104,9 +106,7 @@ export default class GroupToggle extends React.PureComponent {
 
   activeClick = (e) => {
     e.preventDefault();
-    this.setState((prevState) => {
-      return { active: 1 - prevState.active };
-    });
+    this.setState((prevState) => ({ active: 1 - prevState.active }));
   };
 
   render() {
@@ -115,10 +115,10 @@ export default class GroupToggle extends React.PureComponent {
     return (
       <div className="app__group__toggle">
         <div className="app__group__toggle__button" onClick={this.activeClick}>
-          <div className={'app__group__toggle__button__team' + (active ? ' active' : '')}>
+          <div className={`app__group__toggle__button__team${active ? ' active' : ''}`}>
             <span>TEAM</span>
           </div>
-          <div className={'app__group__toggle__button__board' + (!active ? ' active' : '')}>
+          <div className={`app__group__toggle__button__board${!active ? ' active' : ''}`}>
             <span>BOARD</span>
           </div>
         </div>
