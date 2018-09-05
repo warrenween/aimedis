@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class Avatar extends React.PureComponent {
-  static propTypes = {
-    src: PropTypes.string.isRequired,
-  };
+const Avatar = ({ src }) => (
+  <div className="app__avatar">
+    <img className="app__avatar__image" src={require(`assets/media/icons/${src}`)} alt="No Avatar" />
+  </div>
+);
 
-  render() {
-    const { src } = this.props;
-    return (
-      <div className="app__avatar">
-        <img className="app__avatar__image" src={require(`assets/media/icons/${src}`)} alt="No Avatar" />
-      </div>
-    );
-  }
-}
+Avatar.propTypes = {
+  src: PropTypes.string,
+};
+
+Avatar.defaultProps = {
+  src: 'fhir.png',
+};
+
+export default Avatar;

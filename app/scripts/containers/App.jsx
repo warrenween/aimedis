@@ -66,7 +66,7 @@ export class App extends React.Component {
   }
 
   render() {
-    const { app, dispatch, user } = this.props;
+    const { app, dispatch, router, user } = this.props;
 
     return (
       <ConnectedRouter history={history}>
@@ -83,7 +83,7 @@ export class App extends React.Component {
             titleTemplate={`%s | ${config.name}`}
             titleAttributes={{ itemprop: 'name', lang: 'pt-br' }}
           />
-          <Header dispatch={dispatch} />
+          <Header dispatch={dispatch} user={user} router={router} />
           <main className="app__main">
             <Switch>
               <HomeRoute isAuthenticated={user.isAuthenticated} path="/" exact component={Home} />

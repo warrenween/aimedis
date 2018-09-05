@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GetEarlyAccess should render properly 1`] = `"<div class=\\"app__get__early__access\\"><input class=\\"app__get__early__access__input\\" type=\\"text\\" placeholder=\\"Your Email Address\\"><button type=\\"button\\" class=\\"app__get__early__access__button btn btn__primary\\">Get <span class=\\"d-none d-lg-inline\\">Early </span>Access</button></div>"`;

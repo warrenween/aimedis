@@ -6,6 +6,29 @@ export default class Carousel extends React.PureComponent {
     this.state = {
       active: 0,
       count: 3,
+      list: [
+        {
+          id: 0,
+          src: 'ProfHeuer.png',
+          description: '"Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick, easy and efficient treatment."',
+          name: 'Rizmy Shariff',
+          caption: 'Family doctor Solingen Germany',
+        },
+        {
+          id: 1,
+          src: 'yang.png',
+          description: '"Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick, easy and efficient treatment."',
+          name: 'Rizmy Shariff',
+          caption: 'Family doctor Solingen Germany',
+        },
+        {
+          id: 2,
+          src: 'DrPhilippi.png',
+          description: '"Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick, easy and efficient treatment."',
+          name: 'Rizmy Shariff',
+          caption: 'Family doctor Solingen Germany',
+        },
+      ],
     };
   }
 
@@ -31,30 +54,8 @@ export default class Carousel extends React.PureComponent {
   };
 
   content = () => {
-    const list = [
-      {
-        id: 0,
-        src: 'ProfHeuer.png',
-        description: '"Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick, easy and efficient treatment."',
-        name: 'Rizmy Shariff',
-        caption: 'Family doctor Solingen Germany',
-      },
-      {
-        id: 1,
-        src: 'yang.png',
-        description: '"Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick, easy and efficient treatment."',
-        name: 'Rizmy Shariff',
-        caption: 'Family doctor Solingen Germany',
-      },
-      {
-        id: 2,
-        src: 'DrPhilippi.png',
-        description: '"Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick, easy and efficient treatment."',
-        name: 'Rizmy Shariff',
-        caption: 'Family doctor Solingen Germany',
-      },
-    ];
-
+    const { active, count, list } = this.state;
+    const result = [];
     const listItems = list.map((item) => (
       <div className="app__carousel__content__inner__item__content" key={item.id.toString()}>
         <img src={require(`assets/media/images/${item.src}`)} alt="No Carousel" />
@@ -64,9 +65,6 @@ export default class Carousel extends React.PureComponent {
         <p className="app__carousel__content__inner__item__quotation">&ldquo;</p>
       </div>)
     );
-
-    const { active, count } = this.state;
-    const result = [];
 
     result.push(
       <div className="app__carousel__content__inner__item prev" key="prev">
