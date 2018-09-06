@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import BlogItem from 'components/BlogItem';
 
 class BlogDetail extends React.PureComponent {

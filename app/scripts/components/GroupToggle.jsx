@@ -1,7 +1,7 @@
 import React from 'react';
 import GroupToggleItem from 'components/GroupToggleItem';
 
-export default class GroupToggle extends React.PureComponent {
+class GroupToggle extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,56 +12,56 @@ export default class GroupToggle extends React.PureComponent {
           src: 'team1.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 1,
           src: 'team2.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 2,
           src: 'team1.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 3,
           src: 'team3.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 4,
           src: 'team5.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 5,
           src: 'team1.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 6,
           src: 'team4.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
       ],
       listGroup2: [
@@ -70,56 +70,56 @@ export default class GroupToggle extends React.PureComponent {
           src: 'team1.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 1,
           src: 'team2.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 2,
           src: 'team1.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 3,
           src: 'team3.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 4,
           src: 'team5.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 5,
           src: 'team1.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
         {
           id: 6,
           src: 'team4.png',
           title: 'Dr. Michael J. Kaldasch',
           subTitle: 'CEO, MD & founder',
-          facebook: '',
-          linkedin: '',
+          facebook: '#',
+          linkedin: '#',
         },
       ],
     };
@@ -151,6 +151,8 @@ export default class GroupToggle extends React.PureComponent {
           src="team_mask.png"
           title="Join our team"
           subTitle="SEE ALL POSITIONS"
+          facebook="#"
+          linkedin="#"
           key={7}
           last={true}
         />
@@ -187,3 +189,5 @@ export default class GroupToggle extends React.PureComponent {
     );
   }
 }
+
+export default GroupToggle;

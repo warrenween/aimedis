@@ -3,8 +3,8 @@ import GetEarlyAccess from 'components/GetEarlyAccess';
 import VideoMask from 'components/VideoMask';
 import Avatar from 'components/Avatar';
 import Title from 'components/Title';
-import Item from 'components/Item';
-import List from 'components/List';
+import OfferItem from 'components/OfferItem';
+import StaticItem from 'components/StaticItem';
 import Overview from 'components/Overview';
 import Carousel from 'components/Carousel';
 import BlogItem from 'components/BlogItem';
@@ -78,31 +78,31 @@ export default class Home extends React.PureComponent {
             <div className="app__home__section3__content">
               <div className="row">
                 <div className="col-lg-3 col-6 app__home__section3__content__item">
-                  <Item title="Your health data in one place" icon="your-health-data-in-one-place" src="" />
+                  <OfferItem title="Your health data in one place" icon="your-health-data-in-one-place" src="" />
                 </div>
                 <div className="col-lg-3 col-6 app__home__section3__content__item">
-                  <Item title="Videochat with doctors" icon="your-health-data-in-one-place" src="" />
+                  <OfferItem title="Videochat with doctors" icon="your-health-data-in-one-place" src="" />
                 </div>
                 <div className="col-lg-3 col-6 app__home__section3__content__item">
-                  <Item title="Doctors appointments" icon="your-health-data-in-one-place" src="" active={true} />
+                  <OfferItem title="Doctors appointments" icon="your-health-data-in-one-place" src="" />
                 </div>
                 <div className="col-lg-3 col-6 offset-lg-3 app__home__section3__content__item">
-                  <Item title="Independent Second Opinion" icon="your-health-data-in-one-place" src="" />
+                  <OfferItem title="Independent Second Opinion" icon="your-health-data-in-one-place" src="" />
                 </div>
                 <div className="col-lg-3 col-6 app__home__section3__content__item">
-                  <Item title="Connect fitness trackers" icon="your-health-data-in-one-place" src="" />
+                  <OfferItem title="Connect fitness trackers" icon="your-health-data-in-one-place" src="" />
                 </div>
                 <div className="col-lg-3 col-6 app__home__section3__content__item">
-                  <Item title="Care for your family" icon="your-health-data-in-one-place" src="" />
+                  <OfferItem title="Care for your family" icon="your-health-data-in-one-place" src="" />
                 </div>
                 <div className="col-lg-3 col-6 offset-lg-3 app__home__section3__content__item">
-                  <Item title="Prescription online" icon="your-health-data-in-one-place" src="" />
+                  <OfferItem title="Prescription online" icon="your-health-data-in-one-place" src="" />
                 </div>
                 <div className="col-lg-3 col-6 app__home__section3__content__item">
-                  <Item title="Medical tourism" icon="your-health-data-in-one-place" src="" />
+                  <OfferItem title="Medical tourism" icon="your-health-data-in-one-place" src="" />
                 </div>
                 <div className="col-lg-3 col-6 app__home__section3__content__item">
-                  <Item title="Your health data in one place" icon="your-health-data-in-one-place" src="" />
+                  <OfferItem title="Your health data in one place" icon="your-health-data-in-one-place" src="" last={true} />
                 </div>
               </div>
             </div>
@@ -134,28 +134,28 @@ export default class Home extends React.PureComponent {
                 <div className="col-lg-7 d-none d-lg-block">
                   <div className="row">
                     <div className="col-lg-6 app__home__section4__content__item">
-                      <List title="Optimal Security" icon="your-health-data-in-one-place" />
+                      <StaticItem title="Optimal Security" icon="your-health-data-in-one-place" />
                     </div>
                     <div className="col-lg-6 app__home__section4__content__item">
-                      <List title="Blockchain & Smart contracts" icon="your-health-data-in-one-place" />
+                      <StaticItem title="Blockchain & Smart contracts" icon="your-health-data-in-one-place" />
                     </div>
                     <div className="col-lg-6 app__home__section4__content__item">
-                      <List title="Smart graphs & AI" icon="your-health-data-in-one-place" />
+                      <StaticItem title="Smart graphs & AI" icon="your-health-data-in-one-place" />
                     </div>
                     <div className="col-lg-6 app__home__section4__content__item">
-                      <List title="Payment & cryptocurrencies" icon="your-health-data-in-one-place" />
+                      <StaticItem title="Payment & cryptocurrencies" icon="your-health-data-in-one-place" />
                     </div>
                     <div className="col-lg-6 app__home__section4__content__item">
-                      <List title="AIMSafe drug safety" icon="your-health-data-in-one-place" />
+                      <StaticItem title="AIMSafe drug safety" icon="your-health-data-in-one-place" />
                     </div>
                     <div className="col-lg-6 app__home__section4__content__item">
-                      <List title="ICD 10" icon="your-health-data-in-one-place" />
+                      <StaticItem title="ICD 10" icon="your-health-data-in-one-place" />
                     </div>
                     <div className="col-lg-6 app__home__section4__content__item">
-                      <List title="HL7, FHIR, DICOM, HIPAA, IHE" icon="your-health-data-in-one-place" />
+                      <StaticItem title="HL7, FHIR, DICOM, HIPAA, IHE" icon="your-health-data-in-one-place" />
                     </div>
                     <div className="col-lg-6 app__home__section4__content__item">
-                      <List title="ATC" icon="your-health-data-in-one-place" />
+                      <StaticItem title="ATC" icon="your-health-data-in-one-place" />
                     </div>
                   </div>
                 </div>

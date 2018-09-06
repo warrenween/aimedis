@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Carousel extends React.PureComponent {
+class Carousel extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -105,3 +105,5 @@ export default class Carousel extends React.PureComponent {
     );
   }
 }
+
+export default Carousel;

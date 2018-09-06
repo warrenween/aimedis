@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 class CareerDetail extends React.PureComponent {
   // constructor(props) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogItem from 'components/BlogItem';
 
-export default class BlogList extends React.PureComponent {
+class BlogList extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -114,7 +114,7 @@ export default class BlogList extends React.PureComponent {
     }
 
     result.push(<div className="app__blog__list__pagination__item prev" key="prev" onClick={this.prev}>&lt;</div>);
-    result.push(<div className="app__blog__list__pagination__item" key={1} onClick={(e) => this.activeClick(1, e)}>1</div>);
+    result.push(<div className={`app__blog__list__pagination__item${active === 1 ? ' active' : ''}`} key={1} onClick={(e) => this.activeClick(1, e)}>1</div>);
 
     if (buttonCount < 8) {
       for (let i = 2; i < buttonCount; i++) {
@@ -141,7 +141,7 @@ export default class BlogList extends React.PureComponent {
       result.push(<div className="app__blog__list__pagination__item abbr" key="next_abbr">...</div>);
     }
 
-    result.push(<div className="app__blog__list__pagination__item" key={buttonCount} onClick={(e) => this.activeClick(buttonCount, e)}>{buttonCount}</div>);
+    result.push(<div className={`app__blog__list__pagination__item${active === buttonCount ? ' active' : ''}`} key={buttonCount} onClick={(e) => this.activeClick(buttonCount, e)}>{buttonCount}</div>);
     result.push(<div className="app__blog__list__pagination__item next" key="next" onClick={this.next}>&gt;</div>);
     return result;
   };
@@ -161,3 +161,5 @@ export default class BlogList extends React.PureComponent {
     );
   }
 }
+
+export default BlogList;

@@ -163,7 +163,12 @@ const mapStyles = [
   },
 ];
 
-const MyMapComponent = compose(
+const position = {
+  lat: 51.3332,
+  lng: 6.1192292,
+};
+
+const Location = compose(
   withProps({
     googleMapURL: 'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places',
     loadingElement: <div style={{ height: '100%' }} />,
@@ -175,27 +180,15 @@ const MyMapComponent = compose(
 )(() => (
   <GoogleMap
     defaultZoom={18}
-    defaultCenter={{
-      lat: 51.3330158,
-      lng: 6.1192292,
-    }}
+    defaultCenter={position}
     options={{ styles: mapStyles }}
   >
     <Marker
-      position={{
-        lat: 51.3332,
-        lng: 6.1192292,
-      }}
+      position={position}
       defaultIcon={require('assets/media/icons/marker.png')}
       defaultDraggable={false}
     />
   </GoogleMap>
 ));
 
-export default class Location extends React.PureComponent {
-  render() {
-    return (
-      <MyMapComponent />
-    );
-  }
-}
+export default Location;

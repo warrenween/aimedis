@@ -1,4 +1,4 @@
-.app__item {
+.app__offer__item {
   position: relative;
 
   &__content {
@@ -53,8 +53,8 @@
     display: none;
   }
 
-  &.active {
-    .app__item {
+  &:hover {
+    .app__offer__item {
       &__content {
         background: linear-gradient(16.56deg, #00b0db 0%, #00acb9 33.42%, #00aaa6 100%);
         border-radius: 0.75rem;
@@ -119,8 +119,8 @@
     }
   }
 
-  &:hover {
-    .app__item {
+  &.active {
+    .app__offer__item {
       &__content {
         background: linear-gradient(134.78deg, #00aaa6 0%, #00afd7 100%);
         border-radius: 0.75rem;
