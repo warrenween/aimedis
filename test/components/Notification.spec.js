@@ -19,5 +19,10 @@ describe('Notification', () => {
     expect(wrapper.find('.app__notification__icon')).toExist();
     expect(wrapper.find('.app__notification__content')).toHaveText('Hello World');
     expect(wrapper.find('.app__notification__close')).toExist();
+
+    const activeButtonElement = wrapper.find('.app__notification__close');
+    activeButtonElement.simulate('click');
+
+    expect(wrapper.find('.app__notification')).not.toExist();
   });
 });

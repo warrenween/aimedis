@@ -5,7 +5,7 @@ class GroupToggle extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      active: 0,
+      active: true,
       listGroup1: [
         {
           id: 0,
@@ -127,7 +127,7 @@ class GroupToggle extends React.PureComponent {
 
   content = () => {
     const { active, listGroup1, listGroup2 } = this.state;
-    const list = active === 0 ? listGroup1 : listGroup2;
+    const list = active ? listGroup1 : listGroup2;
     const result = [];
 
     for (let i = 0; i < list.length; i++) {
@@ -162,9 +162,10 @@ class GroupToggle extends React.PureComponent {
     return result;
   };
 
-  activeClick = (e) => {
-    e.preventDefault();
-    this.setState((prevState) => ({ active: 1 - prevState.active }));
+  activeClick = () => {
+    this.setState(state => ({
+      active: !state.active,
+    }));
   };
 
   render() {
@@ -173,10 +174,10 @@ class GroupToggle extends React.PureComponent {
     return (
       <div className="app__group__toggle">
         <div className="app__group__toggle__button" onClick={this.activeClick}>
-          <div className={`app__group__toggle__button__team${!active ? ' active' : ''}`}>
+          <div className={`app__group__toggle__button__team${active ? ' active' : ''}`}>
             <span>TEAM</span>
           </div>
-          <div className={`app__group__toggle__button__board${active ? ' active' : ''}`}>
+          <div className={`app__group__toggle__button__board${!active ? ' active' : ''}`}>
             <span>BOARD</span>
           </div>
         </div>

@@ -43,14 +43,16 @@ class Carousel extends React.PureComponent {
     // clearInterval(this.timerID);
   }
 
-  prev = (e) => {
-    e.preventDefault();
-    this.setState((prevState) => ({ active: (prevState.active + prevState.count - 1) % prevState.count }));
+  prev = () => {
+    this.setState(state => ({
+      active: (state.active + state.count - 1) % state.count,
+    }));
   };
 
-  next = (e) => {
-    e.preventDefault();
-    this.setState((prevState) => ({ active: (prevState.active + 1) % prevState.count }));
+  next = () => {
+    this.setState(state => ({
+      active: (state.active + 1) % state.count,
+    }));
   };
 
   content = () => {

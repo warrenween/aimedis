@@ -15,10 +15,11 @@ describe('GroupToggle', () => {
   });
 
   it('should render properly', () => {
-    expect(wrapper.find('.app__group__toggle')).toExist();
-    expect(wrapper.find('.app__group__toggle__button')).toExist();
-    expect(wrapper.find('.app__group__toggle__button__team')).toExist();
-    expect(wrapper.find('.app__group__toggle__button__board')).toExist();
-    expect(wrapper.find('.app__group__toggle__content')).toExist();
+    expect(wrapper.html()).toMatchSnapshot();
+
+    const activeButtonElement = wrapper.find('.app__group__toggle__button');
+    activeButtonElement.simulate('click');
+
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });

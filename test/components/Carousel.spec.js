@@ -15,20 +15,16 @@ describe('Carousel', () => {
   });
 
   it('should render properly', () => {
-    expect(wrapper.find('.app__carousel')).toExist();
-    expect(wrapper.find('.app__carousel__content')).toExist();
-    expect(wrapper.find('.app__carousel__content__inner')).toExist();
+    expect(wrapper.html()).toMatchSnapshot();
 
-    expect(wrapper.find('.prev')).toExist();
-    expect(wrapper.find('.prev img')).toExist();
+    const prevButtonElement = wrapper.find('.app__carousel__content__indicator__prev');
+    prevButtonElement.simulate('click');
 
-    expect(wrapper.find('.active')).toExist();
-    expect(wrapper.find('.active .app__carousel__content__inner__item__description')).toExist();
-    expect(wrapper.find('.active .app__carousel__content__inner__item__name')).toExist();
-    expect(wrapper.find('.active .app__carousel__content__inner__item__caption')).toExist();
-    expect(wrapper.find('.active .app__carousel__content__inner__item__quotation')).toExist();
+    expect(wrapper.html()).toMatchSnapshot();
 
-    expect(wrapper.find('.next')).toExist();
-    expect(wrapper.find('.next img')).toExist();
+    const nextButtonElement = wrapper.find('.app__carousel__content__indicator__next');
+    nextButtonElement.simulate('click');
+
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });

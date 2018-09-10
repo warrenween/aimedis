@@ -9,17 +9,17 @@ class Notification extends React.PureComponent {
     };
   }
 
-  handleClick = (e) => {
-    e.preventDefault();
+  handleClick = () => {
     this.setState({ active: false });
   };
 
   render() {
     const { children, icon } = this.props;
     const { active } = this.state;
+    let html = '';
 
     if (active) {
-      return (
+      html = (
         <div className="app__notification">
           <div className="app__notification__icon">
             <img src={require(`assets/media/icons/${icon}`)} alt="No Asset" />
@@ -28,14 +28,14 @@ class Notification extends React.PureComponent {
             {children}
           </div>
           <div className="app__notification__close" onClick={this.handleClick}>
-            x
+          x
             <i className="i-times" />
           </div>
         </div>
       );
     }
 
-    return null;
+    return html;
   }
 }
 

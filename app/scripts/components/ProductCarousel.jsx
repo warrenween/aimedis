@@ -113,7 +113,7 @@ class ProductCarousel extends React.PureComponent {
 
     for (let i = 0; i < count; i++) {
       result.push(
-        <div className={`app__product__carousel__content__external__content__item${active === i ? ' active' : ''}`} key={i} onClick={(e) => this.activeClick(i, e)} />
+        <div className={`app__product__carousel__content__external__content__item${active === i ? ' active' : ''} item${i + 1}`} key={i} onClick={(e) => this.activeClick(i, e)} />
       );
     }
 

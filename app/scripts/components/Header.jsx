@@ -12,22 +12,17 @@ export class Header extends React.PureComponent {
     user: PropTypes.object.isRequired,
   };
 
-  handleLogIn = (e) => {
-    e.preventDefault();
+  handleLogIn = () => {
     const { dispatch } = this.props;
-
     dispatch(login());
   };
 
-  handleLogOut = (e) => {
-    e.preventDefault();
+  handleLogOut = () => {
     const { dispatch } = this.props;
-
     dispatch(logOut());
   };
 
-  closeClick = (e) => {
-    e.preventDefault();
+  closeClick = () => {
     window.scroll(0, 0);
   };
 
@@ -126,7 +121,7 @@ export class Header extends React.PureComponent {
               { this.list('web') }
             </ul>
             <form className="form-inline app__header__menubar__form">
-              { user.isAuthenticated && <button type="button" className="btn btn__secondary app__header__menubar__form__login mx-xl-3" onClick={this.handleLogOut}>LogOut</button> }
+              { user.isAuthenticated && <button type="button" className="btn btn__secondary app__header__menubar__form__logout mx-xl-3" onClick={this.handleLogOut}>LogOut</button> }
               { !user.isAuthenticated && <button type="button" className="btn btn__secondary app__header__menubar__form__login mx-xl-3" onClick={this.handleLogIn}>LogIn</button> }
               <button
                 className="navbar-toggler app__header__menubar__form__close" type="button" data-toggle="collapse"

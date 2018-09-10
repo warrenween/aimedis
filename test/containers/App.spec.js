@@ -10,6 +10,11 @@ const props = {
     alerts: [],
   },
   dispatch: mockDispatch,
+  router: {
+    location: {
+      pathname: '',
+    },
+  },
   user: {
     isAuthenticated: false,
   },

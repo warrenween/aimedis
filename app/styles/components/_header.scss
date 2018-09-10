@@ -73,7 +73,8 @@
     }
   }
 
-  &__menubar__form__login {
+  &__menubar__form__login,
+  &__menubar__form__logout {
     width: 8rem;
   }
 
@@ -89,7 +90,8 @@
 
       &__form {
         justify-content: space-between;
-        &__login {
+        &__login,
+        &__logout {
           padding: 1.125rem;
           width: 10rem;
         }
