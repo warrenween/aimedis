@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const GroupToggleItem = ({ facebook, last, linkedin, src, subTitle, title }) => {
   const defaultElement = (
@@ -35,7 +36,9 @@ const GroupToggleItem = ({ facebook, last, linkedin, src, subTitle, title }) => 
 
   return (
     <div className="app__group__toggle__item">
-      { last ? lastElement : defaultElement }
+      <ScrollAnimation animateIn="flipInY" animateOnce={true}>
+        { last ? lastElement : defaultElement }
+      </ScrollAnimation>
     </div>
   );
 };

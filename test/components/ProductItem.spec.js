@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import ProductItem from 'components/ProductItem';
 
-function setup(align = 'left', description = 'Description', src = 'Product1.png', title = 'Title') {
+function setup(align, description = 'Description', src = 'Product1.png', title = 'Title') {
   return mount(<ProductItem
     align={align}
     description={description}
@@ -13,18 +13,19 @@ function setup(align = 'left', description = 'Description', src = 'Product1.png'
 }
 
 describe('ProductItem', () => {
-  const wrapper = setup();
+  const leftWrapper = setup('left');
 
   it('should be a StatelessComponent', () => {
-    expect(wrapper.instance()).toBeNull();
+    expect(leftWrapper.instance()).toBeNull();
   });
 
   it('should render properly', () => {
-    expect(wrapper.find('.app__product__item')).toExist();
-    expect(wrapper.find('.app__product__item__content')).toExist();
-    expect(wrapper.find('.app__product__item__content__info')).toExist();
-    expect(wrapper.find('.app__product__item__content__info__description')).toHaveText('Description');
-    expect(wrapper.find('.app__product__item__content__info__title')).toHaveText('Title');
-    expect(wrapper.find('.app__product__item__content img')).toExist();
+    expect(leftWrapper.html()).toMatchSnapshot();
+  });
+
+  const rightWrapper = setup('right');
+
+  it('should render properly', () => {
+    expect(rightWrapper.html()).toMatchSnapshot();
   });
 });

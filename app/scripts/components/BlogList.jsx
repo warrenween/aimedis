@@ -27,7 +27,7 @@ class BlogList extends React.PureComponent {
   };
 
   prev = () => {
-    this.setState((prevState) => ({ active: (prevState.active === 1 ? 1 : prevState.active - 1) }));
+    this.setState((state) => ({ active: (state.active === 1 ? 1 : state.active - 1) }));
   };
 
   next = () => {
@@ -61,7 +61,7 @@ class BlogList extends React.PureComponent {
     return result;
   };
 
-  item = (active, i) => (<div className={`app__blog__list__pagination__item${active === i ? ' active' : ''}`} key={i} onClick={this.activeClick(i)}>{i}</div>);
+  item = (active, i) => (<div className={`app__blog__list__pagination__item${active === i ? ' active' : ''}`} key={i} onClick={() => this.activeClick(i)}>{i}</div>);
 
   pagination = () => {
     const { active, count } = this.state;

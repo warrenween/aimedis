@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import ProductItem from 'components/ProductItem';
 
 class ProductCarousel extends React.PureComponent {
@@ -99,7 +100,9 @@ class ProductCarousel extends React.PureComponent {
 
       result.push(
         <div className={`app__product__carousel__content__inner__item${flag}`} key={i}>
-          { listItems[i] }
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            { listItems[i] }
+          </ScrollAnimation>
         </div>
       );
     }

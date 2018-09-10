@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import GroupToggleItem from 'components/GroupToggleItem';
 
 class GroupToggle extends React.PureComponent {
@@ -173,19 +174,21 @@ class GroupToggle extends React.PureComponent {
 
     return (
       <div className="app__group__toggle">
-        <div className="app__group__toggle__button" onClick={this.activeClick}>
-          <div className={`app__group__toggle__button__team${active ? ' active' : ''}`}>
-            <span>TEAM</span>
+        <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+          <div className="app__group__toggle__button" onClick={this.activeClick}>
+            <div className={`app__group__toggle__button__team${active ? ' active' : ''}`}>
+              <span>TEAM</span>
+            </div>
+            <div className={`app__group__toggle__button__board${!active ? ' active' : ''}`}>
+              <span>BOARD</span>
+            </div>
           </div>
-          <div className={`app__group__toggle__button__board${!active ? ' active' : ''}`}>
-            <span>BOARD</span>
+          <div className="app__group__toggle__content">
+            <div className="row">
+              {this.content()}
+            </div>
           </div>
-        </div>
-        <div className="app__group__toggle__content">
-          <div className="row">
-            {this.content()}
-          </div>
-        </div>
+        </ScrollAnimation>
       </div>
     );
   }

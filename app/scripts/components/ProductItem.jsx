@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const ProductItem = ({ align, description, src, title }) => {
   const content1 = (
-    <div className="col-12 col-lg-6 p-lg-0 app__product__item__content__info">
+    <div>
       <p className="app__product__item__content__info__title">{title}</p>
       <div className="app__product__item__content__info__image d-block d-lg-none">
         <img src={require('assets/media/images/mobile.png')} alt="No Asset" />
@@ -20,14 +21,44 @@ const ProductItem = ({ align, description, src, title }) => {
 
   const content2 = (<img src={require(`assets/media/images/${src}`)} alt="No Asset" />);
 
+  let content = '';
+
+  if (align === 'right') {
+    content = (
+      <div className="row">
+        <div className="col-6 d-none d-lg-flex direction-rtl">
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            {content2}
+          </ScrollAnimation>
+        </div>
+        <div className="col-12 col-lg-6 p-lg-0 app__product__item__content__info">
+          <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+            {content1}
+          </ScrollAnimation>
+        </div>
+      </div>
+    );
+  } else if (align === 'left') {
+    content = (
+      <div className="row">
+        <div className="col-12 col-lg-6 p-lg-0 app__product__item__content__info">
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            {content1}
+          </ScrollAnimation>
+        </div>
+        <div className="col-6 d-none d-lg-flex">
+          <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+            {content2}
+          </ScrollAnimation>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="app__product__item">
       <div className="app__product__item__content">
-        <div className="row">
-          {align === 'right' && <div className="col-6 d-none d-lg-flex direction-rtl"> {content2} </div>}
-          {content1}
-          {align === 'left' && <div className="col-6 d-none d-lg-flex"> {content2} </div>}
-        </div>
+        { content }
       </div>
     </div>
   );
