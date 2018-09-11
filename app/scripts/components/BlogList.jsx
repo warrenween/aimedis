@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import BlogItem from 'components/BlogItem';
 
 class BlogList extends React.PureComponent {
@@ -115,9 +116,11 @@ class BlogList extends React.PureComponent {
             {this.content()}
           </div>
         </div>
-        <div className="app__blog__list__pagination d-none d-lg-flex">
-          {this.pagination()}
-        </div>
+        <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+          <div className="app__blog__list__pagination d-none d-lg-flex">
+            {this.pagination()}
+          </div>
+        </ScrollAnimation>
       </div>
     );
   }

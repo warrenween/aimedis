@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class Carousel extends React.PureComponent {
   constructor(props) {
@@ -70,25 +71,31 @@ class Carousel extends React.PureComponent {
 
     result.push(
       <div className="app__carousel__content__inner__item prev" key="prev">
-        <div className="app__carousel__content__indicator__prev" onClick={this.prev}>
-          <span className="i-long-arrow-left" />
-        </div>
-        { listItems[(active + count - 1) % count] }
+        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+          <div className="app__carousel__content__indicator__prev" onClick={this.prev}>
+            <span className="i-long-arrow-left" />
+          </div>
+          { listItems[(active + count - 1) % count] }
+        </ScrollAnimation>
       </div>
     );
 
     result.push(
       <div className="app__carousel__content__inner__item active" key="active">
-        { listItems[active % count] }
+        <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+          { listItems[active % count] }
+        </ScrollAnimation>
       </div>
     );
 
     result.push(
       <div className="app__carousel__content__inner__item next" key="next">
-        { listItems[(active + 1) % count] }
-        <div className="app__carousel__content__indicator__next" onClick={this.next}>
-          <span className="i-long-arrow-right" />
-        </div>
+        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+          { listItems[(active + 1) % count] }
+          <div className="app__carousel__content__indicator__next" onClick={this.next}>
+            <span className="i-long-arrow-right" />
+          </div>
+        </ScrollAnimation>
       </div>
     );
 

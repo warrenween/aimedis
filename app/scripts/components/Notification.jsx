@@ -21,7 +21,7 @@ class Notification extends React.PureComponent {
 
     if (active) {
       html = (
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} initiallyVisible={true}>
           <div className="app__notification">
             <div className="app__notification__icon">
               <img src={require(`assets/media/icons/${icon}`)} alt="No Asset" />

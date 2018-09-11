@@ -21,11 +21,15 @@
       margin-top: -5rem;
       position: initial;
 
-      img {
-        max-width: 40rem;
+      &__content {
+        max-width: 45rem;
         position: absolute;
         right: 0;
         width: 50%;
+
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -34,7 +38,7 @@
     direction: rtl;
     padding-right: 3.75rem;
 
-    img {
+    .app__institutions__item__content__image__content {
       left: 0;
     }
   }

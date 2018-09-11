@@ -1,6 +1,7 @@
 import React from 'react';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const mapStyles = [
   {
@@ -183,11 +184,13 @@ const Location = compose(
     defaultCenter={position}
     options={{ styles: mapStyles }}
   >
-    <Marker
-      position={position}
-      defaultIcon={require('assets/media/icons/marker.png')}
-      defaultDraggable={false}
-    />
+    <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={3000}>
+      <Marker
+        position={position}
+        defaultIcon={require('assets/media/icons/marker.png')}
+        defaultDraggable={false}
+      />
+    </ScrollAnimation>
   </GoogleMap>
 ));
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import CareerItem from 'components/CareerItem';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default class Career extends React.PureComponent {
   render() {
@@ -10,10 +11,12 @@ export default class Career extends React.PureComponent {
             <div className="app__career__section1__content">
               <div className="row">
                 <div className="col-12">
-                  <div className="app__career__section1__content__info">
-                    <p className="app__career__section1__content__info__title">Careers</p>
-                    <p className="app__career__section1__content__info__subtitle">Open positions</p>
-                  </div>
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+                    <div className="app__career__section1__content__info">
+                      <p className="app__career__section1__content__info__title">Careers</p>
+                      <p className="app__career__section1__content__info__subtitle">Open positions</p>
+                    </div>
+                  </ScrollAnimation>
                 </div>
               </div>
             </div>
@@ -83,24 +86,32 @@ export default class Career extends React.PureComponent {
             <div className="app__career__section3__content">
               <div className="row app__career__section3__content__culture">
                 <div className="col-12 col-lg-6 app__career__section3__content__info">
-                  <div>
-                    <p className="app__career__section3__content__info__title">Our Culture</p>
-                    <p className="app__career__section3__content__info__description">Soon Aimedis will offer much more including AIMSocial - the interactive patient platform that is secured and supported by a blockchain and help.</p>
-                  </div>
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+                    <div>
+                      <p className="app__career__section3__content__info__title">Our Culture</p>
+                      <p className="app__career__section3__content__info__description">Soon Aimedis will offer much more including AIMSocial - the interactive patient platform that is secured and supported by a blockchain and help.</p>
+                    </div>
+                  </ScrollAnimation>
                 </div>
                 <div className="col-12 col-lg-6">
-                  <img src={require('assets/media/images/career1.png')} alt="No Asset" />
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+                    <img src={require('assets/media/images/career1.png')} alt="No Asset" />
+                  </ScrollAnimation>
                 </div>
               </div>
               <div className="row app__career__section3__content__mission">
                 <div className="col-12 col-lg-6">
-                  <img src={require('assets/media/images/career2.png')} alt="No Asset" />
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+                    <img src={require('assets/media/images/career2.png')} alt="No Asset" />
+                  </ScrollAnimation>
                 </div>
                 <div className="col-12 col-lg-6 app__career__section3__content__info">
-                  <div>
-                    <p className="app__career__section3__content__info__title">Our Mission</p>
-                    <p className="app__career__section3__content__info__description">Soon Aimedis will offer much more including AIMSocial - the interactive patient platform that is secured and supported by a blockchain and help.</p>
-                  </div>
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+                    <div>
+                      <p className="app__career__section3__content__info__title">Our Mission</p>
+                      <p className="app__career__section3__content__info__description">Soon Aimedis will offer much more including AIMSocial - the interactive patient platform that is secured and supported by a blockchain and help.</p>
+                    </div>
+                  </ScrollAnimation>
                 </div>
               </div>
             </div>
