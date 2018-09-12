@@ -1,155 +1,153 @@
 .app__carousel {
-  &__content {
-    &__inner {
-      display: flex;
-      justify-content: center;
+  &__inner {
+    display: flex;
+    justify-content: center;
 
-      &__item {
-        display: none;
-        text-align: center;
+    &__item {
+      display: none;
+      text-align: center;
 
-        &__description {
-          color: $black-75;
-          font-size: 1.125rem;
-          font-weight: $font-weight-middle;
-          line-height: 1.75rem;
-          margin-top: 2.5rem;
+      @include media-breakpoint-down(md) {
+        &.prev {
+          .app__carousel__indicator__prev {
+            position: absolute;
+            right: -7rem;
+            top: 18.5rem;
+          }
 
-          @include media-breakpoint-down(md) {
-            margin-top: 5rem;
+          .app__carousel__inner__item__content {
+            position: absolute;
+            right: -3rem;
+            top: 4.5rem;
           }
         }
 
-        &__name {
-          color: $black;
-          font-size: 1rem;
-          font-weight: $font-weight-bold;
-          line-height: 1.75rem;
-          margin-top: 3rem;
-        }
-
-        &__caption {
-          color: $primary;
-          font-size: 0.875rem;
-          font-style: italic;
-          font-weight: $font-weight-bold;
-          line-height: 1.25rem;
-          margin-top: 0.25rem;
-          opacity: 0.5;
-        }
-
-        &__quotation {
-          color: $primary;
-          font-family: sans-serif;
-          font-size: 18rem;
-          font-weight: bold;
-          line-height: 0.5;
-          margin-bottom: -6.5rem;
-          opacity: 0.1;
-        }
-
-        &.active {
-          display: block;
-          width: 50%;
-
-          @include media-breakpoint-down(md) {
-            width: 100%;
-
-            img {
-              height: 18rem;
-              width: 18rem;
-            }
-          }
-
-          img {
-            height: 23rem;
-            width: 23rem;
-          }
-        }
-
-        &.prev,
         &.next {
-          display: block;
-          position: relative;
-          width: 25%;
-
-          img {
-            height: 9.5rem;
-            margin-top: 6.5rem;
-            opacity: 0.3;
-            width: 9.5rem;
+          .app__carousel__indicator__next {
+            left: -7rem;
+            position: absolute;
+            top: 18.5rem;
           }
 
-          p {
-            display: none;
+          .app__carousel__inner__item__content {
+            left: -3rem;
+            position: absolute;
+            top: 4.5rem;
           }
         }
+      }
+
+      &__description {
+        color: $black-75;
+        font-size: 1.125rem;
+        font-weight: $font-weight-middle;
+        line-height: 1.75rem;
+        margin-top: 2.5rem;
 
         @include media-breakpoint-down(md) {
-          &.prev {
-            .app__carousel__content__indicator__prev {
-              position: absolute;
-              right: -7rem;
-              top: 18.5rem;
-            }
+          margin-top: 5rem;
+        }
+      }
 
-            .app__carousel__content__inner__item__content {
-              position: absolute;
-              right: -3rem;
-              top: 4.5rem;
-            }
+      &__name {
+        color: $black;
+        font-size: 1rem;
+        font-weight: $font-weight-bold;
+        line-height: 1.75rem;
+        margin-top: 3rem;
+      }
+
+      &__caption {
+        color: $primary;
+        font-size: 0.875rem;
+        font-style: italic;
+        font-weight: $font-weight-bold;
+        line-height: 1.25rem;
+        margin-top: 0.25rem;
+        opacity: 0.5;
+      }
+
+      &__quotation {
+        color: $primary;
+        font-family: sans-serif;
+        font-size: 18rem;
+        font-weight: bold;
+        line-height: 0.5;
+        margin-bottom: -6.5rem;
+        opacity: 0.1;
+      }
+
+      &.active {
+        display: block;
+        width: 50%;
+
+        @include media-breakpoint-down(md) {
+          width: 100%;
+
+          img {
+            height: 18rem;
+            width: 18rem;
           }
+        }
 
-          &.next {
-            .app__carousel__content__indicator__next {
-              left: -7rem;
-              position: absolute;
-              top: 18.5rem;
-            }
+        img {
+          height: 23rem;
+          width: 23rem;
+        }
+      }
 
-            .app__carousel__content__inner__item__content {
-              left: -3rem;
-              position: absolute;
-              top: 4.5rem;
-            }
-          }
+      &.prev,
+      &.next {
+        display: block;
+        position: relative;
+        width: 25%;
+
+        img {
+          height: 9.5rem;
+          margin-top: 6.5rem;
+          opacity: 0.3;
+          width: 9.5rem;
+        }
+
+        p {
+          display: none;
         }
       }
     }
+  }
 
-    &__indicator {
-      &__prev {
-        left: 0;
-        position: absolute;
-        top: 10.5rem;
+  &__indicator {
+    &__prev {
+      left: 0;
+      position: absolute;
+      top: 10.5rem;
 
-        span {
-          justify-content: flex-end;
-        }
+      span {
+        justify-content: flex-end;
       }
+    }
 
-      &__next {
-        position: absolute;
-        right: 0;
-        top: 10.5rem;
+    &__next {
+      position: absolute;
+      right: 0;
+      top: 10.5rem;
 
-        span {
-          justify-content: flex-start;
-        }
+      span {
+        justify-content: flex-start;
       }
+    }
 
-      &__prev,
-      &__next {
-        span {
-          align-items: flex-end;
-          color: $primary;
-          display: flex;
-          font-size: $headline-size;
-          margin-bottom: 0.2rem;
+    &__prev,
+    &__next {
+      span {
+        align-items: flex-end;
+        color: $primary;
+        display: flex;
+        font-size: $headline-size;
+        margin-bottom: 0.2rem;
 
-          &:hover {
-            cursor: pointer;
-          }
+        &:hover {
+          cursor: pointer;
         }
       }
     }

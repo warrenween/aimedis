@@ -29,7 +29,7 @@
         &__text {
           color: $white;
           font-weight: $font-weight-bold;
-          letter-spacing: 0.01px;
+          letter-spacing: 0;
           margin: 0;
           text-align: center;
         }
@@ -69,7 +69,13 @@
     display: none;
   }
 
-  &:hover, &:active, &.active {
+  & + & {
+    margin-top: 0.75rem;
+  }
+
+  &:hover,
+  &:active,
+  &.active {
     .app__overview {
       &__internal {
         background: linear-gradient(16.56deg, #00b0db 0%, #00acb9 33.42%, #00aaa6 100%);
@@ -78,21 +84,19 @@
         &__content {
           &__order {
             background: $white;
-
-            &__text {
-              color: $primary;
-            }
           }
 
-          &__paragraph {
-            &__title {
-              color: $white;
-            }
+          &__order__text {
+            color: $primary;
+          }
 
-            &__subtitle {
-              color: $white;
-              opacity: 1;
-            }
+          &__paragraph__title {
+            color: $white;
+          }
+
+          &__paragraph__subtitle {
+            color: $white;
+            opacity: 1;
           }
         }
       }
@@ -101,46 +105,41 @@
 
   &.active {
     @include media-breakpoint-down(md) {
-      .app__overview {
-        &__internal {
-          border-radius: 0.75rem 0.75rem 0 0;
+      .app__overview__internal {
+        border-radius: 0.75rem 0.75rem 0 0;
+      }
+
+      .app__overview__external {
+        display: block;
+        position: relative;
+
+        &__image {
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
         }
 
-        &__external {
-          display: block;
-          position: relative;
+        &__image img {
+          margin-bottom: 2.25rem;
+          margin-top: 2.25rem;
+          width: initial;
+        }
 
-          &__image {
-            display: flex;
-            justify-content: center;
-            overflow: hidden;
+        &__download {
+          bottom: 4rem;
+          margin: 0.75rem auto 0;
+          padding: 1rem 0;
+          position: absolute;
+          width: 100%;
 
-            img {
-              margin-bottom: 2.25rem;
-              margin-top: 2.25rem;
-              width: initial;
-            }
-          }
-
-          &__download {
-            bottom: 4rem;
-            margin: 0.75rem auto 0;
-            padding: 1rem 0;
-            position: absolute;
-            width: 100%;
-
-            &:hover, &:active {
-              background-color: $primary;
-              color: $white;
-            }
+          &:hover,
+          &:active {
+            background-color: $primary;
+            color: $white;
           }
         }
       }
     }
-  }
-
-  & + & {
-    margin-top: 0.75rem;
   }
 }
 

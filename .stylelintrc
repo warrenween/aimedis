@@ -25,7 +25,7 @@
     "no-empty-source": [true, { "severity": "warning" }],
     "no-missing-end-of-source-newline": true,
     "number-max-precision": 4,
-    "property-no-vendor-prefix": true,
+    "property-no-vendor-prefix": [true, { "ignoreProperties": ["box-orient"] }],
     "selector-class-pattern": "^((?:-{1,2}|_{2})?[a-z0-9]+(?:(?:-{1,2}|_{2})[a-z0-9]+)*)(?:-{1,2}|_{2})?$",
     "selector-max-compound-selectors": 5,
     "selector-max-specificity": ["1,6,4"],

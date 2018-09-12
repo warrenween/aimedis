@@ -10,7 +10,7 @@
         color: $primary;
         font-size: 0.875rem;
         font-weight: 800;
-        letter-spacing: 0.8px;
+        letter-spacing: 0.05rem;
         line-height: 1.25rem;
         margin-bottom: 0;
         text-transform: uppercase;
@@ -28,12 +28,12 @@
 
     &__content {
       &__image {
-        img {
-          width: 100%;
-        }
-
         @include media-breakpoint-down(md) {
           padding: 0;
+        }
+
+        img {
+          width: 100%;
         }
       }
 
@@ -44,7 +44,7 @@
           color: $primary;
           font-size: 0.875rem;
           font-weight: 800;
-          letter-spacing: 0.8px;
+          letter-spacing: 0.05rem;
           line-height: 1.25rem;
           margin-bottom: 0;
           margin-top: 6.5rem;
@@ -61,17 +61,17 @@
         }
 
         &__description {
+          -webkit-box-orient: vertical;
           color: $black;
           display: -webkit-box;
           font-size: 1rem;
           font-weight: $font-weight-middle;
+          -webkit-line-clamp: 3;
           line-height: 1.75rem;
           margin-top: 0.5rem;
           opacity: 0.5;
           overflow: hidden;
           text-overflow: ellipsis;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 3;
 
           @include media-breakpoint-down(md) {
             margin-top: 2.5rem;

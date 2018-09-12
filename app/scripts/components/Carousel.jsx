@@ -60,19 +60,19 @@ class Carousel extends React.PureComponent {
     const { active, count, list } = this.state;
     const result = [];
     const listItems = list.map((item) => (
-      <div className="app__carousel__content__inner__item__content" key={item.id.toString()}>
+      <div className="app__carousel__inner__item__content" key={item.id.toString()}>
         <img src={require(`assets/media/images/${item.src}`)} alt="No Carousel" />
-        <p className="app__carousel__content__inner__item__description">{ item.description }</p>
-        <p className="app__carousel__content__inner__item__name">{ item.name }</p>
-        <p className="app__carousel__content__inner__item__caption">{ item.caption }</p>
-        <p className="app__carousel__content__inner__item__quotation">&ldquo;</p>
+        <p className="app__carousel__inner__item__description">{ item.description }</p>
+        <p className="app__carousel__inner__item__name">{ item.name }</p>
+        <p className="app__carousel__inner__item__caption">{ item.caption }</p>
+        <p className="app__carousel__inner__item__quotation">&ldquo;</p>
       </div>)
     );
 
     result.push(
-      <div className="app__carousel__content__inner__item prev" key="prev">
+      <div className="app__carousel__inner__item prev" key="prev">
         <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-          <div className="app__carousel__content__indicator__prev" onClick={this.prev}>
+          <div className="app__carousel__indicator__prev" onClick={this.prev}>
             <span className="i-long-arrow-left" />
           </div>
           { listItems[(active + count - 1) % count] }
@@ -81,7 +81,7 @@ class Carousel extends React.PureComponent {
     );
 
     result.push(
-      <div className="app__carousel__content__inner__item active" key="active">
+      <div className="app__carousel__inner__item active" key="active">
         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
           { listItems[active % count] }
         </ScrollAnimation>
@@ -89,10 +89,10 @@ class Carousel extends React.PureComponent {
     );
 
     result.push(
-      <div className="app__carousel__content__inner__item next" key="next">
+      <div className="app__carousel__inner__item next" key="next">
         <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
           { listItems[(active + 1) % count] }
-          <div className="app__carousel__content__indicator__next" onClick={this.next}>
+          <div className="app__carousel__indicator__next" onClick={this.next}>
             <span className="i-long-arrow-right" />
           </div>
         </ScrollAnimation>
@@ -105,10 +105,8 @@ class Carousel extends React.PureComponent {
   render() {
     return (
       <div className="app__carousel">
-        <div className="app__carousel__content">
-          <div className="app__carousel__content__inner">
-            { this.content() }
-          </div>
+        <div className="app__carousel__inner">
+          { this.content() }
         </div>
       </div>
     );

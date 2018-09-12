@@ -33,7 +33,8 @@ const InstitutionsItem  = ({ align, description, src, subtitle, title }) => {
         </div>
       </div>
     );
-  } else if (align === 'left') {
+  }
+  else {
     content = (
       <div className="row">
         <div className="col-6 app__institutions__item__content__info">

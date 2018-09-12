@@ -1,7 +1,7 @@
 .app__career__detail {
+  overflow: hidden;
   padding-bottom: 9.5rem;
   padding-top: 11.25rem;
-  overflow: hidden;
   position: relative;
 
   @include media-breakpoint-down(md) {

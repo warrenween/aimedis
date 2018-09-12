@@ -20,11 +20,15 @@
     &__content {
       margin-top: 7.75rem;
 
+      @include media-breakpoint-down(md) {
+        margin-top: 2.5rem;
+      }
+
       &__title {
         color: $black;
         font-size: 2.625rem;
         font-weight: 900;
-        letter-spacing: 0.95px;
+        letter-spacing: 0.06rem;
         line-height: 3.5rem;
         margin-bottom: 2.75rem;
       }
@@ -43,21 +47,20 @@
 
           &__title {
             color: $white;
-            font-family: "Lucida Grande";
+          }
 
-            &__small {
-              font-size: 0.75rem;
-              letter-spacing: 0.15px;
-              line-height: 0.75rem;
-              margin-bottom: 0;
-            }
+          &__title__small {
+            font-size: 0.75rem;
+            letter-spacing: 0.01rem;
+            line-height: 0.75rem;
+            margin-bottom: 0;
+          }
 
-            &__big {
-              font-size: 1.25rem;
-              font-weight: bold;
-              letter-spacing: 0.18px;
-              line-height: 1.75rem;
-            }
+          &__title__big {
+            font-size: 1.25rem;
+            font-weight: bold;
+            letter-spacing: 0.01rem;
+            line-height: 1.75rem;
           }
 
           img {
@@ -80,10 +83,6 @@
             width: 22rem;
           }
         }
-      }
-
-      @include media-breakpoint-down(md) {
-        margin-top: 2.5rem;
       }
     }
   }

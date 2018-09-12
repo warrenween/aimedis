@@ -11,6 +11,18 @@
     justify-content: center;
     margin-top: 8rem;
 
+    &__next {
+      border: 0.0625rem solid rgba(#979797, 0.34);
+      border-radius: 50%;
+      margin-left: 0.75rem;
+    }
+
+    &__prev {
+      border: 0.0625rem solid rgba(#979797, 0.34);
+      border-radius: 50%;
+      margin-right: 0.75rem;
+    }
+
     &__abbr,
     &__item,
     &__prev,
@@ -33,18 +45,6 @@
         color: $white;
         cursor: pointer;
       }
-    }
-
-    &__next {
-      border: 1px solid rgba(#979797, 0.34);
-      border-radius: 50%;
-      margin-left: 0.75rem;
-    }
-
-    &__prev {
-      border: 1px solid rgba(#979797, 0.34);
-      border-radius: 50%;
-      margin-right: 0.75rem;
     }
   }
 }

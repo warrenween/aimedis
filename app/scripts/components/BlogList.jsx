@@ -5,7 +5,7 @@ import BlogItem from 'components/BlogItem';
 class BlogList extends React.PureComponent {
   constructor(props) {
     super(props);
-    let list = [];
+    const list = [];
     const count = 100;
     for (let i = 0; i < count; i++) {
       list.push({
@@ -18,8 +18,8 @@ class BlogList extends React.PureComponent {
 
     this.state = {
       active: 1,
-      count: count,
-      list: list,
+      count,
+      list,
     };
   }
 

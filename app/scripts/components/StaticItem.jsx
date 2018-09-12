@@ -6,7 +6,7 @@ const StaticItem = ({ icon, title }) => (
   <div className="app__static__item">
     <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
       <div className="app__static__item__icon">
-        <img className="app__static__item__icon__img" src={require(`assets/media/icons/${icon}.png`)} alt="No Asset"/>
+        <img className="app__static__item__icon__img" src={require(`assets/media/icons/${icon}.png`)} alt="No Asset" />
       </div>
       <p className="app__static__item__title">{title}</p>
     </ScrollAnimation>

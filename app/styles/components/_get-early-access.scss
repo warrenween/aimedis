@@ -20,20 +20,20 @@
     top: 0;
     width: 70%;
 
-    &:focus {
-      outline: 0;
-    }
-
-    &::placeholder {
-      opacity: 0.25;
-    }
-
     @include media-breakpoint-down(md) {
       padding: 1rem 1.125rem;
 
       &::placeholder {
         opacity: 0.5;
       }
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::placeholder {
+      opacity: 0.25;
     }
   }
 
@@ -49,7 +49,7 @@
 
     @include media-breakpoint-down(md) {
       font-size: 0.75rem;
-      letter-spacing: 0.78px;
+      letter-spacing: 0.0488rem;
       max-width: 10rem;
     }
   }

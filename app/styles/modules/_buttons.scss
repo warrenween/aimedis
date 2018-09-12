@@ -3,7 +3,7 @@
   border-radius: 1.75rem;
   font-size: $font-size-sm;
   font-weight: 800;
-  letter-spacing: 0.91px;
+  letter-spacing: 0.0569rem;
   line-height: $body-line-height;
   padding: 1rem 2rem;
   text-align: center;
@@ -14,7 +14,8 @@
     box-shadow: $box-shadow-custom;
     color: $white;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       background: $white;
       box-shadow: none;
       color: $primary;
@@ -26,7 +27,8 @@
     box-shadow: $box-shadow-2;
     color: $primary;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       background: linear-gradient(36.72deg, #00aaa6, #00b1e6);
       box-shadow: $box-shadow-custom;
       color: $white;

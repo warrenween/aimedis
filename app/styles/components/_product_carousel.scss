@@ -3,24 +3,24 @@
     position: relative;
 
     &__inner {
-      &__item {
-        margin-top: 15.3125rem;
-
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-
       @include media-breakpoint-down(md) {
         .app__product__carousel__content__inner {
           &__item {
             display: none;
             margin-top: 0;
-
-            &.active {
-              display: block;
-            }
           }
+
+          &__item.active {
+            display: block;
+          }
+        }
+      }
+
+      &__item {
+        margin-top: 15.3125rem;
+
+        &:first-child {
+          margin-top: 0;
         }
       }
     }

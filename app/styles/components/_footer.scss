@@ -44,8 +44,53 @@
       }
     }
 
+    &__social__terms a {
+      color: $white;
+      font-size: 0.75rem;
+      font-weight: $font-weight-middle;
+      line-height: 1.25rem;
+      text-transform: uppercase;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 1.375rem;
+        text-align: center;
+      }
+    }
+
+    &__menu a {
+      color: $white;
+      font-size: 0.75rem;
+      font-weight: $font-weight-middle;
+      letter-spacing: 0.021rem;
+      text-transform: uppercase;
+
+      @include media-breakpoint-down(md) {
+        font-size: 1rem;
+        letter-spacing: 0.0288rem;
+      }
+
+      .separator {
+        margin: 0 0.625rem;
+      }
+
+      .hire {
+        color: $yellow;
+        font-size: 0.625rem;
+        letter-spacing: 0.018rem;
+        text-transform: initial;
+      }
+    }
+
+    &__social__terms a:first-child {
+      margin-right: 2rem;
+    }
+
     &__menu {
       margin-top: 0.75rem;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 3.125rem;
+      }
 
       ul {
         margin-bottom: 0;
@@ -61,34 +106,6 @@
           list-style: none;
           margin-bottom: 1.1rem;
 
-          a {
-            color: $white;
-            font-size: 0.75rem;
-            font-weight: $font-weight-middle;
-            letter-spacing: 0.34px;
-            text-transform: uppercase;
-
-            .separator {
-              margin: 0 0.625rem;
-            }
-
-            .hire {
-              color: $yellow;
-              font-size: 0.625rem;
-              letter-spacing: 0.29px;
-              text-transform: initial;
-            }
-
-            @include media-breakpoint-down(md) {
-              font-size: 1rem;
-              letter-spacing: 0.46px;
-            }
-
-            &:hover {
-              text-decoration: none;
-            }
-          }
-
           @include media-breakpoint-down(md) {
             margin-bottom: 1.5rem;
           }
@@ -97,10 +114,6 @@
             margin-bottom: 0;
           }
         }
-      }
-
-      @include media-breakpoint-down(md) {
-        margin-top: 3.125rem;
       }
     }
 
@@ -136,30 +149,10 @@
 
       &__terms {
         margin-top: 4.25rem;
+
         @include media-breakpoint-down(md) {
           margin-top: 1.5rem;
           text-align: center;
-        }
-
-        a {
-          color: $white;
-          font-size: 0.75rem;
-          font-weight: $font-weight-middle;
-          line-height: 1.25rem;
-          text-transform: uppercase;
-
-          @include media-breakpoint-down(md) {
-            margin-top: 1.375rem;
-            text-align: center;
-          }
-
-          &:first-child {
-            margin-right: 2rem;
-          }
-
-          &:hover {
-            text-decoration: none;
-          }
         }
       }
     }

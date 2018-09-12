@@ -1,6 +1,6 @@
 .app__blog__detail {
-  padding-top: 7.75rem;
   overflow: hidden;
+  padding-top: 7.75rem;
   position: relative;
 
   &__image {
@@ -44,28 +44,28 @@
           display: flex;
           font-size: 0.75rem;
           font-weight: $font-weight-bold;
-          letter-spacing: 0.69px;
+          letter-spacing: 0.043rem;
           line-height: 1.25rem;
           text-transform: uppercase;
 
           &__element {
             display: flex;
+          }
 
-            &__icon {
-              align-items: center;
-              display: flex;
-              font-size: 1rem;
-              height: 1.5rem;
-              justify-content: center;
-              margin-right: 0.75rem;
-              width: 1.5rem;
-            }
+          &__element__icon {
+            align-items: center;
+            display: flex;
+            font-size: 1rem;
+            height: 1.5rem;
+            justify-content: center;
+            margin-right: 0.75rem;
+            width: 1.5rem;
+          }
 
-            &__text {
-              align-items: center;
-              display: flex;
-              justify-content: center;
-            }
+          &__element__text {
+            align-items: center;
+            display: flex;
+            justify-content: center;
           }
 
           &__element + &__element {
@@ -122,7 +122,7 @@
       }
 
       &__reference {
-        border-left: 2px solid $primary;
+        border-left: 0.125rem solid $primary;
         color: #13152b;
         margin-right: -2rem;
         padding-left: 1rem;

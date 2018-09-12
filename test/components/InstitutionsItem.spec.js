@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import InstitutionsItem from 'components/InstitutionsItem';
 
-function setup(align = 'left', description = 'Description', src = 'institutions-bg1.png', subtitle = 'SubTitle', title = 'Title') {
+function setup(align, description = 'Description', src = 'institutions-bg1.png', subtitle = 'SubTitle', title = 'Title') {
   return mount(<InstitutionsItem
     align={align}
     description={description}
@@ -14,17 +14,19 @@ function setup(align = 'left', description = 'Description', src = 'institutions-
 }
 
 describe('InstitutionsItem', () => {
-  const wrapper = setup();
+  const leftWrapper = setup('left');
 
   it('should be a StatelessComponent', () => {
-    expect(wrapper.instance()).toBeNull();
+    expect(leftWrapper.instance()).toBeNull();
   });
 
   it('should render properly', () => {
-    expect(wrapper.find('.app__institutions__item')).toExist();
-    expect(wrapper.find('.app__institutions__item__content')).toExist();
-    expect(wrapper.find('.app__institutions__item__content__image')).toExist();
-    expect(wrapper.find('.app__institutions__item__content__info')).toExist();
-    expect(wrapper.find('.app__institutions__item__content__info__description')).toHaveText('Description');
+    expect(leftWrapper.html()).toMatchSnapshot();
+  });
+
+  const rightWrapper = setup('right');
+
+  it('should render properly', () => {
+    expect(rightWrapper.html()).toMatchSnapshot();
   });
 });

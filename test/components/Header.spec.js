@@ -14,7 +14,7 @@ function setup(isAuthenticated = false) {
       },
     },
     user: {
-      isAuthenticated: isAuthenticated,
+      isAuthenticated,
     },
   };
 

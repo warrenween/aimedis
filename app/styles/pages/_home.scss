@@ -14,7 +14,7 @@
         color: $black;
         font-size: 2.625rem;
         font-weight: $font-weight-bold;
-        letter-spacing: 0.95px;
+        letter-spacing: 0.06rem;
         line-height: 3.5rem;
 
         @include media-breakpoint-down(md) {
@@ -136,7 +136,8 @@
           width: initial;
         }
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
           background-color: $primary;
           color: $white;
         }
@@ -219,7 +220,7 @@
           font-size: $subheader-size;
           font-weight: $font-weight-bold;
           height: 3.75rem;
-          letter-spacing: 0.01px;
+          letter-spacing: 0;
           line-height: $body-line-height;
           margin: 6.5rem 1rem 0;
         }
@@ -253,19 +254,18 @@
           color: $white;
         }
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
           background-color: $white;
 
-          .app__home__section7__content__iphone {
-            &__title {
-              color: #868a8c;
-            }
+          .app__home__section7__content__iphone &__title {
+            color: #868a8c;
+          }
 
-            &__button {
-              background: linear-gradient(36.72deg, #00aaa6, #00b1e6);
-              box-shadow: $box-shadow-custom;
-              color: $white;
-            }
+          .app__home__section7__content__iphone &__button {
+            background: linear-gradient(36.72deg, #00aaa6, #00b1e6);
+            box-shadow: $box-shadow-custom;
+            color: $white;
           }
         }
       }
@@ -279,24 +279,23 @@
 
         &__button {
           font-size: 0.875rem;
-          letter-spacing: 0.91px;
+          letter-spacing: 0.0569rem;
           line-height: 1.25rem;
           padding: 0.875rem 1.25rem;
         }
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
           background-color: $primary;
 
-          .app__home__section7__content__android {
-            &__title {
-              color: $white;
-            }
+          .app__home__section7__content__android &__title {
+            color: $white;
+          }
 
-            &__button {
-              background: $white;
-              box-shadow: none;
-              color: $primary;
-            }
+          .app__home__section7__content__android &__button {
+            background: $white;
+            box-shadow: none;
+            color: $primary;
           }
         }
       }
@@ -404,7 +403,7 @@
           color: #060606;
           font-size: 1.125rem;
           font-weight: 800;
-          letter-spacing: 1.29px;
+          letter-spacing: 0.08rem;
           line-height: 1.5rem;
 
           span {
@@ -416,7 +415,7 @@
           color: $input-color;
           font-size: 1rem;
           font-weight: $font-weight-middle;
-          letter-spacing: 1.14px;
+          letter-spacing: 0.07rem;
           line-height: 1.25rem;
           margin-top: 0.5rem;
 

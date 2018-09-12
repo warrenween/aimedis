@@ -38,7 +38,8 @@ const ProductItem = ({ align, description, src, title }) => {
         </div>
       </div>
     );
-  } else if (align === 'left') {
+  }
+  else {
     content = (
       <div className="row">
         <div className="col-12 col-lg-6 p-lg-0 app__product__item__content__info">
