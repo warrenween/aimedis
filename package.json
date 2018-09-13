@@ -57,7 +57,8 @@
     "scroll-doc": "^0.2.1",
     "tree-changes": "^0.3.2",
     "url-parse": "^1.4.3",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "video-react": "^0.13.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.0.1",

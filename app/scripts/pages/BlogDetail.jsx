@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ScrollAnimation from 'react-animate-on-scroll';
 import BlogItem from 'components/BlogItem';
+import CustomVideo from 'components/CustomVideo';
 
 const BlogDetail = ({ match }) => (
   <div key="BlogDetail" className="app__blog__detail app__route">
@@ -112,11 +113,9 @@ const BlogDetail = ({ match }) => (
               </ScrollAnimation>
             </div>
             <div className="col-12">
-              <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-                <div className="app__blog__detail__section1__content__video">
-                  <img src={require('assets/media/images/video.png')} alt="No Asset" />
-                </div>
-              </ScrollAnimation>
+              <div className="app__blog__detail__section1__content__video">
+                <CustomVideo src="http://media.w3.org/2010/05/bunny/movie.mp4" />
+              </div>
               <div className="app__blog__detail__section1__content__share">
                 <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
                   <div className="app__blog__detail__section1__content__share__text">Like it? Share it!</div>

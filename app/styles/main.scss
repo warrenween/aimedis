@@ -1,6 +1,7 @@
 // *** Node modules
 @import '~sass-mediaqueries/media-queries';
 @import '~animate.css/animate.min.css';
+@import '~video-react/styles/scss/video-react';
 
 // *** Variables
 @import 'variables/app';
@@ -53,6 +54,7 @@
 @import 'components/institutions_item';
 @import 'components/blog_list';
 @import 'components/career_item';
+@import 'components/custom_video';
 
 // *** Routes
 @import 'pages/home';
