@@ -22,6 +22,7 @@ import BlogRoute from 'routes/BlogRoute';
 import BlogDetailRoute from 'routes/BlogDetailRoute';
 import CareerRoute from 'routes/CareerRoute';
 import CareerDetailRoute from 'routes/CareerDetailRoute';
+import SupportRoute from 'routes/SupportRoute';
 import ProfileRoute from 'routes/ProfileRoute';
 
 import Home from 'pages/Home';
@@ -36,6 +37,7 @@ import Blog from 'pages/Blog';
 import BlogDetail from 'pages/BlogDetail';
 import Career from 'pages/Career';
 import CareerDetail from 'pages/CareerDetail';
+import Support from 'pages/Support';
 import NotFound from 'pages/NotFound';
 
 import SystemAlerts from 'containers/SystemAlerts';
@@ -97,6 +99,7 @@ export class App extends React.Component {
               <BlogDetailRoute isAuthenticated={user.isAuthenticated} path="/blog/:id" component={BlogDetail} />
               <CareerRoute isAuthenticated={user.isAuthenticated} path="/career" exact component={Career} />
               <CareerDetailRoute isAuthenticated={user.isAuthenticated} path="/career/:id" component={CareerDetail} />
+              <SupportRoute isAuthenticated={user.isAuthenticated} path="/support" component={Support} />
               <ProfileRoute isAuthenticated={user.isAuthenticated} path="/profile" component={Profile} />
               <Route component={NotFound} />
             </Switch>
