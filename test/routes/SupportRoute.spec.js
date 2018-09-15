@@ -6,7 +6,7 @@ import SupportRoute from 'routes/SupportRoute';
 describe('routes/SupportRoute', () => {
   it('should render the Support Page for unauthenticated access', () => {
     const render = renderToString(
-      <Router initialEntries={['/about']}>
+      <Router initialEntries={['/support']}>
         <SupportRoute
           exact
           path="/support"
@@ -21,7 +21,7 @@ describe('routes/SupportRoute', () => {
 
   it('should render the Support Page for authenticated access', () => {
     const render = renderToString(
-      <Router initialEntries={['/about']}>
+      <Router initialEntries={['/support']}>
         <SupportRoute
           exact
           path="/support"

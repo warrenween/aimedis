@@ -3,10 +3,16 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import GroupToggle from 'components/GroupToggle';
 import Title from 'components/Title';
 import Location from 'components/Location';
+import InputBox from 'components/InputBox';
 import { Link } from 'react-router-dom';
 
 export default class About extends React.PureComponent {
   render() {
+    const email = (value) => {
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(value).toLowerCase());
+    };
+
     return (
       <div key="About" className="app__about app__route">
         <div className="container">
@@ -41,12 +47,9 @@ export default class About extends React.PureComponent {
               <div className="row">
                 <div className="col-12 col-lg-6 app__about__section3__content__form">
                   <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-                    <label>Name or Company</label>
-                    <input type="text" className="app__about__section3__content__form__name" />
-                    <label>E-mail address</label>
-                    <input type="email" className="app__about__section3__content__form__email" />
-                    <label>Message</label>
-                    <input type="text" className="app__about__section3__content__form__message" />
+                    <InputBox label="Name or Company" height={3.5} />
+                    <InputBox label="E-mail address" height={3.5} validate={email} validationString="Email is invalid." />
+                    <InputBox label="Message" height={11.125} />
                     <button type="button" className="btn btn__primary app__about__section3__content__form__button">SEND</button>
                   </ScrollAnimation>
                 </div>

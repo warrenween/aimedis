@@ -16,5 +16,10 @@ describe('Support', () => {
 
   it('should render properly', () => {
     expect(wrapper.html()).toMatchSnapshot();
+
+    const activeButtonElement = wrapper.find('.app__support__section1__content__form__button');
+    activeButtonElement.simulate('click');
+
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });

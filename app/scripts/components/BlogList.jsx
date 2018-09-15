@@ -1,12 +1,14 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import BlogItem from 'components/BlogItem';
+import InputBox from './InputBox';
+import PropTypes from 'prop-types';
 
 class BlogList extends React.PureComponent {
   constructor(props) {
     super(props);
     const list = [];
-    const count = 100;
+    const count = props.count;
     for (let i = 0; i < count; i++) {
       list.push({
         description: 'Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by',
@@ -125,5 +127,13 @@ class BlogList extends React.PureComponent {
     );
   }
 }
+
+BlogList.propTypes = {
+  count: PropTypes.number,
+};
+
+BlogList.defaultProps = {
+  count: 100,
+};
 
 export default BlogList;

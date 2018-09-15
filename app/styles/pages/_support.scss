@@ -46,40 +46,6 @@
           padding: 0;
         }
 
-        label {
-          color: $black;
-          display: block;
-          font-size: 0.875rem;
-          line-height: 1.25rem;
-        }
-
-        input {
-          background-color: rgba($input-color, 0.09);
-          border: 0;
-          border-radius: 0.5rem;
-          box-shadow: 0 0.125rem 0.5rem 0 rgba($input-color, 0.24);
-          display: block;
-          max-width: 24.5rem;
-          width: 100%;
-        }
-
-        label + input {
-          margin-top: 0.75rem;
-        }
-
-        input + label {
-          margin-top: 1.5rem;
-        }
-
-        &__name,
-        &__email {
-          height: 3.5rem;
-        }
-
-        &__message {
-          height: 11.125rem;
-        }
-
         &__button {
           display: block;
           height: 3.5rem;
@@ -97,7 +63,7 @@
     display: flex;
     height: 6.25rem;
     justify-content: space-between;
-    left: 0;
+    left: 5rem;
     padding: 1.25rem 1.25rem 1rem 1rem;
     position: absolute;
     width: 20.5rem;
