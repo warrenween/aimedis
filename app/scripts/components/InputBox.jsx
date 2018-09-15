@@ -14,9 +14,8 @@ export class InputBox extends React.PureComponent {
   }
 
   onBlur = (e) => {
-    const value = e.target.value;
     const { validate } = this.props;
-    if (validate && !validate(value)) {
+    if (validate && !validate(e.target.value)) {
       this.setState({ flag: INVALIDATE });
     }
     else {

@@ -8,7 +8,7 @@ const email = (value) => {
   return re.test(String(value).toLowerCase());
 };
 
-function setup(label = 'Name or Company', height = 3.5,  validate = '', validationString = '') {
+function setup(label = 'Name or Company', height = 3.5, validate = '', validationString = '') {
   return mount(<InputBox
     label={label}
     height={height}
