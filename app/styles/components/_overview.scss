@@ -1,4 +1,6 @@
 .app__overview {
+  cursor: pointer;
+
   @include media-breakpoint-up(lg) {
     height: 7.25rem;
     width: 24.125rem;

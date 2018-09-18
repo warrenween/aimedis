@@ -1,10 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from 'react-router-dom';
 
-const OfferItem = ({ icon, last, title }) => (
-  <div className={`app__offer__item${last ? ' active' : ''}`}>
-    <ScrollAnimation animateIn="flipInY" animateOnce={true}>
+const OfferItem = ({ icon, last, title }) => {
+  let html = '';
+  if (last) {
+    html = (
+      <Link className="app__offer__item__content" to="/product">
+        <p className="app__offer__item__content__active mx-auto">See full product overview</p>
+      </Link>
+    );
+  }
+  else {
+    html = (
       <div className="app__offer__item__content">
         <div className="app__offer__item__content__icon mx-auto">
           <img className="app__offer__item__content__icon__img" src={require(`assets/media/icons/${icon}.png`)} alt="No Asset" />
@@ -14,15 +23,20 @@ const OfferItem = ({ icon, last, title }) => (
           </div>
         </div>
         <p className="app__offer__item__content__title mx-auto">{title}</p>
-        <p className="app__offer__item__content__active mx-auto">See full product overview</p>
       </div>
-      <div className="app__offer__item__background">
-        Image
-        <img src={require(`assets/media/icons/${icon}.png`)} alt="No Asset" />
-      </div>
-    </ScrollAnimation>
-  </div>
-);
+    );
+  }
+  return (
+    <div className={`app__offer__item${last ? ' active' : ''}`}>
+      <ScrollAnimation animateIn="flipInY" animateOnce={true}>
+        <div className="app__offer__item__background">
+          <img src={require('assets/media/images/blog1.png')} alt="No Asset" />
+        </div>
+        { html }
+      </ScrollAnimation>
+    </div>
+  );
+};
 
 OfferItem.propTypes = {
   icon: PropTypes.string.isRequired,

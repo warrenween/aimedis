@@ -199,7 +199,6 @@
 
       &__mobile {
         border-radius: 0.75rem;
-        box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
         display: inline-block;
         height: 27.75rem;
         margin-right: 4rem;
@@ -231,6 +230,7 @@
 
         &__soon {
           background: $green;
+          border-radius: 0.75rem;
           clip-path: ellipse(65% 60% at 70% 12%);
           color: #fff;
           font-size: 0.875rem;
@@ -249,6 +249,7 @@
 
       &__iphone {
         background-color: $primary;
+        box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
 
         &__title {
           color: $white;
@@ -257,12 +258,13 @@
         &:hover,
         &:active {
           background-color: $white;
+          box-shadow: 0 0.25rem 2rem 0 $white;
 
-          .app__home__section7__content__iphone &__title {
+          .app__home__section7__content__iphone__title {
             color: #868a8c;
           }
 
-          .app__home__section7__content__iphone &__button {
+          .app__home__section7__content__iphone__button {
             background: linear-gradient(36.72deg, #00aaa6, #00b1e6);
             box-shadow: $box-shadow-custom;
             color: $white;
@@ -272,6 +274,7 @@
 
       &__android {
         background-color: $white;
+        box-shadow: 0 0.25rem 2rem 0 $white;
 
         &__title {
           color: #868a8c;
@@ -287,12 +290,13 @@
         &:hover,
         &:active {
           background-color: $primary;
+          box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
 
-          .app__home__section7__content__android &__title {
+          .app__home__section7__content__android__title {
             color: $white;
           }
 
-          .app__home__section7__content__android &__button {
+          .app__home__section7__content__android__button {
             background: $white;
             box-shadow: none;
             color: $primary;

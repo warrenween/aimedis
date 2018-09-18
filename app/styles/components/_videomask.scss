@@ -1,6 +1,5 @@
 .app__video__mask {
   padding-top: 100%;
-  position: relative;
   width: 100%;
 
   @include media-breakpoint-down(md) {
@@ -58,6 +57,39 @@
     }
   }
 
+  &__background {
+    background: $black;
+    height: 100%;
+    left: 0;
+    opacity: 0.2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+  }
+
+  &__player {
+    left: -100%;
+    position: absolute;
+    top: 0;
+    width: 200%;
+    z-index: 201;
+
+    &__close {
+      background: transparent;
+      height: 1.5rem;
+      position: absolute;
+      right: -2rem;
+      top: 0;
+      width: 1.5rem;
+
+      i {
+        color: $white;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   &__triangle {
     border-bottom: 1rem solid transparent;
     border-left: 1.6rem solid #fff;
@@ -66,5 +98,27 @@
     left: calc(50% - 0.5rem);
     position: absolute;
     top: calc(50% - 0.8rem);
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .app__video__mask__circle1 {
+      opacity: 0.2;
+    }
+
+    .app__video__mask__circle2 {
+      background-color: $white;
+      opacity: 0.3;
+    }
+
+    .app__video__mask__circle3 {
+      background-color: $white;
+      opacity: 0.5;
+    }
+
+    .app__video__mask__triangle {
+      border-left-color: rgba(0, 176, 220, 0.5);
+    }
   }
 }

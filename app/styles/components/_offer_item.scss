@@ -2,6 +2,7 @@
   position: relative;
 
   &__content {
+    display: block;
     height: 14rem;
     margin: 0 auto;
     padding-bottom: 2.5rem;
@@ -43,10 +44,6 @@
         max-width: 10rem;
       }
     }
-
-    &__active {
-      display: none;
-    }
   }
 
   &__background {
@@ -54,12 +51,13 @@
   }
 
   &:hover {
+    cursor: pointer;
+
     .app__offer__item {
       &__content {
         background: linear-gradient(16.56deg, #00b0db 0%, #00acb9 33.42%, #00aaa6 100%);
         border-radius: 0.75rem;
-        box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
-        opacity: 0.5;
+        box-shadow: 0 0.25rem 2rem 0.5rem #7bdbdc;
 
         &__title {
           color: $white;
@@ -107,13 +105,14 @@
         height: 100%;
         justify-content: center;
         left: 0;
-        opacity: 0.5;
         position: absolute;
         top: 0;
         width: 100%;
 
         img {
-          display: none;
+          border-radius: 0.75rem;
+          height: 100%;
+          opacity: 0.2;
           width: 100%;
         }
       }
@@ -126,19 +125,11 @@
         background: linear-gradient(134.78deg, #00aaa6 0%, #00afd7 100%);
         border-radius: 0.75rem;
         box-shadow: $box-shadow-3;
-        opacity: 1;
         padding: 5.25rem 2rem;
+        text-decoration: none;
 
         @include media-breakpoint-down(md) {
           padding: 2.5rem 2rem;
-        }
-
-        &__icon {
-          display: none;
-        }
-
-        &__title {
-          display: none;
         }
 
         &__active {

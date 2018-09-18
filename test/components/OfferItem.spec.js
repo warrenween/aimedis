@@ -25,7 +25,7 @@ describe('OfferItem', () => {
     expect(defaultWrapper.find('.app__offer__item__content__title')).toHaveText('Title');
   });
 
-  const lastWrapper = setup();
+  const lastWrapper = setup(true);
 
   it('should render properly which [last is true]', () => {
     expect(lastWrapper.find('.app__offer__item')).toExist();

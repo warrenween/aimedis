@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from 'react-router-dom';
 import GetEarlyAccess from 'components/GetEarlyAccess';
 import VideoMask from 'components/VideoMask';
 import Avatar from 'components/Avatar';
@@ -17,43 +18,37 @@ export default class Home extends React.PureComponent {
     return (
       <div key="Home" className="app__home app__route">
         <div className="container">
-          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-            <section className="app__home__section1">
-              <div className="app__home__section1__content">
-                <div className="row">
-                  <div className="col-lg-6 col-md-12 p-lg-0">
-                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-                      <div className="app__home__section1__content__header">Aimedis is the health platform of the future.
-                      </div>
-                      <div className="app__home__section1__content__subheader d-none d-lg-block">Aimedis has been developed by
-                      doctors for patients, doctors and hospitals - designed to give patients the complete control over
-                      their
-                      health data and support.
-                      </div>
-                      <div className="app__home__section1__content__image d-block d-lg-none">
-                        <VideoMask />
-                      </div>
-                      <div className="app__home__section1__content__get__access">
-                        <GetEarlyAccess />
-                      </div>
-                      <div className="app__home__section1__content__terms">By filling my email and clicking on “GET EARLY
-                      ACCESS“
-                      I agree to the <span>Conditions Of Use</span> and the <span>Data Protection Policy</span>.
-                      </div>
-                    </ScrollAnimation>
+          <section className="app__home__section1">
+            <div className="app__home__section1__content">
+              <div className="row">
+                <div className="col-lg-6 col-md-12 p-lg-0">
+                  <div className="app__home__section1__content__header">Aimedis is the health platform of the future.
                   </div>
-                  <div className="col-lg-5 offset-lg-1 d-none d-lg-block app__home__section1__image">
-                    <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
-                      <VideoMask />
-                      <div className="app__home__mask__one">
-                        <img src={require('assets/media/images/bg.png')} alt="No Asset" />
-                      </div>
-                    </ScrollAnimation>
+                  <div className="app__home__section1__content__subheader d-none d-lg-block">Aimedis has been developed by
+                  doctors for patients, doctors and hospitals - designed to give patients the complete control over
+                  their
+                  health data and support.
+                  </div>
+                  <div className="app__home__section1__content__image d-block d-lg-none">
+                    <VideoMask />
+                  </div>
+                  <div className="app__home__section1__content__get__access">
+                    <GetEarlyAccess />
+                  </div>
+                  <div className="app__home__section1__content__terms">By filling my email and clicking on “GET EARLY
+                  ACCESS“
+                  I agree to the <Link to="#">Conditions Of Use</Link> and the <Link to="#">Data Protection Policy</Link>.
+                  </div>
+                </div>
+                <div className="col-lg-5 offset-lg-1 d-none d-lg-block app__home__section1__image">
+                  <VideoMask />
+                  <div className="app__home__mask__one">
+                    <img src={require('assets/media/images/bg.png')} alt="No Asset" />
                   </div>
                 </div>
               </div>
-            </section>
-          </ScrollAnimation>
+            </div>
+          </section>
           <section className="app__home__section2">
             <div className="app__home__section2__content">
               <div className="row">
@@ -338,7 +333,7 @@ export default class Home extends React.PureComponent {
               <Notification icon="flash.png">
                 <div className="app__home__mask__notification__content">
                   <div className="app__home__mask__notification__content__title">
-                    <span>Token sale</span> is currently live!
+                    <Link to="#">Token sale</Link> is currently live!
                   </div>
                   <div className="app__home__mask__notification__content__description">
                   Ending in <span>12d 15h 3m 44s</span>

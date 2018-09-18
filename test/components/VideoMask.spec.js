@@ -10,10 +10,6 @@ function setup() {
 describe('VideoMask', () => {
   const wrapper = setup();
 
-  it('should be a StatelessComponent', () => {
-    expect(wrapper.instance()).toBeNull();
-  });
-
   it('should render properly', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
