@@ -7,7 +7,7 @@ import Avatar from 'components/Avatar';
 import Title from 'components/Title';
 import OfferItem from 'components/OfferItem';
 import StaticItem from 'components/StaticItem';
-import Overview from 'components/Overview';
+import OverviewList from 'components/OverviewList';
 import Carousel from 'components/Carousel';
 import BlogItem from 'components/BlogItem';
 import Notification from 'components/Notification';
@@ -15,6 +15,43 @@ import Feature from 'components/Feature';
 
 export default class Home extends React.PureComponent {
   render() {
+    const overviewList = [
+      {
+        id: 1,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'In every actual browser',
+        title: 'Fully responsive',
+      },
+      {
+        id: 2,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'also fully functional abroad',
+        title: 'Multilanguage',
+      },
+      {
+        id: 3,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'also for unexperienced patients simple & fast',
+        title: 'Easy to use',
+      },
+      {
+        id: 4,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'For optimal security through regular security audits',
+        title: 'ISO 21007 certification',
+      },
+      {
+        id: 5,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'Tested by active physicians and medical IT specialists',
+        title: 'Tested by doctors & hospitals',
+      },
+    ];
     return (
       <div key="Home" className="app__home app__route">
         <div className="container">
@@ -176,49 +213,7 @@ export default class Home extends React.PureComponent {
                 <Title title="Aimedis Ecosystem" subtitle="Platform Overview" />
               </div>
               <div className="app__home__section5__content">
-                <div className="row">
-                  <div className="col-12 col-lg-5">
-                    <Overview
-                      active={true}
-                      order={1}
-                      src="mobile.png"
-                      subtitle="In every actual browser"
-                      title="Fully responsive"
-                    />
-                    <Overview
-                      order={2}
-                      src="mobile.png"
-                      subtitle="also fully functional abroad"
-                      title="Multilanguage"
-                    />
-                    <Overview
-                      order={3}
-                      src="mobile.png"
-                      subtitle="also for unexperienced patients simple & fast"
-                      title="Easy to use"
-                    />
-                    <Overview
-                      order={4}
-                      src="mobile.png"
-                      subtitle="For optimal security through regular security audits"
-                      title="ISO 21007 certification"
-                    />
-                    <Overview
-                      order={5}
-                      src="mobile.png"
-                      subtitle="Tested by active physicians and medical IT specialists"
-                      title="Tested by doctors & hospitals"
-                    />
-                  </div>
-                  <div className="col-lg-7 d-none d-lg-block">
-                    <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
-                      <img src={require('assets/media/images/IMac.png')} alt="No Asset" />
-                      <div className="app__home__mask__four">
-                        <img src={require('assets/media/images/Group 2.png')} alt="No Asset" />
-                      </div>
-                    </ScrollAnimation>
-                  </div>
-                </div>
+                <OverviewList list={overviewList} />
               </div>
             </section>
           </ScrollAnimation>

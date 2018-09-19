@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Title from 'components/Title';
-import Overview from 'components/Overview';
+import OverviewList from 'components/OverviewList';
 import InstitutionsItem from 'components/InstitutionsItem';
 import Feature from 'components/Feature';
 
@@ -16,31 +16,33 @@ export default class Institutions extends React.PureComponent {
                 <Title title="Who gets the most out of Aimedis" subtitle="institutions" />
               </div>
               <div className="app__institutions__section1__content">
-                <div className="row">
-                  <div className="col-12 col-lg-5">
-                    <Overview
-                      order={1} title="Insurance companies"
-                      subtitle="Excepteur sint accaecut cupidatat n every actual browser"
-                      src="institutions-mobile.png" link="assets/media/images/institutions-web.png"
-                      active={true}
-                    />
-                    <Overview
-                      order={2} title="Hospitals"
-                      subtitle="Excepteur sint accaecut cupidatat n every actual browser"
-                      src="institutions-mobile.png" link="assets/media/images/institutions-web.png"
-                    />
-                    <Overview
-                      order={3} title="Pharma Companies"
-                      subtitle="Excepteur sint accaecut cupidatat n every actual browser"
-                      src="institutions-mobile.png" link="assets/media/images/institutions-web.png"
-                    />
-                  </div>
-                  <div className="col-lg-7 d-none d-lg-block app__institutions__section1__content__image">
-                    <ScrollAnimation animateIn="fadeInRight" animateOnce={true} initiallyVisible={true}>
-                      <img src={require('assets/media/images/institutions-web.png')} alt="No Asset" />
-                    </ScrollAnimation>
-                  </div>
-                </div>
+                <OverviewList list={[
+                  {
+                    id: 1,
+                    link: 'assets/media/images/institutions-web.png',
+                    right: 'institutions-web.png',
+                    src: 'institutions-mobile.png',
+                    subtitle: 'Excepteur sint accaecut cupidatat n every actual browser',
+                    title: 'Insurance companies',
+                  },
+                  {
+                    id: 2,
+                    link: 'assets/media/images/institutions-web.png',
+                    right: 'institutions-web.png',
+                    src: 'institutions-mobile.png',
+                    subtitle: 'Excepteur sint accaecut cupidatat n every actual browser',
+                    title: 'Hospitals',
+                  },
+                  {
+                    id: 3,
+                    link: 'assets/media/images/institutions-web.png',
+                    right: 'institutions-web.png',
+                    src: 'institutions-mobile.png',
+                    subtitle: 'Excepteur sint accaecut cupidatat n every actual browser',
+                    title: 'Pharma Companies',
+                  },
+                ]}
+                />
               </div>
             </ScrollAnimation>
           </section>

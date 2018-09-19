@@ -1,0 +1,7 @@
+.app__overview__list {
+  &__content {
+    &__item + &__item {
+      margin-top: 0.75rem;
+    }
+  }
+}

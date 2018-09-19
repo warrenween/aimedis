@@ -71,10 +71,6 @@
     display: none;
   }
 
-  & + & {
-    margin-top: 0.75rem;
-  }
-
   &:hover,
   &:active,
   &.active {

@@ -26,10 +26,14 @@
         margin-top: 2.75rem;
       }
 
-      &__image {
+      imgq {
         margin-top: -15rem;
         padding-left: 8rem;
       }
+    }
+
+    .mask {
+      display: none;
     }
   }
 

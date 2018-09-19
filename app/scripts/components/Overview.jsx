@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const Overview = ({ active, link, order, src, subtitle, title }) => (
-  <div className={`app__overview${active ? ' active' : ''}`}>
-    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+    <div className={`app__overview${active ? ' active' : ''}`}>
       <div className="app__overview__internal">
         <div className="app__overview__internal__content">
           <div className="app__overview__internal__content__order">
@@ -26,8 +26,8 @@ const Overview = ({ active, link, order, src, subtitle, title }) => (
         </div>
         {link && <button className="app__overview__external__download body btn btn__secondary ml-0" type="button">DOWNLOAD THE CASE STUDY (8.4 MB)</button> }
       </div>
-    </ScrollAnimation>
-  </div>
+    </div>
+  </ScrollAnimation>
 );
 
 Overview.propTypes = {

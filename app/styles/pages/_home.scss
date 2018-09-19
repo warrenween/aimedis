@@ -170,6 +170,17 @@
         width: 120%;
       }
     }
+
+    .mask {
+      position: absolute;
+      right: -16rem;
+      top: 6rem;
+      z-index: -1;
+
+      img {
+        width: 15rem;
+      }
+    }
   }
 
   &__section6 {
@@ -370,17 +381,6 @@
 
       img {
         width: 13rem;
-      }
-    }
-
-    &__four {
-      position: absolute;
-      right: -16rem;
-      top: 6rem;
-      z-index: -1;
-
-      img {
-        width: 15rem;
       }
     }
 
