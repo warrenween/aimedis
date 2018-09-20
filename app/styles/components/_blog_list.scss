@@ -14,13 +14,13 @@
     &__next {
       border: 0.0625rem solid rgba(#979797, 0.34);
       border-radius: 50%;
-      margin-left: 0.75rem;
+      margin-left: 0.5rem !important;
     }
 
     &__prev {
       border: 0.0625rem solid rgba(#979797, 0.34);
       border-radius: 50%;
-      margin-right: 0.75rem;
+      margin-right: 0.5rem !important;
     }
 
     &__abbr,
@@ -34,7 +34,6 @@
       height: 3.5rem;
       justify-content: center;
       line-height: 1.125rem;
-      margin: 0.25rem;
       width: 3.5rem;
 
       &:hover:not(.abbr),

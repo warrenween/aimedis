@@ -78,6 +78,7 @@ class ProductCarousel extends React.PureComponent {
       <ProductItem
         title={item.title}
         description={item.description}
+        link="http://media.w3.org/2010/05/bunny/movie.mp4"
         src={item.src}
         align={item.align}
         key={item.title}

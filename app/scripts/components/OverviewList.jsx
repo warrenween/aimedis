@@ -45,14 +45,39 @@ class OverviewList extends React.PureComponent {
 
   render() {
     const { active, list } = this.state;
+    const { header, button } = this.props;
     return (
       <div className="app__overview__list">
         <div className="app__overview__list__content">
           <div className="row">
-            <div className="col-12 col-lg-5">
+            <div className="col-12 col-lg-5 left">
+              {header && <p className="app__overview__list__content__title">{header}</p>}
               {this.content()}
+              {button && (
+                <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+                  <div className="app__overview__list__content__mobile d-none d-lg-flex">
+                    <div className="app__overview__list__content__mobile__button">
+                      <img src={require('assets/media/icons/apple-icon.png')} alt="No Asset"/>
+                      <div className="app__overview__list__content__mobile__button__title">
+                        <p className="app__overview__list__content__mobile__button__title__small">Available on
+                          the</p>
+                        <p className="app__overview__list__content__mobile__button__title__big">App Store</p>
+                      </div>
+                    </div>
+                    <div className="app__overview__list__content__mobile__button">
+                      <img src={require('assets/media/icons/google_play.png')} alt="No Asset"/>
+                      <div className="app__overview__list__content__mobile__button__title">
+                        <p className="app__overview__list__content__mobile__button__title__small">Available on
+                          the</p>
+                        <p className="app__overview__list__content__mobile__button__title__big">Google Play</p>
+                      </div>
+                    </div>
+                  </div>
+                </ScrollAnimation>
+              )
+              }
             </div>
-            <div className="col-lg-7 d-none d-lg-block">
+            <div className="col-lg-7 right d-none d-lg-block app__overview__list__content__mobile__image">
               <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
                 <img src={require(`assets/media/images/${list[active - 1].right}`)} alt="No Asset" />
                 <div className="mask">
@@ -68,7 +93,9 @@ class OverviewList extends React.PureComponent {
 }
 
 OverviewList.propTypes = {
-  list: PropTypes.array,
+  button: PropTypes.bool,
+  header: PropTypes.string,
+  list: PropTypes.array.isRequired,
 };
 
 export default OverviewList;

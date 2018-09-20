@@ -1,6 +1,5 @@
 import React from 'react';
 import { Player } from 'video-react';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 class VideoMask extends React.PureComponent {
   constructor(props) {
@@ -31,7 +30,7 @@ class VideoMask extends React.PureComponent {
           <div className="app__video__mask__triangle" />
         </div>
 
-        <div className={!active ? " d-none" : " d-flex"}>
+        <div className={!active ? ' d-none' : ' d-flex'}>
           <div className="app__video__mask__background" />
           <div className="app__video__mask__player">
             <Player

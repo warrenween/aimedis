@@ -15,10 +15,6 @@ function setup(align, description = 'Description', src = 'Product1.png', title =
 describe('ProductItem', () => {
   const leftWrapper = setup('left');
 
-  it('should be a StatelessComponent', () => {
-    expect(leftWrapper.instance()).toBeNull();
-  });
-
   it('should render properly', () => {
     expect(leftWrapper.html()).toMatchSnapshot();
   });

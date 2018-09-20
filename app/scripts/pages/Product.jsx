@@ -2,8 +2,8 @@ import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Feature from 'components/Feature';
 import Title from 'components/Title';
-import Overview from 'components/Overview';
 import ProductCarousel from 'components/ProductCarousel';
+import OverviewList from 'components/OverviewList';
 
 export default class Product extends React.PureComponent {
   render() {
@@ -19,38 +19,33 @@ export default class Product extends React.PureComponent {
                 <Title title="Cool features" subtitle="Platform Overview" />
               </div>
               <div className="app__product__section2__content">
-                <div className="row">
-                  <div className="col-12 col-lg-6">
-                    <p className="app__product__section2__content__title d-none d-lg-block">Aimedis is mobile and with cool features</p>
-                    <Overview
-                      order={1} title="Video chat with doctor." subtitle="In every actual browser" src="mobile.png"
-                      active={true}
-                    />
-                    <Overview order={2} title="Multilanguage" subtitle="also fully functional abroad" src="mobile.png" />
-                    <Overview order={3} title="Easy to use" subtitle="also for unexperienced patients simple & fast" src="mobile.png" />
-                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-                      <div className="app__product__section2__content__mobile d-none d-lg-flex">
-                        <div className="app__product__section2__content__mobile__button">
-                          <img src={require('assets/media/icons/apple-icon.png')} alt="No Asset" />
-                          <div className="app__product__section2__content__mobile__button__title">
-                            <p className="app__product__section2__content__mobile__button__title__small">Available on the</p>
-                            <p className="app__product__section2__content__mobile__button__title__big">App Store</p>
-                          </div>
-                        </div>
-                        <div className="app__product__section2__content__mobile__button">
-                          <img src={require('assets/media/icons/google_play.png')} alt="No Asset" />
-                          <div className="app__product__section2__content__mobile__button__title">
-                            <p className="app__product__section2__content__mobile__button__title__small">Available on the</p>
-                            <p className="app__product__section2__content__mobile__button__title__big">Google Play</p>
-                          </div>
-                        </div>
-                      </div>
-                    </ScrollAnimation>
-                  </div>
-                  <div className="col-lg-6 d-none d-lg-block app__product__section2__content__mobile__image">
-                    <img src={require('assets/media/images/mobile.png')} alt="No Asset" />
-                  </div>
-                </div>
+                <OverviewList
+                  button={true}
+                  header="Aimedis is mobile and with cool features"
+                  list={[
+                    {
+                      id: 1,
+                      right: 'mobile.png',
+                      src: 'mobile.png',
+                      subtitle: 'In every actual browser',
+                      title: 'Video chat with doctor.',
+                    },
+                    {
+                      id: 2,
+                      right: 'mobile.png',
+                      src: 'mobile.png',
+                      subtitle: 'also fully functional abroad',
+                      title: 'Multilanguage',
+                    },
+                    {
+                      id: 3,
+                      right: 'mobile.png',
+                      src: 'mobile.png',
+                      subtitle: 'also for unexperienced patients simple & fast',
+                      title: 'Easy to use',
+                    },
+                  ]}
+                />
               </div>
             </ScrollAnimation>
           </section>
