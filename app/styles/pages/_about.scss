@@ -134,6 +134,10 @@
           @include media-breakpoint-down(md) {
             display: block;
           }
+
+          &:hover {
+            box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
+          }
         }
       }
 

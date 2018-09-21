@@ -37,6 +37,10 @@
     &__team {
       letter-spacing: 0.0569rem;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__content {
