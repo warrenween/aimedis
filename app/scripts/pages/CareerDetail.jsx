@@ -85,7 +85,7 @@ const CareerDetail = ({ match }) => (
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
                 <p className="app__career__detail__section1__content__reference mt-1">
-                  to email address <span>jobs@aimedis.com</span>
+                  to email address <a href="mailto:jobs@aimedis.com">jobs@aimedis.com</a>
                 </p>
               </ScrollAnimation>
             </div>

@@ -49,7 +49,7 @@ export default class About extends React.PureComponent {
                   <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
                     <InputBox label="Name or Company" height={3.5} />
                     <InputBox label="E-mail address" height={3.5} validate={email} validationString="Email is invalid." />
-                    <InputBox label="Message" height={11.125} />
+                    <InputBox label="Message" height={11.125} multiline={true} />
                     <button type="button" className="btn btn__primary app__about__section3__content__form__button">SEND</button>
                   </ScrollAnimation>
                 </div>

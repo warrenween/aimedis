@@ -46,7 +46,7 @@ export default class Support extends React.PureComponent {
                     <div className="app__support__section1__content__form">
                       <InputBox label="Name" height={3.5} />
                       <InputBox label="E-mail address" height={3.5} validate={email} validationString="Email is invalid." />
-                      <InputBox label="Message" height={11.125} />
+                      <InputBox label="Message" height={11.125} multiline={true} />
                       <button type="button" className="btn btn__primary app__support__section1__content__form__button" onClick={this.handle}>SEND</button>
                     </div>
                   </ScrollAnimation>

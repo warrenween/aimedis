@@ -24,10 +24,11 @@ export class InputBox extends React.PureComponent {
   };
 
   render() {
-    const { height, label, validationString } = this.props;
+    const { height, label, multiline, validationString } = this.props;
     const { flag } = this.state;
     let style = {};
     let icon = '';
+    let element = '';
 
     if (flag === VALIDATE) {
       style = {
@@ -49,15 +50,29 @@ export class InputBox extends React.PureComponent {
       };
     }
 
+    if (multiline) {
+      element = (
+        <textarea
+          className="app__input__text" style={style}
+          onBlur={this.onBlur}
+        />
+      );
+    }
+    else {
+      element = (
+        <input
+          type="text" className="app__input__text" style={style}
+          onBlur={this.onBlur}
+        />
+      );
+    }
+
     return (
       <div className="app__input">
         <label className="app__input__label">
           {label}
         </label>
-        <input
-          type="text" className="app__input__text" style={style}
-          onBlur={this.onBlur}
-        />
+        {element}
         {flag !== BEGINNING && <i className={icon} />}
         {flag === INVALIDATE && <div className="app__input__invalid">{validationString}</div>}
       </div>
@@ -68,12 +83,14 @@ export class InputBox extends React.PureComponent {
 InputBox.propTypes = {
   height: PropTypes.number,
   label: PropTypes.string.isRequired,
+  multiline: PropTypes.bool,
   validate: PropTypes.func,
   validationString: PropTypes.string,
 };
 
 InputBox.defaultProps = {
   height: 3.5,
+  multiline: false,
 };
 
 export default InputBox;
