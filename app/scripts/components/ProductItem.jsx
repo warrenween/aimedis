@@ -28,19 +28,19 @@ class ProductItem extends React.PureComponent {
       <div>
         <p className="app__product__item__content__info__title">{title}</p>
         <div className="app__product__item__content__info__image d-block d-lg-none">
-          <img src={require('assets/media/images/mobile.png')} alt="No Asset"/>
+          <img src={require('assets/media/images/mobile.png')} alt="No Asset" />
         </div>
         <p className="app__product__item__content__info__description">{description}</p>
         <div className="app__product__item__content__info__button" onClick={this.play}>
           <div className="app__product__item__content__info__button__icon">
-            <div className="app__product__item__content__info__button__icon__triangle"/>
+            <div className="app__product__item__content__info__button__icon__triangle" />
           </div>
           <p className="app__product__item__content__info__button__text">PLAY VIDEO</p>
         </div>
       </div>
     );
 
-    const content2 = (<img src={require(`assets/media/images/${src}`)} alt="No Asset"/>);
+    const content2 = (<img src={require(`assets/media/images/${src}`)} alt="No Asset" />);
 
     let content = '';
     let player = (
@@ -48,7 +48,7 @@ class ProductItem extends React.PureComponent {
         <div className="app__product__item__content__player">
           <Player
             autoplay
-            ref={(element) => this.player = element}
+            ref={(re) => {this.player = re;}}
             src={link}
           />
           <div onClick={this.stop} className="app__product__item__content__player__close">

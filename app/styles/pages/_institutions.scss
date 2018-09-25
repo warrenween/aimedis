@@ -43,6 +43,12 @@
 
   &__section2 {
     margin-top: 8.25rem;
+
+    &__item {
+      & + & {
+        margin-top: 17rem;
+      }
+    }
   }
 
   &__section3 {

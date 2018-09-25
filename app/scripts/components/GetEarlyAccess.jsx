@@ -49,7 +49,6 @@ class GetEarlyAccess extends React.PureComponent {
         <button type="button" className="app__get__early__access__button btn btn__primary">
           Get <span className="d-none d-lg-inline">Early </span>Access
         </button>
-        {false && flag === INVALIDATE && <div className="app__get__early__access__invalid">Email is invalid</div>}
       </div>
     );
   };

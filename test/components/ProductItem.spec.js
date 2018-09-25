@@ -23,5 +23,15 @@ describe('ProductItem', () => {
 
   it('should render properly', () => {
     expect(rightWrapper.html()).toMatchSnapshot();
+
+    const playButtonElement = rightWrapper.find('.app__product__item__content__info__button');
+    playButtonElement.simulate('click');
+
+    expect(rightWrapper.html()).toMatchSnapshot();
+
+    const stopButtonElement = rightWrapper.find('.app__product__item__content__player__close');
+    stopButtonElement.simulate('click');
+
+    expect(rightWrapper.html()).toMatchSnapshot();
   });
 });

@@ -22,5 +22,10 @@ describe('OverviewList', () => {
 
   it('should render properly', () => {
     expect(wrapper.html()).toMatchSnapshot();
+
+    const activeButtonElement = wrapper.find('.app__overview__list__content__item');
+    activeButtonElement.simulate('click');
+
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });

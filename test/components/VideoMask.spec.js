@@ -12,5 +12,15 @@ describe('VideoMask', () => {
 
   it('should render properly', () => {
     expect(wrapper.html()).toMatchSnapshot();
+
+    const playButtonElement = wrapper.find('.app__video__mask__button');
+    playButtonElement.simulate('click');
+
+    expect(wrapper.html()).toMatchSnapshot();
+
+    const stopButtonElement = wrapper.find('.app__video__mask__player__close');
+    stopButtonElement.simulate('click');
+
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });
