@@ -80,10 +80,10 @@
             height: 1.5rem;
             opacity: 0.32;
             width: 1.5rem;
+          }
 
-            &:hover {
-              opacity: 1;
-            }
+          &__element:hover {
+            opacity: 1;
           }
 
           &__element + &__element {
@@ -206,10 +206,10 @@
             margin-left: 1.75rem;
             opacity: 0.5;
             width: 1.5rem;
+          }
 
-            &:hover {
-              opacity: 1;
-            }
+          &__element:hover {
+            opacity: 1;
           }
         }
       }

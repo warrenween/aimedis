@@ -46,37 +46,37 @@ const Footer = () => (
             <div className="col-12 col-lg-2 offset-lg-1">
               <div className="app__footer__content__social">
                 <div className="app__footer__content__social__icon">
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/facebook.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/Group 9.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/Group 10.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/Group 11.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/btc.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/medium.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/insta.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/In.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/reddit.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/youtube.png')} alt="No asset" />
                   </Link>
-                  <Link className="app__footer__content__social__icon__item" to='#'>
+                  <Link className="app__footer__content__social__icon__item" to="#">
                     <img src={require('assets/media/social/mail.png')} alt="No asset" />
                   </Link>
                 </div>

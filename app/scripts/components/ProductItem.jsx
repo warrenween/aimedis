@@ -43,12 +43,12 @@ class ProductItem extends React.PureComponent {
     const content2 = (<img src={require(`assets/media/images/${src}`)} alt="No Asset" />);
 
     let content = '';
-    let player = (
+    const player = (
       <div className={!active ? ' d-none' : ' d-flex'}>
         <div className="app__product__item__content__player">
           <Player
             autoplay
-            ref={(re) => {this.player = re;}}
+            ref={(re) => { this.player = re; }}
             src={link}
           />
           <div onClick={this.stop} className="app__product__item__content__player__close">

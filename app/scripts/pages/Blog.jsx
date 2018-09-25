@@ -9,7 +9,7 @@ export default class Blog extends React.PureComponent {
       <div key="Blog" className="app__blog app__route">
         <div className="container">
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-            <Link to='/blog/1'>
+            <Link to="/blog/1">
               <section className="app__blog__section1">
                 <div className="app__blog__section1__mobile d-block d-lg-none">
                   <p className="app__blog__section1__mobile__subtitle">Featured post</p>

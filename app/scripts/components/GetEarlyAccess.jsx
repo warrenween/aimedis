@@ -51,7 +51,7 @@ class GetEarlyAccess extends React.PureComponent {
         </button>
       </div>
     );
-  };
+  }
 }
 
 export default GetEarlyAccess;

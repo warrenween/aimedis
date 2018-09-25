@@ -6,11 +6,10 @@ import PropTypes from 'prop-types';
 class OverviewList extends React.PureComponent {
   constructor(props) {
     super(props);
-    const list = props.list;
 
     this.state = {
       active: 1,
-      list,
+      list: props.list,
     };
   }
 
@@ -57,18 +56,16 @@ class OverviewList extends React.PureComponent {
                 <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
                   <div className="app__overview__list__content__mobile d-none d-lg-flex">
                     <div className="app__overview__list__content__mobile__button">
-                      <img src={require('assets/media/icons/apple-icon.png')} alt="No Asset"/>
+                      <img src={require('assets/media/icons/apple-icon.png')} alt="No Asset" />
                       <div className="app__overview__list__content__mobile__button__title">
-                        <p className="app__overview__list__content__mobile__button__title__small">Available on
-                          the</p>
+                        <p className="app__overview__list__content__mobile__button__title__small">Available on the</p>
                         <p className="app__overview__list__content__mobile__button__title__big">App Store</p>
                       </div>
                     </div>
                     <div className="app__overview__list__content__mobile__button">
-                      <img src={require('assets/media/icons/google_play.png')} alt="No Asset"/>
+                      <img src={require('assets/media/icons/google_play.png')} alt="No Asset" />
                       <div className="app__overview__list__content__mobile__button__title">
-                        <p className="app__overview__list__content__mobile__button__title__small">Available on
-                          the</p>
+                        <p className="app__overview__list__content__mobile__button__title__small">Available on the</p>
                         <p className="app__overview__list__content__mobile__button__title__big">Google Play</p>
                       </div>
                     </div>

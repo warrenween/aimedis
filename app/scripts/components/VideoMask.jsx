@@ -35,7 +35,7 @@ class VideoMask extends React.PureComponent {
           <div className="app__video__mask__player">
             <Player
               autoplay
-              ref={(element) => this.player = element}
+              ref={(element) => { this.player = element; }}
               src="http://media.w3.org/2010/05/bunny/movie.mp4"
             />
             <div onClick={this.stop} className="app__video__mask__player__close">

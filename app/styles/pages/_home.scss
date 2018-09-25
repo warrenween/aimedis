@@ -151,6 +151,87 @@
     }
   }
 
+  &__mask {
+    &__one {
+      bottom: -3.75rem;
+      left: -2rem;
+      position: absolute;
+      z-index: -1;
+
+      img {
+        width: 40rem;
+      }
+    }
+
+    &__two {
+      left: 0;
+      position: absolute;
+      top: 100rem;
+      z-index: -1;
+
+      img {
+        width: 16.25rem;
+      }
+    }
+
+    &__three {
+      position: absolute;
+      right: 0;
+      top: 56.75rem;
+      z-index: -1;
+
+      img {
+        width: 13rem;
+      }
+    }
+
+    &__five {
+      left: 0;
+      position: absolute;
+      top: 422rem;
+      z-index: -1;
+
+      img {
+        width: 13.5rem;
+      }
+    }
+
+    &__notification {
+      position: absolute;
+      right: 5rem;
+      top: 41rem;
+
+      &__content {
+        margin-right: 1rem;
+
+        &__title {
+          color: #060606;
+          font-size: 1.125rem;
+          font-weight: 800;
+          letter-spacing: 0.08rem;
+          line-height: 1.5rem;
+
+          span {
+            color: $primary;
+          }
+        }
+
+        &__description {
+          color: $input-color;
+          font-size: 1rem;
+          font-weight: $font-weight-middle;
+          letter-spacing: 0.07rem;
+          line-height: 1.25rem;
+          margin-top: 0.5rem;
+
+          span {
+            font-weight: $font-weight-bold;
+          }
+        }
+      }
+    }
+  }
+
   &__section5 {
     margin-top: 11rem;
 
@@ -347,87 +428,6 @@
     @include media-breakpoint-down(md) {
       margin-bottom: 7.5rem;
       margin-top: 5.5rem;
-    }
-  }
-
-  &__mask {
-    &__one {
-      bottom: -3.75rem;
-      left: -2rem;
-      position: absolute;
-      z-index: -1;
-
-      img {
-        width: 40rem;
-      }
-    }
-
-    &__two {
-      left: 0;
-      position: absolute;
-      top: 100rem;
-      z-index: -1;
-
-      img {
-        width: 16.25rem;
-      }
-    }
-
-    &__three {
-      position: absolute;
-      right: 0;
-      top: 56.75rem;
-      z-index: -1;
-
-      img {
-        width: 13rem;
-      }
-    }
-
-    &__five {
-      left: 0;
-      position: absolute;
-      top: 422rem;
-      z-index: -1;
-
-      img {
-        width: 13.5rem;
-      }
-    }
-
-    &__notification {
-      position: absolute;
-      right: 5rem;
-      top: 41rem;
-
-      &__content {
-        margin-right: 1rem;
-
-        &__title {
-          color: #060606;
-          font-size: 1.125rem;
-          font-weight: 800;
-          letter-spacing: 0.08rem;
-          line-height: 1.5rem;
-
-          span {
-            color: $primary;
-          }
-        }
-
-        &__description {
-          color: $input-color;
-          font-size: 1rem;
-          font-weight: $font-weight-middle;
-          letter-spacing: 0.07rem;
-          line-height: 1.25rem;
-          margin-top: 0.5rem;
-
-          span {
-            font-weight: $font-weight-bold;
-          }
-        }
-      }
     }
   }
 }
