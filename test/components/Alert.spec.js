@@ -55,7 +55,7 @@ describe('Alert', () => {
   it('should render a black alert with markup', () => {
     wrapper = setup(<div>This is a black message</div>, 'black');
 
-    expect(wrapper.find('.app__alert__content div').length).toBe(2);
+    expect(wrapper.find('.app__alert__content div').length).toBe(1);
     expect(wrapper.find('.app__alert')).toHaveClassName('is-black');
   });
 });

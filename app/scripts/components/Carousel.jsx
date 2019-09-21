@@ -66,7 +66,8 @@ class Carousel extends React.PureComponent {
         <p className="app__carousel__inner__item__name">{ item.name }</p>
         <p className="app__carousel__inner__item__caption">{ item.caption }</p>
         <p className="app__carousel__inner__item__quotation">&ldquo;</p>
-      </div>)
+      </div>
+    )
     );
 
     result.push(

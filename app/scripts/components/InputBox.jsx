@@ -69,9 +69,9 @@ export class InputBox extends React.PureComponent {
 
     return (
       <div className="app__input">
-        <label className="app__input__label">
+        <div className="app__input__label">
           {label}
-        </label>
+        </div>
         {element}
         {flag !== BEGINNING && <i className={icon} />}
         {flag === INVALIDATE && <div className="app__input__invalid">{validationString}</div>}
