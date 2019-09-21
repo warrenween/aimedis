@@ -121,7 +121,7 @@
     "markdown-loader": "^3.0.0",
     "modernizr-loader": "^1.0.1",
     "nock": "^9.4.3",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.12.0",
     "offline-plugin": "^5.0.5",
     "postcss-loader": "^2.1.6",
     "raw-loader": "^0.5.1",

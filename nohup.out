@@ -1,0 +1,3 @@
+Attempting to call a function in a renderer window that has been closed or released.
+Function provided here: S4lApi.js:67:33
+2019-05-16 12:42:55.269 Skype Helper[39697:256444] dataFromCheckingString timed out
