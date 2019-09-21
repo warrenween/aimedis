@@ -3,7 +3,8 @@
   "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "jest": true
+    "jest": true,
+    "jquery": true
   },
   "globals": {
     "$": true,
@@ -83,6 +84,7 @@
     "no-trailing-spaces": "warn",
     "no-underscore-dangle": "off",
     "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "no-useless-escape": ["off"],
     "object-curly-newline": "off",
     "object-shorthand": ["warn", "always"],
     "one-var": "warn",

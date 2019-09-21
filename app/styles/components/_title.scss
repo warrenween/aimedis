@@ -1,0 +1,22 @@
+.app__title {
+  &__subtitle {
+    color: $primary;
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: $black;
+    font-size: 2.25rem;
+    font-weight: $font-weight-bold;
+    line-height: 3.375rem;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.625rem;
+    }
+  }
+}

@@ -1,0 +1,433 @@
+.app__home {
+  overflow: hidden;
+  position: relative;
+
+  &__section1 {
+    margin-top: 15.25rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 9.25rem;
+    }
+
+    &__content {
+      &__header {
+        color: $black;
+        font-size: 2.625rem;
+        font-weight: $font-weight-bold;
+        letter-spacing: 0.06rem;
+        line-height: 3.5rem;
+
+        @include media-breakpoint-down(md) {
+          font-size: 2.25rem;
+          line-height: 3.125rem;
+          margin-right: 1rem;
+        }
+      }
+
+      &__subheader {
+        color: $black;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        margin-bottom: 2.5rem;
+        margin-top: 2rem;
+        opacity: 0.5;
+      }
+
+      &__terms {
+        color: $black;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        margin-top: 1rem;
+        opacity: 0.5;
+
+        @include media-breakpoint-down(md) {
+          opacity: 1;
+        }
+
+        span {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &__section2 {
+    margin-top: 15rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 11.5rem;
+    }
+
+    &__content {
+      margin-bottom: -4.125rem;
+
+      &__item {
+        margin-bottom: 4.125rem;
+      }
+    }
+  }
+
+  &__section3 {
+    margin-top: 15rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 9rem;
+    }
+
+    &__title {
+      margin-bottom: 5rem;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &__content {
+      margin-bottom: -3.5rem;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: -1rem;
+      }
+
+      &__item {
+        margin-bottom: 3.5rem;
+        text-align: center;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 1rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__section4 {
+    margin-top: 15rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 7.25rem;
+    }
+
+    &__content {
+      &__subtitle {
+        color: $black;
+        font-weight: $font-weight-middle;
+        margin-bottom: 2.5rem;
+        margin-top: 1.75rem;
+        opacity: 0.5;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 2rem;
+          margin-top: 1.5rem;
+          text-align: left;
+        }
+      }
+
+      &__download {
+        margin: 0.75rem auto 0;
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+          margin-top: 0.5rem;
+          width: initial;
+        }
+
+        &:hover,
+        &:active {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+
+      &__item {
+        margin-bottom: 4rem;
+        padding-left: 2.5rem;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__mask {
+    &__one {
+      bottom: -3.75rem;
+      left: -2rem;
+      position: absolute;
+      z-index: -1;
+
+      img {
+        width: 40rem;
+      }
+    }
+
+    &__two {
+      left: 0;
+      position: absolute;
+      top: 100rem;
+      z-index: -1;
+
+      img {
+        width: 16.25rem;
+      }
+    }
+
+    &__three {
+      position: absolute;
+      right: 0;
+      top: 56.75rem;
+      z-index: -1;
+
+      img {
+        width: 13rem;
+      }
+    }
+
+    &__five {
+      left: 0;
+      position: absolute;
+      top: 422rem;
+      z-index: -1;
+
+      img {
+        width: 13.5rem;
+      }
+    }
+
+    &__notification {
+      position: absolute;
+      right: 5rem;
+      top: 41rem;
+
+      &__content {
+        margin-right: 1rem;
+
+        &__title {
+          color: #060606;
+          font-size: 1.125rem;
+          font-weight: 800;
+          letter-spacing: 0.08rem;
+          line-height: 1.5rem;
+
+          span {
+            color: $primary;
+          }
+        }
+
+        &__description {
+          color: $input-color;
+          font-size: 1rem;
+          font-weight: $font-weight-middle;
+          letter-spacing: 0.07rem;
+          line-height: 1.25rem;
+          margin-top: 0.5rem;
+
+          span {
+            font-weight: $font-weight-bold;
+          }
+        }
+      }
+    }
+  }
+
+  &__section5 {
+    margin-top: 11rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 7rem;
+    }
+
+    &__content {
+      margin-top: 7.75rem;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 2.5rem;
+      }
+
+      img {
+        margin-top: -9.5rem;
+        width: 120%;
+      }
+    }
+
+    .mask {
+      position: absolute;
+      right: -16rem;
+      top: 6rem;
+      z-index: -1;
+
+      img {
+        width: 15rem;
+      }
+    }
+  }
+
+  &__section6 {
+    margin-top: 12.5rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 7.25rem;
+    }
+
+    &__content {
+      margin-top: 4.125rem;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 2.25rem;
+      }
+    }
+  }
+
+  &__section7 {
+    margin-top: 12.5rem;
+
+    &__content {
+      display: flex;
+      margin-top: 3.5rem;
+      padding-bottom: 13rem;
+      position: relative;
+
+      &__mobile {
+        border-radius: 0.75rem;
+        display: inline-block;
+        height: 27.75rem;
+        margin-right: 4rem;
+        padding: 5.25rem 1.5rem 2.5rem;
+        position: relative;
+        text-align: center;
+        width: 16rem;
+
+        &__img {
+          align-items: center;
+          display: flex;
+          height: 3.5rem;
+          justify-content: center;
+          width: 3.5rem;
+        }
+
+        &__title {
+          font-size: $subheader-size;
+          font-weight: $font-weight-bold;
+          height: 3.75rem;
+          letter-spacing: 0;
+          line-height: $body-line-height;
+          margin: 6.5rem 1rem 0;
+        }
+
+        &__button {
+          margin-top: 3rem;
+        }
+
+        &__soon {
+          background: $green;
+          border-radius: 0.75rem;
+          clip-path: ellipse(65% 60% at 70% 12%);
+          color: #fff;
+          font-size: 0.875rem;
+          font-weight: 900;
+          height: 3.75rem;
+          line-height: 1.25rem;
+          padding: 0.5rem 1.5rem;
+          position: absolute;
+          right: 0;
+          text-align: center;
+          text-transform: uppercase;
+          top: 0;
+          width: 5rem;
+        }
+      }
+
+      &__iphone {
+        background-color: $primary;
+        box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
+
+        &__title {
+          color: $white;
+        }
+
+        &:hover,
+        &:active {
+          background-color: $white;
+          box-shadow: 0 0.25rem 2rem 0 $white;
+
+          .app__home__section7__content__iphone__title {
+            color: #868a8c;
+          }
+
+          .app__home__section7__content__iphone__button {
+            background: linear-gradient(36.72deg, #00aaa6, #00b1e6);
+            box-shadow: $box-shadow-custom;
+            color: $white;
+          }
+        }
+      }
+
+      &__android {
+        background-color: $white;
+        box-shadow: 0 0.25rem 2rem 0 $white;
+
+        &__title {
+          color: #868a8c;
+        }
+
+        &__button {
+          font-size: 0.875rem;
+          letter-spacing: 0.0569rem;
+          line-height: 1.25rem;
+          padding: 0.875rem 1.25rem;
+        }
+
+        &:hover,
+        &:active {
+          background-color: $primary;
+          box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
+
+          .app__home__section7__content__android__title {
+            color: $white;
+          }
+
+          .app__home__section7__content__android__button {
+            background: $white;
+            box-shadow: none;
+            color: $primary;
+          }
+        }
+      }
+
+      &__img {
+        left: 30rem;
+        position: absolute;
+        top: -8rem;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__section8 {
+    margin-top: 10.25rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 7.25rem;
+    }
+
+    &__content {
+      margin-top: 5.5rem;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 2.25rem;
+      }
+    }
+  }
+
+  &__section9 {
+    margin-bottom: 10rem;
+    margin-top: 15rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 7.5rem;
+      margin-top: 5.5rem;
+    }
+  }
+}

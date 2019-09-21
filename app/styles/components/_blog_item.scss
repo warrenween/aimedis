@@ -1,0 +1,96 @@
+.app__blog__item {
+  box-shadow: 0 1rem 2rem 0 rgba($white, 0.5);
+  height: 29rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  width: 20rem;
+
+  @include media-breakpoint-down(md) {
+    height: 7.25rem;
+    margin-bottom: 1rem;
+    padding: 0;
+
+    .app__blog__item__content {
+      &__img {
+        height: 7.5rem;
+        width: 50%;
+      }
+
+      &__title {
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        left: 55%;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        top: 0;
+        width: 50%;
+      }
+
+      &__description {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    &__img {
+      align-items: center;
+      display: flex;
+      height: 12.5rem;
+      justify-content: center;
+      left: 0;
+      padding: 0.25rem;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      color: $black;
+      font-size: 1rem;
+      font-weight: $font-weight-bold;
+      left: 0;
+      line-height: 1.75rem;
+      position: absolute;
+      top: 14rem;
+    }
+
+    &__description {
+      -webkit-box-orient: vertical;
+      color: $black-75;
+      display: -webkit-box;
+      font-size: 0.875rem;
+      font-weight: $font-weight-middle;
+      height: 5.25rem;
+      left: 0;
+      -webkit-line-clamp: 3;
+      line-height: 1.75rem;
+      overflow: hidden;
+      position: absolute;
+      text-overflow: ellipsis;
+      top: 20rem;
+      width: 100%;
+    }
+  }
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+    margin-top: -1rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: -0.5rem;
+    }
+
+    .app__blog__item__content__title {
+      color: $primary;
+    }
+  }
+}

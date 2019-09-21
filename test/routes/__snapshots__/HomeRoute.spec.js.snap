@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes/HomeRoute should render the Home Page for authenticated access 1`] = `"<div data-reactroot=\\"\\">HOME</div>"`;
+
+exports[`routes/HomeRoute should render the Home Page for unauthenticated access 1`] = `"<div data-reactroot=\\"\\">HOME</div>"`;

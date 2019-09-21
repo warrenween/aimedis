@@ -1,0 +1,46 @@
+.small {
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+}
+
+.caption {
+  font-size: $caption-size;
+  line-height: $caption-line-height;
+}
+
+.body {
+  font-size: $body-size;
+  line-height: $body-line-height;
+}
+
+.subheader {
+  font-size: $subheader-size;
+  font-weight: $font-weight-middle;
+  line-height: $subheader-line-height;
+}
+
+.title {
+  font-size: $title-size;
+  line-height: $title-line-height;
+}
+
+.headline {
+  font-size: $headline-size;
+  line-height: $headline-line-height;
+}
+
+.display {
+  font-size: $display-size;
+  font-weight: $font-weight-middle;
+  line-height: $display-line-height;
+}
+
+.jumbo {
+  font-size: $jumbo-size;
+  line-height: $jumbo-line-height;
+}
+
+.mega {
+  font-size: $mega-size;
+  line-height: $mega-line-height;
+}

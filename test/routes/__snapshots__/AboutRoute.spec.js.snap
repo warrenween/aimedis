@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes/AboutRoute should render the About us Page for authenticated access 1`] = `"<div data-reactroot=\\"\\">About us</div>"`;
+
+exports[`routes/AboutRoute should render the About us Page for unauthenticated access 1`] = `"<div data-reactroot=\\"\\">About us</div>"`;

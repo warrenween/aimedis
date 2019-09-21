@@ -49,6 +49,7 @@ module.exports = {
       assets: paths.assets,
       modernizr$: paths.modernizrrc,
       test: paths.test,
+      jquery: 'jquery/src/jquery',
     },
     modules: [paths.appScripts, paths.nodeModules],
     extensions: ['.js', '.jsx', '.json'],
@@ -79,6 +80,10 @@ module.exports = {
       exclude: /node_modules/,
       failOnError: true,
       cwd: process.cwd(),
+    }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
     }),
   ],
   module: {

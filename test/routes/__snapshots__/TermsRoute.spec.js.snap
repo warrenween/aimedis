@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes/TermsRoute should render the Terms Page for authenticated access 1`] = `"<div data-reactroot=\\"\\">Terms</div>"`;
+
+exports[`routes/TermsRoute should render the Terms Page for unauthenticated access 1`] = `"<div data-reactroot=\\"\\">Terms</div>"`;

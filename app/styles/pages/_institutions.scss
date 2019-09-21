@@ -1,0 +1,63 @@
+.app__institutions {
+  overflow: hidden;
+  position: relative;
+
+  &__section1 {
+    margin-top: 11.25rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 10.25rem;
+    }
+
+    &__title {
+      @include media-breakpoint-down(md) {
+        text-align: center;
+
+        .app__title__title {
+          line-height: 2.625rem;
+        }
+      }
+    }
+
+    &__content {
+      margin-top: 4.125rem;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 2.75rem;
+      }
+
+      .app__overview {
+        margin-bottom: 0.75rem;
+      }
+
+      img {
+        margin-top: -15rem;
+        padding-left: 8rem;
+      }
+    }
+
+    .mask {
+      display: none;
+    }
+  }
+
+  &__section2 {
+    margin-top: 8.25rem;
+
+    &__item {
+      & + & {
+        margin-top: 17rem;
+      }
+    }
+  }
+
+  &__section3 {
+    margin-bottom: 10rem;
+    margin-top: 12.5rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 7.5rem;
+      margin-top: 6.375rem;
+    }
+  }
+}

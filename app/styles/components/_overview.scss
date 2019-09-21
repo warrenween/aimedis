@@ -1,0 +1,144 @@
+.app__overview {
+  cursor: pointer;
+
+  @include media-breakpoint-up(lg) {
+    height: 7.25rem;
+    width: 24.125rem;
+  }
+
+  &__internal {
+    background-color: $white;
+    border-radius: 0.75rem;
+    box-shadow: $box-shadow-3;
+    height: 100%;
+    margin-bottom: 0.75rem;
+
+    &__content {
+      display: flex;
+      height: 100%;
+      padding: 1.5rem;
+
+      &__order {
+        align-items: center;
+        background: linear-gradient(212.33deg, #00b0db 0%, #12b3b3 100%);
+        border-radius: 50%;
+        box-shadow: 0 0.0625rem 0.25rem 0 rgba($primary, 0.5);
+        display: flex;
+        height: 1.625rem;
+        justify-content: center;
+        margin-right: 0.875rem;
+        width: 1.625rem;
+
+        &__text {
+          color: $white;
+          font-weight: $font-weight-bold;
+          letter-spacing: 0;
+          margin: 0;
+          text-align: center;
+        }
+      }
+
+      &__paragraph {
+        flex: 1;
+        margin-right: 0.2rem;
+
+        &__title {
+          color: $black;
+          font-weight: $font-weight-bold;
+        }
+
+        &__subtitle {
+          color: $black;
+          margin-right: 1rem;
+          opacity: 0.5;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      &__next {
+        align-items: center;
+        color: $white;
+        display: flex;
+        font-size: $headline-size;
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+
+  &__external {
+    display: none;
+  }
+
+  &:hover,
+  &:active,
+  &.active {
+    .app__overview {
+      &__internal {
+        background: linear-gradient(16.56deg, #00b0db 0%, #00acb9 33.42%, #00aaa6 100%);
+        box-shadow: 0 0.25rem 2rem 0 #7bdbdc;
+
+        &__content {
+          &__order {
+            background: $white;
+          }
+
+          &__order__text {
+            color: $primary;
+          }
+
+          &__paragraph__title {
+            color: $white;
+          }
+
+          &__paragraph__subtitle {
+            color: $white;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    @include media-breakpoint-down(md) {
+      .app__overview__internal {
+        border-radius: 0.75rem 0.75rem 0 0;
+      }
+
+      .app__overview__external {
+        display: block;
+        position: relative;
+
+        &__image {
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+        }
+
+        &__image img {
+          margin-bottom: 2.25rem;
+          margin-top: 2.25rem;
+          width: initial;
+        }
+
+        &__download {
+          bottom: 4rem;
+          margin: 0.75rem auto 0;
+          padding: 1rem 0;
+          position: absolute;
+          width: 100%;
+
+          &:hover,
+          &:active {
+            background-color: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+

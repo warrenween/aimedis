@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SVG from 'react-inlinesvg';
 
 import config from 'config';
 
 const Logo = ({ file }) => (
   <div className="app__logo">
-    <SVG src={require(`assets/media/brand/${file}.svg`)}>
-      <img src={require(`assets/media/brand/${file}.png`)} alt={config.title} />
-    </SVG>
+    <img src={require(`assets/media/brand/${file}.png`)} alt={config.title} />
   </div>
 );
 
@@ -17,7 +14,7 @@ Logo.propTypes = {
 };
 
 Logo.defaultProps = {
-  file: 'icon',
+  file: 'logo_new',
 };
 
 export default Logo;

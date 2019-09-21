@@ -1,0 +1,74 @@
+.app__career__item {
+  background-color: $white;
+  box-shadow: $box-shadow-3;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      padding: 0.875rem 1rem 1.5rem 1rem;
+    }
+
+    &__info {
+      @include media-breakpoint-down(md) {
+        font-size: 1.25rem;
+      }
+
+      &__title {
+        color: $black;
+        font-size: 1.125rem;
+        font-weight: $font-weight-bold;
+        line-height: 2.5rem;
+        margin-bottom: 0;
+      }
+
+      &__subtitle {
+        color: $black;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(md) {
+          font-size: 1rem;
+          margin-top: 0.375rem;
+        }
+      }
+
+      &__icon {
+        color: $black;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        margin-top: 0.375rem;
+        opacity: 0.5;
+
+        @include media-breakpoint-down(md) {
+          margin-top: 0.875rem;
+        }
+
+        span + span {
+          margin-left: 1.25rem;
+        }
+      }
+    }
+
+    &__button {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 2.75rem;
+      }
+
+      button {
+        background: linear-gradient(36.72deg, #00aaa6 0%, #00b1e6 100%);
+        border-radius: 1.75rem;
+        box-shadow: 0 0.125rem 0.375rem 0 $shadow-color;
+        padding: 1.125rem 3.5rem;
+      }
+    }
+  }
+}

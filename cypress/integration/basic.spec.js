@@ -2,7 +2,7 @@ describe('Aimedis-Landing-Page', () => {
   it('should assert that <title> is correct', () => {
     cy.visit('http://localhost:3000');
     cy.title()
-      .should('include', 'aimedis-landing-page');
+      .should('include', 'aimedis-landing-pages');
   });
 
   it('should be able to start', () => {

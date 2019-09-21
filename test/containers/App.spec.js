@@ -10,6 +10,11 @@ const props = {
     alerts: [],
   },
   dispatch: mockDispatch,
+  router: {
+    location: {
+      pathname: '',
+    },
+  },
   user: {
     isAuthenticated: false,
   },
@@ -33,18 +38,8 @@ describe('App', () => {
     expect(wrapper.find('HelmetWrapper')).toExist();
     expect(wrapper.find('Connect(ConnectedRouter)')).toExist();
     expect(wrapper.find('Switch')).toExist();
+    expect(wrapper.find('Header')).toExist();
     expect(wrapper.find('Footer')).toExist();
     expect(wrapper.find('SystemAlerts')).toExist();
-  });
-
-  it('should render properly for logged users', () => {
-    wrapper.setProps({
-      ...wrapper.props(),
-      user: {
-        isAuthenticated: true,
-      },
-    });
-
-    expect(wrapper.find('Header')).toExist();
   });
 });

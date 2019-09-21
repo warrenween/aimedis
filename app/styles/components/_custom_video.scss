@@ -1,0 +1,27 @@
+.app__video {
+  width: 100%;
+
+  .video-react-control-bar {
+    margin: 0 5% 2.25rem;
+    width: 90%;
+
+    @include media-breakpoint-down(md) {
+      margin: 0 0 1rem;
+      width: 100%;
+    }
+  }
+
+  .video-react-play-progress {
+    background: $primary;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .video-react-play-progress:before {
+      display: block;
+    }
+  }
+}

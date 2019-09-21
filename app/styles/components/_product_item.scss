@@ -1,0 +1,117 @@
+.app__product__item {
+  position: relative;
+
+  &__content {
+    &__info {
+      &__title {
+        color: $black;
+        font-size: 2.625rem;
+        font-weight: $font-weight-bold;
+        letter-spacing: 0.06rem;
+        line-height: 3.5rem;
+
+        @include media-breakpoint-down(md) {
+          font-size: 2.25rem;
+          line-height: 3.125rem;
+        }
+      }
+
+      &__image {
+        margin: 3.75rem auto 0;
+        width: 14.25rem;
+      }
+
+      &__description {
+        color: $black;
+        font-size: 1rem;
+        font-weight: $font-weight-middle;
+        line-height: 1.75rem;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        opacity: 0.5;
+
+        @include media-breakpoint-down(md) {
+          margin-top: 9.625rem;
+        }
+      }
+
+      &__button {
+        align-items: center;
+        display: flex;
+        margin-top: 3rem;
+
+        @include media-breakpoint-down(md) {
+          margin-top: 0;
+          padding: 0.5rem 0;
+          position: absolute;
+          top: 43.5rem;
+        }
+
+        &__icon {
+          background-color: #00aeca;
+          border-radius: 50%;
+          height: 2.5rem;
+          position: relative;
+          width: 2.5rem;
+
+          &__triangle {
+            border-bottom: 0.5rem solid transparent;
+            border-left: 0.75rem solid #fff;
+            border-top: 0.5rem solid transparent;
+            height: 0;
+            left: calc(50% - 0.25rem);
+            position: absolute;
+            top: calc(50% - 0.5rem);
+          }
+        }
+
+        &__text {
+          color: $black;
+          font-size: 0.875rem;
+          font-weight: 800;
+          letter-spacing: 0.0569rem;
+          line-height: 1.25rem;
+          margin-bottom: 0;
+          margin-left: 0.75rem;
+          opacity: 0.5;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .direction-rtl {
+      direction: rtl;
+      padding-right: 3.75rem;
+    }
+
+    &__player {
+      left: 0;
+      position: absolute;
+      top: -30%;
+      width: 95%;
+      z-index: 201;
+
+      @include media-breakpoint-down(md) {
+        top: 50%;
+      }
+
+      &__close {
+        background: transparent;
+        height: 1.5rem;
+        position: absolute;
+        right: -2rem;
+        top: 0;
+        width: 1.5rem;
+
+        i {
+          color: $black;
+          cursor: pointer;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

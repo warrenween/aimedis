@@ -1,15 +1,19 @@
 // *** Node modules
 @import '~sass-mediaqueries/media-queries';
+@import '~animate.css/animate.min.css';
+@import '~video-react/styles/scss/video-react';
 
 // *** Variables
 @import 'variables/app';
 @import 'variables/bootstrap';
+@import 'variables/components';
 @import 'variables/typography';
 
 // *** Utilities
 @import 'utilities/functions';
 @import 'utilities/mixins';
 @import 'utilities/grid';
+@import 'utilities/components';
 
 // *** Vendor
 @import 'vendor/bootstrap';
@@ -20,19 +24,51 @@
 
 // *** Modules
 @import 'modules/animations';
-@import 'modules/buttons';
+@import 'modules/buttons'; // Update with UI
+@import 'modules/type';
 @import 'modules/icons';
 @import 'modules/transitions';
 
 // *** Components
+@import 'containers/system-alerts';
 @import 'components/alert';
 @import 'components/footer';
 @import 'components/header';
 @import 'components/loader';
 @import 'components/logo';
-@import 'components/system-alerts';
+@import 'components/avatar';
+@import 'components/videomask';
+@import 'components/get-early-access';
+@import 'components/title';
+@import 'components/offer_item';
+@import 'components/static_item';
+@import 'components/overview';
+@import 'components/carousel';
+@import 'components/blog_item';
+@import 'components/notification';
+@import 'components/product_item';
+@import 'components/product_carousel';
+@import 'components/feature';
+@import 'components/group_toggle';
+@import 'components/group_toggle_item';
+@import 'components/institutions_item';
+@import 'components/blog_list';
+@import 'components/career_item';
+@import 'components/custom_video';
+@import 'components/input_box';
+@import 'components/overview_list';
 
 // *** Routes
-@import 'routes/home';
-@import 'routes/private';
-@import 'routes/not-found';
+@import 'pages/home';
+@import 'pages/product';
+@import 'pages/about';
+@import 'pages/institutions';
+@import 'pages/investor';
+@import 'pages/policy';
+@import 'pages/terms';
+@import 'pages/blog';
+@import 'pages/blog_detail';
+@import 'pages/career';
+@import 'pages/career_detail';
+@import 'pages/support';
+@import 'pages/not-found';

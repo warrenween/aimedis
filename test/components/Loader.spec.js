@@ -3,15 +3,8 @@ import { mount } from 'enzyme';
 
 import Loader from 'components/Loader';
 
-const mockDispatch = jest.fn();
-
 function setup() {
-  const props = {
-    app: {},
-    dispatch: mockDispatch,
-  };
-
-  return mount(<Loader {...props} />);
+  return mount(<Loader />);
 }
 
 describe('Loader', () => {

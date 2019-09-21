@@ -1,0 +1,125 @@
+.app__career__detail {
+  overflow: hidden;
+  padding-bottom: 9.5rem;
+  padding-top: 11.25rem;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 7rem;
+    margin-top: 8.75rem;
+  }
+
+  &__section1 {
+    &__content {
+      &__title {
+        color: $black;
+        font-size: 2.25rem;
+        font-weight: $font-weight-bold;
+        line-height: 2.25rem;
+        margin-bottom: 2.25rem;
+
+        @include media-breakpoint-down(md) {
+          font-size: 1.625rem;
+          line-height: 2.625rem;
+          margin-bottom: 1.875rem;
+        }
+      }
+
+      &__subtitle {
+        color: $black;
+        font-size: 1.125rem;
+        font-weight: $font-weight-middle;
+        line-height: 2.25rem;
+        margin-bottom: 2.875rem;
+        margin-top: 2.875rem;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 2.125rem;
+          margin-top: 2.125rem;
+        }
+      }
+
+      &__info {
+        color: $primary;
+        display: flex;
+        font-size: 0.75rem;
+        font-weight: $font-weight-middle;
+        line-height: 1.25rem;
+        margin-bottom: 3.875rem;
+        margin-top: 0.5rem;
+
+        &__element {
+          display: flex;
+
+          &__icon {
+            align-items: center;
+            display: flex;
+            font-size: 1rem;
+            height: 1.25rem;
+            justify-content: center;
+            width: 1.25rem;
+          }
+        }
+
+        &__element + &__element {
+          margin-left: 1.25rem;
+        }
+      }
+
+      &__description {
+        color: #13152b;
+        font-size: 1rem;
+        line-height: 1.625rem;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+
+        ul {
+          margin-bottom: 0;
+          padding-left: 1rem;
+        }
+      }
+
+      &__reference {
+        color: $black;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-top: 7.25rem;
+
+        @include media-breakpoint-down(md) {
+          margin-top: 5.625rem;
+        }
+
+        a {
+          color: $black;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  &__mask {
+    &__one {
+      opacity: 0.32;
+      position: absolute;
+      right: -5rem;
+      top: 22rem;
+      transform: scaleX(-1);
+      z-index: -1;
+
+      img {
+        width: 15rem;
+      }
+    }
+
+    &__two {
+      bottom: 5rem;
+      left: -3rem;
+      position: absolute;
+      z-index: -1;
+
+      img {
+        width: 16rem;
+      }
+    }
+  }
+}

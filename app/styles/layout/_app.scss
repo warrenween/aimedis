@@ -8,14 +8,6 @@
 
   &__main {
     min-height: 100vh;
-
-    @at-root .app--private & {
-      padding: ($header-height + $grid-gutter-width) 0 ($footer-height + $grid-gutter-width);
-    }
-  }
-
-  &__container {
-    @include app-container();
   }
 
   &__route {
@@ -23,11 +15,5 @@
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100vh;
-  }
-
-  &__logout {
-    span {
-      margin-right: $grid-gutter-width / 6;
-    }
   }
 }

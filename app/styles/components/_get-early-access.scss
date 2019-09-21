@@ -1,0 +1,64 @@
+.app__get__early__access {
+  font-size: 0.875rem;
+  height: 3.5rem;
+  line-height: 1.25rem;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    height: 3.25rem;
+  }
+
+  &__input {
+    background-color: rgba($input-color, 0.1);
+    border: 0;
+    border-radius: 1.75rem;
+    box-shadow: 0 0.125rem 0.5rem 0 rgba($input-color, 0.24);
+    color: $black;
+    left: 0;
+    padding: 1.125rem 1.5rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      padding: 1rem 1.125rem;
+
+      &::placeholder {
+        opacity: 0.5;
+      }
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::placeholder {
+      opacity: 0.25;
+    }
+  }
+
+  &__button {
+    font-weight: 800;
+    height: 100%;
+    left: 55%;
+    max-width: 15rem;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 45%;
+
+    @include media-breakpoint-down(md) {
+      font-size: 0.75rem;
+      letter-spacing: 0.0488rem;
+      max-width: 10rem;
+    }
+  }
+
+  &__invalid {
+    bottom: -1.5rem;
+    color: $red;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 1rem;
+  }
+}

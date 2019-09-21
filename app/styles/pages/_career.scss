@@ -1,0 +1,138 @@
+.app__career {
+  overflow: hidden;
+  position: relative;
+
+  &__section1 {
+    margin-top: 11.375rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 9.5rem;
+    }
+
+    &__content {
+      &__info {
+        &__title {
+          color: $black;
+          font-size: 2.25rem;
+          font-weight: $font-weight-bold;
+          line-height: 2.25rem;
+
+          @include media-breakpoint-down(md) {
+            font-size: 1.625rem;
+            line-height: 2.625rem;
+          }
+        }
+
+        &__subtitle {
+          color: $black;
+          font-size: 1.125rem;
+          font-weight: $font-weight-bold;
+          line-height: 2.5rem;
+          margin-top: 2.25rem;
+
+          @include media-breakpoint-down(md) {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__section2 {
+    margin-top: 3.5rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 2.75rem;
+    }
+
+    &__content {
+      &__item:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__section3 {
+    margin-bottom: 9rem;
+    margin-top: 11.75rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 7rem;
+      margin-top: 6rem;
+    }
+
+    &__content {
+      &__info {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        @include media-breakpoint-down(md) {
+          text-align: center;
+        }
+
+        &__title {
+          color: $black;
+          font-size: 2.25rem;
+          font-weight: $font-weight-bold;
+          line-height: 3.375rem;
+
+          @include media-breakpoint-down(md) {
+            font-size: 1.625rem;
+          }
+        }
+
+        &__description {
+          color: $black;
+          font-size: 1rem;
+          font-weight: $font-weight-middle;
+          line-height: 1.75rem;
+          opacity: 0.5;
+        }
+      }
+
+      img {
+        width: 100%;
+
+        @include media-breakpoint-down(md) {
+          margin-top: 2.25rem;
+        }
+      }
+
+      &__mission {
+        margin-top: 11rem;
+
+        @include media-breakpoint-down(md) {
+          flex-direction: column-reverse;
+          margin-top: 6rem;
+        }
+      }
+    }
+  }
+
+  &__mask {
+    &__one {
+      left: 15rem;
+      opacity: 0.3;
+      position: absolute;
+      top: 29rem;
+      transform: scaleX(-1);
+      z-index: -1;
+
+      img {
+        width: 29rem;
+      }
+    }
+
+    &__two {
+      bottom: 10rem;
+      left: -5rem;
+      position: absolute;
+      z-index: -1;
+
+      img {
+        width: 15rem;
+      }
+    }
+  }
+}

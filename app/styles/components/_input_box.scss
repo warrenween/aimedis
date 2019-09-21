@@ -1,0 +1,59 @@
+.app__input {
+  position: relative;
+
+  label {
+    color: $black;
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  input,
+  textarea {
+    background-color: rgba($input-color, 0.09);
+    border: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.5rem 0 rgba($input-color, 0.24);
+    display: block;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  &__invalid {
+    bottom: -1.5rem;
+    color: $red;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 1rem;
+  }
+
+  i {
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 2.75rem;
+  }
+
+  .i-check-circle-o {
+    color: #03d200;
+  }
+
+  .i-exclamation-circle {
+    color: #e30000;
+  }
+
+  label + input {
+    margin-top: 0.75rem;
+  }
+
+  input:hover,
+  input:focus,
+  textarea:hover,
+  textarea:focus {
+    outline: 0;
+  }
+
+  & + & {
+    margin-top: 1.5rem;
+  }
+}

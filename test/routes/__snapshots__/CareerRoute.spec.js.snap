@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes/CareerRoute should render the Career Page for authenticated access 1`] = `"<div data-reactroot=\\"\\">Career</div>"`;
+
+exports[`routes/CareerRoute should render the Career Page for unauthenticated access 1`] = `"<div data-reactroot=\\"\\">Career</div>"`;
