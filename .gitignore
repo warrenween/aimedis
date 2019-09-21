@@ -1,9 +1,3 @@
-.tmp
-.sass-cache
-.publish
-coverage/
 dist/
 node_modules/
-reports/
-webpack.stats.json
 .idea/
