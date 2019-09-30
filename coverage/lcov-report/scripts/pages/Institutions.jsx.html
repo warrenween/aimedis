@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/pages/Institutions.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">scripts/pages</a> Institutions.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>10/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/10</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import Title from 'components/Title';
+import Overview from 'components/Overview';
+import InstitutionsItem from 'components/InstitutionsItem';
+import Feature from 'components/Feature';
+&nbsp;
+export default class Institutions extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.list = [];
+  }
+&nbsp;
+  slideShow = (i) =&gt; {
+    this.list[i].scrollIntoView({ block: 'end', behavior: 'smooth' });
+  };
+&nbsp;
+  render() {
+    return (
+      &lt;div key="Institutions" className="app__institutions app__route"&gt;
+        &lt;div className="container"&gt;
+          &lt;section className="app__institutions__section1"&gt;
+            &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+              &lt;div className="app__institutions__section1__title"&gt;
+                &lt;Title title="Who gets the most out of Aimedis" subtitle="institutions" /&gt;
+              &lt;/div&gt;
+              &lt;div className="app__institutions__section1__content"&gt;
+                &lt;div className="row"&gt;
+                  &lt;div className="col-12 col-lg-5"&gt;
+                    &lt;div className="app__institutions__section1__content__item1" onClick={() =&gt; this.slideShow(1)}&gt;
+                      &lt;Overview
+                        order={1} title="Insurance companies"
+                        subtitle="Excepteur sint accaecut cupidatat n every actual browser"
+                        src="institutions-mobile.png" link="assets/media/images/institutions-web.png"
+                        direction="down"
+                      /&gt;
+                    &lt;/div&gt;
+                    &lt;div className="app__institutions__section1__content__item2" onClick={() =&gt; this.slideShow(2)}&gt;
+                      &lt;Overview
+                        order={2} title="Hospitals"
+                        subtitle="Excepteur sint accaecut cupidatat n every actual browser"
+                        src="institutions-mobile.png" link="assets/media/images/institutions-web.png"
+                        direction="down"
+                      /&gt;
+                    &lt;/div&gt;
+                    &lt;div className="app__institutions__section1__content__item3" onClick={() =&gt; this.slideShow(3)}&gt;
+                      &lt;Overview
+                        order={3} title="Pharma Companies"
+                        subtitle="Excepteur sint accaecut cupidatat n every actual browser"
+                        src="institutions-mobile.png" link="assets/media/images/institutions-web.png"
+                        direction="down"
+                      /&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-7 d-none d-lg-block app__institutions__section1__content__image"&gt;
+                    &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true} initiallyVisible={true}&gt;
+                      &lt;img src={require('assets/media/images/institutions-web.png')} alt="No Asset" /&gt;
+                    &lt;/ScrollAnimation&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/ScrollAnimation&gt;
+          &lt;/section&gt;
+          &lt;section className="app__institutions__section2 d-none d-lg-block"&gt;
+            &lt;div className="app__institutions__section2__item" ref={(re) =&gt; { this.list[1] = re; }}&gt;
+              &lt;InstitutionsItem
+                title="Dois aute irure dolor" subtitle="INSURANCE COMPANIES"
+                description="Soon Aimedis will offer much more including AIMSocial - the interactive patient platform that is secured and supported by a blockchain and help."
+                src="institutions-bg2.png"
+                align="left"
+              /&gt;
+            &lt;/div&gt;
+            &lt;div className="app__institutions__section2__item" ref={(re) =&gt; { this.list[2] = re; }}&gt;
+              &lt;InstitutionsItem
+                title="Dois aute irure dolor" subtitle="Hospitals"
+                description="Soon Aimedis will offer much more including AIMSocial - the interactive patient platform that is secured and supported by a blockchain and help."
+                src="institutions-bg1.png"
+                align="right"
+              /&gt;
+            &lt;/div&gt;
+            &lt;div className="app__institutions__section2__item" ref={(re) =&gt; { this.list[3] = re; }}&gt;
+              &lt;InstitutionsItem
+                title="Dois aute irure dolor" subtitle="Pharma Companies"
+                description="Soon Aimedis will offer much more including AIMSocial - the interactive patient platform that is secured and supported by a blockchain and help."
+                src="institutions-bg2.png"
+                align="left"
+              /&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+          &lt;section className="app__institutions__section3"&gt;
+            &lt;Feature /&gt;
+          &lt;/section&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Sep 21 2019 19:39:36 GMT-0400 (Eastern Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

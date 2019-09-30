@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/pages/Home.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">scripts/pages</a> Home.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/2</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from 'react-router-dom';
+import GetEarlyAccess from 'components/GetEarlyAccess';
+import VideoMask from 'components/VideoMask';
+import Avatar from 'components/Avatar';
+import Title from 'components/Title';
+import OfferItem from 'components/OfferItem';
+import StaticItem from 'components/StaticItem';
+import OverviewList from 'components/OverviewList';
+import Carousel from 'components/Carousel';
+import BlogItem from 'components/BlogItem';
+import Notification from 'components/Notification';
+import Feature from 'components/Feature';
+&nbsp;
+export default class Home extends React.PureComponent {
+  render() {
+    const overviewList = [
+      {
+        id: 1,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'In every actual browser',
+        title: 'Fully responsive',
+      },
+      {
+        id: 2,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'also fully functional abroad',
+        title: 'Multilanguage',
+      },
+      {
+        id: 3,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'also for unexperienced patients simple &amp; fast',
+        title: 'Easy to use',
+      },
+      {
+        id: 4,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'For optimal security through regular security audits',
+        title: 'ISO 21007 certification',
+      },
+      {
+        id: 5,
+        right: 'IMac.png',
+        src: 'mobile.png',
+        subtitle: 'Tested by active physicians and medical IT specialists',
+        title: 'Tested by doctors &amp; hospitals',
+      },
+    ];
+    return (
+      &lt;div key="Home" className="app__home app__route"&gt;
+        &lt;div className="container"&gt;
+          &lt;section className="app__home__section1"&gt;
+            &lt;div className="app__home__section1__content"&gt;
+              &lt;div className="row"&gt;
+                &lt;div className="col-lg-6 col-md-12 p-lg-0"&gt;
+                  &lt;div className="app__home__section1__content__header"&gt;Aimedis is the health platform of the future.
+                  &lt;/div&gt;
+                  &lt;div className="app__home__section1__content__subheader d-none d-lg-block"&gt;Aimedis has been developed by
+                  doctors for patients, doctors and hospitals - designed to give patients the complete control over
+                  their
+                  health data and support.
+                  &lt;/div&gt;
+                  &lt;div className="app__home__section1__content__image d-block d-lg-none"&gt;
+                    &lt;VideoMask /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="app__home__section1__content__get__access"&gt;
+                    &lt;GetEarlyAccess /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="app__home__section1__content__terms"&gt;By filling my email and clicking on “GET EARLY
+                  ACCESS“
+                  I agree to the &lt;Link to="#"&gt;Conditions Of Use&lt;/Link&gt; and the &lt;Link to="#"&gt;Data Protection Policy&lt;/Link&gt;.
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div className="col-lg-5 offset-lg-1 d-none d-lg-block app__home__section1__image"&gt;
+                  &lt;VideoMask /&gt;
+                  &lt;div className="app__home__mask__one"&gt;
+                    &lt;img src={require('assets/media/images/bg.png')} alt="No Asset" /&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+          &lt;section className="app__home__section2"&gt;
+            &lt;div className="app__home__section2__content"&gt;
+              &lt;div className="row"&gt;
+                &lt;div className="col-lg-2 col-6 app__home__section2__content__item"&gt;
+                  &lt;Avatar src="fhir.png" /&gt;
+                &lt;/div&gt;
+                &lt;div className="col-lg-2 col-6 app__home__section2__content__item"&gt;
+                  &lt;Avatar src="fhir.png" /&gt;
+                &lt;/div&gt;
+                &lt;div className="col-lg-2 col-6 app__home__section2__content__item"&gt;
+                  &lt;Avatar src="fhir.png" /&gt;
+                &lt;/div&gt;
+                &lt;div className="col-lg-2 col-6 app__home__section2__content__item"&gt;
+                  &lt;Avatar src="fhir.png" /&gt;
+                &lt;/div&gt;
+                &lt;div className="col-lg-2 col-6 app__home__section2__content__item"&gt;
+                  &lt;Avatar src="fhir.png" /&gt;
+                &lt;/div&gt;
+                &lt;div className="col-lg-2 col-6 app__home__section2__content__item"&gt;
+                  &lt;Avatar src="fhir.png" /&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+          &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+            &lt;section className="app__home__section3"&gt;
+              &lt;div className="app__home__section3__title text-center"&gt;
+                &lt;Title title="What Aimedis offers" subtitle="Platform features" /&gt;
+              &lt;/div&gt;
+              &lt;div className="app__home__section3__content"&gt;
+                &lt;div className="row"&gt;
+                  &lt;div className="col-lg-3 col-6 app__home__section3__content__item"&gt;
+                    &lt;OfferItem title="Your health data in one place" icon="your-health-data-in-one-place" src="" /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-3 col-6 app__home__section3__content__item"&gt;
+                    &lt;OfferItem title="Videochat with doctors" icon="your-health-data-in-one-place" src="" /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-3 col-6 app__home__section3__content__item"&gt;
+                    &lt;OfferItem title="Doctors appointments" icon="your-health-data-in-one-place" src="" /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-3 col-6 offset-lg-3 app__home__section3__content__item"&gt;
+                    &lt;OfferItem title="Independent Second Opinion" icon="your-health-data-in-one-place" src="" /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-3 col-6 app__home__section3__content__item"&gt;
+                    &lt;OfferItem title="Connect fitness trackers" icon="your-health-data-in-one-place" src="" /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-3 col-6 app__home__section3__content__item"&gt;
+                    &lt;OfferItem title="Care for your family" icon="your-health-data-in-one-place" src="" /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-3 col-6 offset-lg-3 app__home__section3__content__item"&gt;
+                    &lt;OfferItem title="Prescription online" icon="your-health-data-in-one-place" src="" /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-3 col-6 app__home__section3__content__item"&gt;
+                    &lt;OfferItem title="Medical tourism" icon="your-health-data-in-one-place" src="" /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-3 col-6 app__home__section3__content__item"&gt;
+                    &lt;OfferItem title="Your health data in one place" icon="your-health-data-in-one-place" src="" last={true} /&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/section&gt;
+          &lt;/ScrollAnimation&gt;
+          &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+            &lt;section className="app__home__section4"&gt;
+              &lt;div className="app__home__section4__content"&gt;
+                &lt;div className="row"&gt;
+                  &lt;div className="col-lg-5 col-md-12"&gt;
+                    &lt;ScrollAnimation animateIn="fadeInLeft" animateOnce={true}&gt;
+                      &lt;div className="text-center text-lg-left mx-auto ml-lg-0"&gt;
+                        &lt;Title title="The Technology" subtitle="forward thinking" /&gt;
+                      &lt;/div&gt;
+                      &lt;p className="app__home__section4__content__subtitle"&gt;Blockchain smart contracts smart graphs artificial
+                      intelligence highest security standards payments cryptocurrencies ICD ATC HL7 FHIR HIPPA IHE
+                      DICOM.
+                      &lt;/p&gt;
+                      &lt;p className="app__home__section4__content__subtitle"&gt;Soon Aimedis will offer much more including
+                      AIMSocial
+                      - the
+                      interactive patient platform that is secured and supported by a blockchain and help patients to
+                      support each other on a new level.
+                      &lt;/p&gt;
+                      &lt;button
+                        className="app__home__section4__content__download body btn btn__secondary ml-0"
+                        type="button"
+                      &gt;DOWNLOAD
+                      TECH SPEC (3.4 MB)
+                      &lt;/button&gt;
+                    &lt;/ScrollAnimation&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-lg-7 d-none d-lg-block"&gt;
+                    &lt;div className="row"&gt;
+                      &lt;div className="col-lg-6 app__home__section4__content__item"&gt;
+                        &lt;StaticItem title="Optimal Security" icon="your-health-data-in-one-place" /&gt;
+                      &lt;/div&gt;
+                      &lt;div className="col-lg-6 app__home__section4__content__item"&gt;
+                        &lt;StaticItem title="Blockchain &amp; Smart contracts" icon="your-health-data-in-one-place" /&gt;
+                      &lt;/div&gt;
+                      &lt;div className="col-lg-6 app__home__section4__content__item"&gt;
+                        &lt;StaticItem title="Smart graphs &amp; AI" icon="your-health-data-in-one-place" /&gt;
+                      &lt;/div&gt;
+                      &lt;div className="col-lg-6 app__home__section4__content__item"&gt;
+                        &lt;StaticItem title="Payment &amp; cryptocurrencies" icon="your-health-data-in-one-place" /&gt;
+                      &lt;/div&gt;
+                      &lt;div className="col-lg-6 app__home__section4__content__item"&gt;
+                        &lt;StaticItem title="AIMSafe drug safety" icon="your-health-data-in-one-place" /&gt;
+                      &lt;/div&gt;
+                      &lt;div className="col-lg-6 app__home__section4__content__item"&gt;
+                        &lt;StaticItem title="ICD 10" icon="your-health-data-in-one-place" /&gt;
+                      &lt;/div&gt;
+                      &lt;div className="col-lg-6 app__home__section4__content__item"&gt;
+                        &lt;StaticItem title="HL7, FHIR, DICOM, HIPAA, IHE" icon="your-health-data-in-one-place" /&gt;
+                      &lt;/div&gt;
+                      &lt;div className="col-lg-6 app__home__section4__content__item"&gt;
+                        &lt;StaticItem title="ATC" icon="your-health-data-in-one-place" /&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/section&gt;
+          &lt;/ScrollAnimation&gt;
+          &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+            &lt;section className="app__home__section5"&gt;
+              &lt;div className="app__home__section5__title text-center"&gt;
+                &lt;Title title="Aimedis Ecosystem" subtitle="Platform Overview" /&gt;
+              &lt;/div&gt;
+              &lt;div className="app__home__section5__content"&gt;
+                &lt;OverviewList list={overviewList} /&gt;
+              &lt;/div&gt;
+            &lt;/section&gt;
+          &lt;/ScrollAnimation&gt;
+          &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+            &lt;section className="app__home__section6"&gt;
+              &lt;div className="app__home__section6__title text-center"&gt;
+                &lt;Title title="Testimonials" subtitle="what users say" /&gt;
+              &lt;/div&gt;
+              &lt;div className="app__home__section6__content"&gt;
+                &lt;Carousel /&gt;
+              &lt;/div&gt;
+            &lt;/section&gt;
+          &lt;/ScrollAnimation&gt;
+          &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+            &lt;section className="app__home__section7 d-none d-lg-block"&gt;
+              &lt;div className="app__home__section7__title"&gt;
+                &lt;Title title="Aimedis is mobile" subtitle="information on the go" /&gt;
+              &lt;/div&gt;
+              &lt;div className="app__home__section7__content"&gt;
+                &lt;div className="app__home__section7__content__mobile app__home__section7__content__iphone"&gt;
+                  &lt;div className="app__home__section7__content__mobile__img app__home__section7__content__iphone__img mx-auto"&gt;
+                    &lt;img src={require('assets/media/icons/icon_apple.png')} alt="No Asset" /&gt;
+                  &lt;/div&gt;
+                  &lt;p className="app__home__section7__content__mobile__title app__home__section7__content__iphone__title"&gt;
+                    on iPhone and iPad from iOS 9
+                  &lt;/p&gt;
+                  &lt;button
+                    className="btn btn__secondary app__home__section7__content__mobile__button app__home__section7__content__iphone__button"
+                    type="button"
+                  &gt;
+                    GO TO App Store
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div className="app__home__section7__content__mobile app__home__section7__content__android"&gt;
+                  &lt;div className="app__home__section7__content__mobile__img app__home__section7__content__android__img mx-auto"&gt;
+                    &lt;img src={require('assets/media/icons/icon_android.png')} alt="No Asset" /&gt;
+                  &lt;/div&gt;
+                  &lt;p className="app__home__section7__content__mobile__title app__home__section7__content__android__title"&gt;
+                    on Android smartphones and tablet from Android 4
+                  &lt;/p&gt;
+                  &lt;button
+                    className="app__home__section7__content__mobile__button btn btn__primary app__home__section7__content__android__button"
+                    type="button"
+                  &gt;
+                    GO TO GOOGLE PLAY
+                  &lt;/button&gt;
+                  &lt;div className="app__home__section7__content__mobile__soon"&gt;
+                    soon
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div className="app__home__section7__content__img ml-auto"&gt;
+                  &lt;img src={require('assets/media/images/iPhoneX-01.png')} alt="No Asset" /&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/section&gt;
+          &lt;/ScrollAnimation&gt;
+          &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+            &lt;section className="app__home__section8"&gt;
+              &lt;div className="app__home__section8__title text-center"&gt;
+                &lt;Title title="Aimedis Blog" subtitle="Learn what’s new" /&gt;
+              &lt;/div&gt;
+              &lt;div className="app__home__section8__content app__home_section8__content"&gt;
+                &lt;div className="row"&gt;
+                  &lt;div className="col-12 col-lg-4"&gt;
+                    &lt;BlogItem
+                      item={{
+                        id: 1,
+                        title: 'Why Japan, the Tech giant, still needs to improve Health Tech',
+                        description: 'Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by',
+                        src: 'blog1.png',
+                      }}
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-12 col-lg-4"&gt;
+                    &lt;BlogItem
+                      item={{
+                        id: 2,
+                        title: 'Why diagnosing leprosy in the Philippines is not a big problem any more: Learns',
+                        description: 'Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by',
+                        src: 'blog2.png',
+                      }}
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;div className="col-12 col-lg-4"&gt;
+                    &lt;BlogItem
+                      item={{
+                        id: 3,
+                        title: 'Why diagnosing leprosy in the Philippines is not a big problem any more: Learns',
+                        description: 'Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by',
+                        src: 'blog3.png',
+                      }}
+                    /&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/section&gt;
+          &lt;/ScrollAnimation&gt;
+          &lt;section className="app__home__section9"&gt;
+            &lt;Feature /&gt;
+          &lt;/section&gt;
+          &lt;section className="app__home__mask d-none d-lg-block"&gt;
+            &lt;div className="app__home__mask__two"&gt;
+              &lt;img src={require('assets/media/images/Group 8.png')} alt="No Asset" /&gt;
+            &lt;/div&gt;
+            &lt;div className="app__home__mask__three"&gt;
+              &lt;img src={require('assets/media/images/Path 2 Copy 3.png')} alt="No Asset" /&gt;
+            &lt;/div&gt;
+            &lt;div className="app__home__mask__five"&gt;
+              &lt;img src={require('assets/media/images/Group 2.png')} alt="No Asset" /&gt;
+            &lt;/div&gt;
+            &lt;div className="app__home__mask__notification"&gt;
+              &lt;Notification icon="flash.png"&gt;
+                &lt;div className="app__home__mask__notification__content"&gt;
+                  &lt;div className="app__home__mask__notification__content__title"&gt;
+                    &lt;Link to="#"&gt;Token sale&lt;/Link&gt; is currently live!
+                  &lt;/div&gt;
+                  &lt;div className="app__home__mask__notification__content__description"&gt;
+                  Ending in &lt;span&gt;12d 15h 3m 44s&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/Notification&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Sep 21 2019 19:39:36 GMT-0400 (Eastern Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

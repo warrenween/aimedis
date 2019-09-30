@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/pages/BlogDetail.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">scripts/pages</a> BlogDetail.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/4</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import ScrollAnimation from 'react-animate-on-scroll';
+import BlogItem from 'components/BlogItem';
+import CustomVideo from 'components/CustomVideo';
+import { Link } from 'react-router-dom';
+&nbsp;
+const BlogDetail = ({ match }) =&gt; (
+  &lt;div key="BlogDetail" className="app__blog__detail app__route"&gt;
+    &lt;p className="d-none"&gt;{match.params.id}&lt;/p&gt;
+    &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+      &lt;div className="app__blog__detail__image"&gt;
+        &lt;img src={require('assets/media/images/blogdetail.png')} alt="No Asset" /&gt;
+      &lt;/div&gt;
+    &lt;/ScrollAnimation&gt;
+    &lt;div className="container"&gt;
+      &lt;section className="app__blog__detail__section1"&gt;
+        &lt;div className="row"&gt;
+          &lt;div className="col-12"&gt;
+            &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+              &lt;p className="app__blog__detail__section1__title"&gt;AR and VR are the new tools in your doctor’s bag&lt;/p&gt;
+            &lt;/ScrollAnimation&gt;
+          &lt;/div&gt;
+          &lt;div className="col-12 col-lg-8 offset-lg-2 app__blog__detail__section1__content"&gt;
+            &lt;div className="app__blog__detail__section1__content__info"&gt;
+              &lt;ScrollAnimation animateIn="fadeInLeft" animateOnce={true}&gt;
+                &lt;div className="app__blog__detail__section1__content__info__share"&gt;
+                  &lt;div className="app__blog__detail__section1__content__info__share__element"&gt;
+                    &lt;div className="app__blog__detail__section1__content__info__share__element__icon"&gt;
+                      &lt;img src={require('assets/media/icons/writer.png')} alt="No Asset" /&gt;
+                    &lt;/div&gt;
+                    &lt;div className="app__blog__detail__section1__content__info__share__element__text"&gt;
+                      Chris Welch
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div className="app__blog__detail__section1__content__info__share__element"&gt;
+                    &lt;div className="app__blog__detail__section1__content__info__share__element__icon"&gt;
+                      &lt;img src={require('assets/media/icons/date.png')} alt="No Asset" /&gt;
+                    &lt;/div&gt;
+                    &lt;div className="app__blog__detail__section1__content__info__share__element__text"&gt;
+                      2 WEEKS AGO
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/ScrollAnimation&gt;
+              &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true}&gt;
+                &lt;div className="app__blog__detail__section1__content__info__link d-none d-lg-flex"&gt;
+                  &lt;Link className="app__blog__detail__section1__content__info__link__element" to="#"&gt;
+                    &lt;img src={require('assets/media/icons/facebook.png')} alt="No Asset" /&gt;
+                  &lt;/Link&gt;
+                  &lt;Link className="app__blog__detail__section1__content__info__link__element" to="#"&gt;
+                    &lt;img src={require('assets/media/social/Group 9.png')} alt="No Asset" /&gt;
+                  &lt;/Link&gt;
+                  &lt;Link className="app__blog__detail__section1__content__info__link__element" to="#"&gt;
+                    &lt;img src={require('assets/media/icons/linkedin.png')} alt="No Asset" /&gt;
+                  &lt;/Link&gt;
+                &lt;/div&gt;
+              &lt;/ScrollAnimation&gt;
+            &lt;/div&gt;
+            &lt;ScrollAnimation animateIn="fadeInUp" animateOnce={true}&gt;
+              &lt;hr /&gt;
+            &lt;/ScrollAnimation&gt;
+            &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true}&gt;
+              &lt;p className="app__blog__detail__section1__content__description first__letter"&gt;
+                Medicine has always been an obscure discipline to practise doctor has been looking at with awe and respect, and until quite recently, was often an unapproachable person. However, this is changing rapidly. He is a service provider and you, the patient, are a consumer, and thus protected by the prevailing consumer laws.
+              &lt;/p&gt;
+            &lt;/ScrollAnimation&gt;
+            &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true}&gt;
+              &lt;p className="app__blog__detail__section1__content__subtitle"&gt;Being good at medicine is not good enough&lt;/p&gt;
+            &lt;/ScrollAnimation&gt;
+            &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true}&gt;
+              &lt;p className="app__blog__detail__section1__content__description1"&gt;
+                160 years ago, in 1858, Henry Gray published Gray’s Anatomy – the bible for every doctor. Back then, body snatchers were a prime source of obtaining cadavers for dissections. About 70 years later, the first antibiotic was discovered in the form of penicillin. Fast forward another 40 years, and people were still dying from simple infections. Today, these things would sound so alien! No antibiotics, illegally obtained bodies for dissection, people dying from simple infection rather than grave, life-threatening diseases. Medicine has come a long way since the time of Mr Gray (Surgeons use a Mr instead of Dr in the UK).
+              &lt;/p&gt;
+            &lt;/ScrollAnimation&gt;
+            &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true}&gt;
+              &lt;p className="app__blog__detail__section1__content__description1"&gt;
+                Today, a doctor is not expected to do his job, he has to be in a sensitive manner, warranted by the profession. He needs to have proper bedside manners in most of the medical schools. However, in the age of technology, this is not enough!
+              &lt;/p&gt;
+            &lt;/ScrollAnimation&gt;
+            &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true}&gt;
+              &lt;div className="app__blog__detail__section1__content__reference"&gt;
+                &lt;p className="app__blog__detail__section1__content__reference__text"&gt;
+                  «Today, medical schools have started recruiting the importance of telemedicine in the healthcare ecosystem.»
+                &lt;/p&gt;
+                &lt;p className="app__blog__detail__section1__content__reference__speaker"&gt;Irina Danilenko – doctor&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/ScrollAnimation&gt;
+          &lt;/div&gt;
+          &lt;div className="col-12 d-none d-lg-block app__blog__detail__section1__content__feature"&gt;
+            &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+              &lt;img src={require('assets/media/images/featrued_blog.png')} alt="No Asset" /&gt;
+            &lt;/ScrollAnimation&gt;
+          &lt;/div&gt;
+          &lt;div className="col-12 col-lg-6 offset-lg-3 d-none d-lg-block"&gt;
+            &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true}&gt;
+              &lt;p className="app__blog__detail__section1__content__description1"&gt;Medical advances on the fronts of new drug discoveries have slowed down. Instead, pharmaceuticals are being used to improve their chances. The next big thing is biologicals and personalized medicine.&lt;/p&gt;
+            &lt;/ScrollAnimation&gt;
+            &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true}&gt;
+              &lt;p className="app__blog__detail__section1__content__description1"&gt;However, when it comes to the doctor’s clinic, a lot of things are changing as well. He has the tools to capture the patient’s data without having to spend on his computer. With IoT devices and integrated software, things are becoming easier for doctors. That said, there is still a huge scope for technology in his clinic.&lt;/p&gt;
+            &lt;/ScrollAnimation&gt;
+            &lt;ScrollAnimation animateIn="fadeInRight" animateOnce={true}&gt;
+              &lt;div className="app__blog__detail__section1__content__list"&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;Fashion&lt;/li&gt;
+                  &lt;li&gt;Design&lt;/li&gt;
+                  &lt;li&gt;Art&lt;/li&gt;
+                  &lt;li&gt;Marketing&lt;/li&gt;
+                  &lt;li&gt;Management&lt;/li&gt;
+                  &lt;li&gt;Communications&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/ScrollAnimation&gt;
+          &lt;/div&gt;
+          &lt;div className="col-12"&gt;
+            &lt;div className="app__blog__detail__section1__content__video"&gt;
+              &lt;CustomVideo src="http://media.w3.org/2010/05/bunny/movie.mp4" /&gt;
+            &lt;/div&gt;
+            &lt;div className="app__blog__detail__section1__content__share"&gt;
+              &lt;ScrollAnimation animateIn="fadeInLeft" animateOnce={true}&gt;
+                &lt;div className="app__blog__detail__section1__content__share__text"&gt;Like it? Share it!&lt;/div&gt;
+              &lt;/ScrollAnimation&gt;
+              &lt;ScrollAnimation animateIn="fadeInLeft" animateOnce={true}&gt;
+                &lt;div className="app__blog__detail__section1__content__share__link"&gt;
+                  &lt;Link className="app__blog__detail__section1__content__share__link__element" to="#"&gt;
+                    &lt;img src={require('assets/media/icons/facebook.png')} alt="No Asset" /&gt;
+                  &lt;/Link&gt;
+                  &lt;Link className="app__blog__detail__section1__content__share__link__element" to="#"&gt;
+                    &lt;img src={require('assets/media/social/Group 9.png')} alt="No Asset" /&gt;
+                  &lt;/Link&gt;
+                  &lt;Link className="app__blog__detail__section1__content__share__link__element" to="#"&gt;
+                    &lt;img src={require('assets/media/icons/linkedin.png')} alt="No Asset" /&gt;
+                  &lt;/Link&gt;
+                &lt;/div&gt;
+              &lt;/ScrollAnimation&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+      &lt;section className="app__blog__detail__section2"&gt;
+        &lt;ScrollAnimation animateIn="fadeIn" animateOnce={true}&gt;
+          &lt;div className="app__blog__detail__section2__title"&gt;
+            You might like these articles too
+          &lt;/div&gt;
+        &lt;/ScrollAnimation&gt;
+        &lt;div className="app__blog__detail__section2__content"&gt;
+          &lt;div className="row"&gt;
+            &lt;div className="col-12 col-lg-4"&gt;
+              &lt;BlogItem
+                item={{
+                  id: 1,
+                  title: 'Why Japan, the Tech giant, still needs to improve Health Tech',
+                  description: 'Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by',
+                  src: 'blog1.png',
+                }}
+              /&gt;
+            &lt;/div&gt;
+            &lt;div className="col-12 col-lg-4"&gt;
+              &lt;BlogItem
+                item={{
+                  id: 2,
+                  title: 'Why diagnosing leprosy in the Philippines is not a big problem any more: Learns',
+                  description: 'Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by',
+                  src: 'blog2.png',
+                }}
+              /&gt;
+            &lt;/div&gt;
+            &lt;div className="col-12 col-lg-4"&gt;
+              &lt;BlogItem
+                item={{
+                  id: 3,
+                  title: 'Why diagnosing leprosy in the Philippines is not a big problem any more: Learns',
+                  description: 'Aimedis supports patients and doctors by making data available quickly and reliable which results in a quick supports patients and doctors by',
+                  src: 'blog3.png',
+                }}
+              /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+);
+&nbsp;
+BlogDetail.propTypes = {
+  match: PropTypes.object,
+};
+&nbsp;
+BlogDetail.defaultProps = {
+  match: {
+    params: {
+      id: 1,
+    },
+  },
+};
+&nbsp;
+export default BlogDetail;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Sep 21 2019 19:39:36 GMT-0400 (Eastern Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
